@@ -1,0 +1,23 @@
+export enum HanaTripettoQuestions {
+  q1 = "How old are you?",
+  phone = "Please give us your telephone number.",
+  contactTime = "What time of day is best for us to call you?",
+  email = `After you've spoken to the pharmacist, they might need to email a link for you to complete your order.
+Please give us an email address we can use for this.`,
+  q3No = "Currently using hormonal contraception? No",
+  q3aDesogestrel = "Current contraceptive: Desogestrel",
+  q3aInjection = "Current contraceptive: Injection",
+  q3aImplant = "Current contraceptive: Implant",
+  q3aRing = "Current contraceptive: Vaginal ring",
+  q3aPatch = "Current contraceptive: Skin patch",
+  q3aCPill = "Current contraceptive: Combined pill",
+  q3aMPill = "Current contraception: Mini-pill",
+  q3aUid = "Current contraceptive: IUD",
+  q3bcdeYes = "Current contraceptive taken as directed? Yes",
+  q3bcdeNo = "Current contraceptive taken as directed? No",
+  q5Yes = "Emergency contraception: Yes",
+  q7Chloasma = "Current/previous conditions: Chloasma",
+  q7Thromboembolic = "Current/previous conditions: Thromboembolic disorders",
+  q7Hypertension = "Current/previous conditions: Hypertension",
+  q11bNoRegExp = "^Antibiotics/Antifungals: ((?!(None of these|Don't know)$).*)",
+}

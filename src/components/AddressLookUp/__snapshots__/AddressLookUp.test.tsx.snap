@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddressLookUp /> should match the snapshot 1`] = `
+<div>
+  <div
+    class="MuiGrid-root className MuiGrid-container MuiGrid-spacing-xs-2"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9"
+    >
+      <div
+        class="MuiFormControl-root MuiTextField-root makeStyles-input-1"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined Mui-error Mui-error"
+          data-shrink="true"
+          for="postcode-input"
+          id="postcode-input-label"
+        >
+          Postcode
+        </label>
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root Mui-error Mui-error MuiInputBase-formControl"
+        >
+          <input
+            aria-describedby="postcode-input-helper-text"
+            aria-invalid="true"
+            class="MuiInputBase-input MuiOutlinedInput-input"
+            data-testid="postcode"
+            id="postcode-input"
+            name="postcode"
+            type="text"
+            value=""
+          />
+          <fieldset
+            aria-hidden="true"
+            class="PrivateNotchedOutline-root-4 MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="PrivateNotchedOutline-legendLabelled-6 PrivateNotchedOutline-legendNotched-7"
+            >
+              <span>
+                Postcode
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-contained Mui-error"
+          id="postcode-input-helper-text"
+        >
+          test error message
+        </p>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3"
+    >
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-searchButton-2 Mui-disabled Mui-disabled"
+        data-testid="addressLookUp/search-button"
+        disabled=""
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Search
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

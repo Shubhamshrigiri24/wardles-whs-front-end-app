@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PriceInfo /> should match snapshot 1`] = `
+<div>
+  <div
+    class="makeStyles-spacing3-10"
+    data-testid="spacing/root"
+  />
+  <hr
+    class="MuiDivider-root makeStyles-divider-1"
+  />
+  <div
+    class="makeStyles-spacing1-6"
+    data-testid="spacing/root"
+  />
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true"
+    >
+      <p
+        class="MuiTypography-root makeStyles-text-2 MuiTypography-body1"
+        data-testid="priceInfo/label"
+      >
+        label
+      </p>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto"
+    >
+      <p
+        class="MuiTypography-root makeStyles-text-2 MuiTypography-body1"
+        data-testid="priceInfo/price"
+      >
+        £5.99
+      </p>
+    </div>
+  </div>
+  <div
+    class="makeStyles-spacing3-10"
+    data-testid="spacing/root"
+  />
+</div>
+`;

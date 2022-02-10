@@ -1,0 +1,27 @@
+[
+  {
+    "label": "4 pack",
+    "quantity": 4,
+    "price": 19.99,
+    "value": 5
+  },
+  {
+    "label": "8 pack",
+    "quantity": 8,
+    "price": 34.96,
+    "value": 4.38
+  },
+  {
+    "label": "12 pack",
+    "quantity": 12,
+    "price": 52,
+    "value": 4.33
+  },
+  {
+    "label": "16 pack",
+    "quantity": 16,
+    "price": 52,
+    "value": 4.06,
+    "isBestValue": true
+  }
+]

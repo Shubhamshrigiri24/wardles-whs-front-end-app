@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PaymentPanel /> should match the snapshot 1`] = `
+<div>
+  <div
+    class="MuiContainer-root makeStyles-pageMargin-3 MuiContainer-maxWidthSm"
+  >
+    <div
+      class="MuiPaper-root MuiCard-root makeStyles-card-4 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <h3
+        class="MuiTypography-root MuiTypography-h3"
+      >
+        Select a method of payment
+      </h3>
+      <div
+        id="braintree_container"
+      />
+      
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-5"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+            data-testid="paymentPanel/payment-button"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Pay
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PaymentPanel /> should match the snapshot on error 1`] = `
+<div>
+  <div
+    class="MuiContainer-root makeStyles-pageMargin-8 MuiContainer-maxWidthSm"
+  >
+    <div
+      class="MuiPaper-root MuiCard-root makeStyles-card-9 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <h3
+        class="MuiTypography-root MuiTypography-h3"
+      >
+        Select a method of payment
+      </h3>
+      <div
+        id="braintree_container"
+      />
+      <div
+        class="makeStyles-root-10 makeStyles-errorType-14 makeStyles-defaultSize-16"
+        data-testid="alert/root"
+      >
+        <div
+          class="makeStyles-main-20"
+          data-testid="alert/main"
+        >
+          <div
+            class="makeStyles-icon-21"
+            data-testid="alert/icon"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+              />
+            </svg>
+          </div>
+          <p
+            class="MuiTypography-root makeStyles-message-23 MuiTypography-body1"
+            data-testid="alert/message"
+          >
+            error
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-27"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+            data-testid="paymentPanel/payment-button"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Pay
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PaymentPanel /> should match the snapshot when loading 1`] = `
+<div>
+  <div
+    class="MuiContainer-root makeStyles-pageMargin-30 MuiContainer-maxWidthSm"
+  >
+    <div
+      class="MuiPaper-root MuiCard-root makeStyles-card-31 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <h3
+        class="MuiTypography-root MuiTypography-h3"
+      >
+        Select a method of payment
+      </h3>
+      <div
+        id="braintree_container"
+      />
+      
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="MuiBox-root MuiBox-root-32"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+            data-testid="paymentPanel/payment-button"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <div
+                class="makeStyles-loadingSpinnerCenter-28"
+              >
+                <div
+                  class="MuiCircularProgress-root makeStyles-marginRight-29 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                  role="progressbar"
+                  style="width: 1em; height: 1em;"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="20.2"
+                      stroke-width="3.6"
+                    />
+                  </svg>
+                </div>
+                Paying...
+              </div>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

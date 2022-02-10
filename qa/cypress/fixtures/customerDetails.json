@@ -1,0 +1,30 @@
+{
+  "valid_customer": {
+    "title": "Mr",
+    "firstName": "Testy",
+    "lastName": "Testerson",
+    "email": "test@test.com",
+    "phone": "1234567890",
+    "postcode": "SW1A 2AA",
+    "addressLine1": "Prime Minister & First Lord of the Treasury",
+    "addressLine2": "10 Downing Street",
+    "city": "London",
+    "option": false,
+    "deliverySameAddress": true
+  },
+  "credit_card": {
+    "Visa": {
+      "card_number": "4111111111111111",
+      "expiration_date": "01 / 29",
+      "cvv": "116",
+      "otp": "1234"
+
+    },
+    "Mastercard": {
+      "card_number": "5555555555554444",
+      "expiration_date": "01 / 29",
+      "cvv": "116",
+      "otp": "1234"
+    }      
+  }
+}

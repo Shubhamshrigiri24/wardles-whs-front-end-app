@@ -1,0 +1,1107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImportantInfo /> should match the snapshot for 13-15 flow 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-1 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-2 MuiTypography-h3"
+  >
+    Safeguarding information for under-16s
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-3 MuiTypography-body1"
+  >
+    As you're under 16, there are a few points we need to run through with you.
+    <br />
+    <br />
+    - The legal age of consent in the UK is 16
+    <br />
+    - Even if it's consensual, sexual activity under the age of 16 is an offence
+    <br />
+    - The offence is considered more serious if it involves someone under the age of 13. It's then classed as statuatory rape.
+    <br />
+    <br />
+    Your consultation with us is confidential, but we do have a duty to break this in some cases. These are:
+    <br />
+    - If we suspect child protection issues
+    <br />
+    - We feel someone is at risk of exploitation
+    <br />
+    - We suspect someone is being coerced or forced to engage in sexual activity.
+    <br />
+    <br />
+    It's important to understand the emotional and physical impact of sexual relationships. The risks around pregnancy and sexually transmitted infections are important to consider, as well as looking after your emotional wellbeing.
+    <br />
+    <br />
+    You can talk to a pharmacist confidentially if you have any concerns, or take a look at some of the resources available online, such as the
+     
+    <a
+      href="https://www.nhs.uk/live-well/sexual-health/where-can-i-get-sexual-health-advice-now/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      NHS Website
+    </a>
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3, Answer: No 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-5 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-6 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-7 MuiTypography-body1"
+  >
+    If you haven't used hormonal contraception in the last month, start taking Hana on the first day of your next period. You won't need to use any extra methods of contraception to be protected.
+    <br />
+    <br />
+    If you start taking Hana after the first day of your period, you'll need to use another form of contraception to be protected, such as condoms.
+  </p>
+  <h3
+    class="MuiTypography-root makeStyles-title-6 MuiTypography-h3"
+  >
+    Late periods
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-7 MuiTypography-body1"
+  >
+    If your period is late and you've had unprotected sex, you'll need to take a pregnancy test before you start taking Hana. We recommend taking a pregnancy test approximately 3 weeks after having unprotected sex.
+    <br />
+    <br />
+    If the test is negative, start taking Hana on the first day of your period. If it's positive, do not start taking Hana, please visit your doctor.
+  </p>
+  <h3
+    class="MuiTypography-root makeStyles-title-6 MuiTypography-h3"
+  >
+    Taking Hana after having a baby
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-7 MuiTypography-body1"
+  >
+    If you're taking Hana after having a baby, start within the first 21 days after you gave birth. If this isn't possible for you, you should use another form of contraception for 7 days to be protected, such as condoms.
+    <br />
+    <br />
+    If you've had unprotected sex before starting Hana, you should take a pregnancy test before you start taking it. If the test is positive, please visit your doctor.
+  </p>
+  <h3
+    class="MuiTypography-root makeStyles-title-6 MuiTypography-h3"
+  >
+    Taking Hana after a miscarriage or abortion 
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-7 MuiTypography-body1"
+  >
+    If you're starting to take Hana following a miscarriage or an abortion, start taking it immediately or within 5 days. You won't need to use any extra methods of contraception. If this isn't possible for you, you should use another form of contraception for 7 days to be protected, such as condoms.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3: Current contraception: Mini-pill, Answer: No 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-57 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-58 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-59 MuiTypography-body1"
+  >
+    Start taking Hana the day after your last tablet. You won't need to use any extra methods of contraception to be protected.
+    <br />
+    <br />
+    Because you've told us that you might have missed a dose, you'll need to take a pregnancy test. We recommend taking a pregnancy test approximately 3 weeks after having unprotected sex. If you do have a positive pregnancy test result, please visit your doctor.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3: Current contraception: Mini-pill, Answer: Yes 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-53 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-54 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-55 MuiTypography-body1"
+  >
+    Start taking Hana the day after your last tablet. You won't need to use any extra methods of contraception to be protected.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3: Current contraceptive: Combined pill, Answer: No 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-33 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-34 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-35 MuiTypography-body1"
+  >
+    Start taking Hana the day after your last active tablet. If you start taking Hana the day after an inactive tablet, use another form of contraception for 7 days to be protected, such as condoms.
+    <br />
+    <br />
+    Because you've told us that you might've missed a dose, you'll need to take a pregnancy test. We recommend taking a pregnancy test approximately 3 weeks after having unprotected sex. If you do have a positive pregnancy test result, please visit your doctor.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3: Current contraceptive: Combined pill, Answer: Yes 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-29 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-30 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-31 MuiTypography-body1"
+  >
+    Start taking Hana the day after your last active tablet. You won't need to use any extra methods of contraception to be protected. If you start taking Hana the day after an inactive tablet, you should use another form of contraception for 7 days to be protected, such as condoms.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3: Current contraceptive: Desogestrel, Answer: No 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-25 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-26 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-27 MuiTypography-body1"
+  >
+    Once you've finished your current pill pack, start your new pack the following day without a break, regardless of bleeding.
+    <br />
+    <br />
+    Because you've told us that you might've missed a dose, you'll need to take a pregnancy test. We recommend taking a pregnancy test approximately 3 weeks after having unprotected sex. You should continue to take Hana until then. If you do have a positive pregnancy test result, please visit your doctor as soon as possible.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3: Current contraceptive: Desogestrel, Answer: Yes 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-21 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-22 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-23 MuiTypography-body1"
+  >
+    Once you've finished your current pill pack, start your new pack the following day without a break, regardless of bleeding.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3: Current contraceptive: Skin patch, Answer: No 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-49 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-50 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-51 MuiTypography-body1"
+  >
+    Start taking Hana on the day your contraceptive is removed. You won't need to use any extra methods of contraception to be protected. If you start the day after a break, you should use another form of contraception for 7 days to be protected, such as condoms.
+    <br />
+    <br />
+    Because you told us you might've had an unscheduled break, you'll need to take a pregnancy test. We recommend taking a pregnancy test approximately 3 weeks after having unprotected sex. If you do have a positive pregnancy test result, please visit your doctor.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3: Current contraceptive: Skin patch, Answer: Yes 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-45 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-46 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-47 MuiTypography-body1"
+  >
+    Start taking Hana on the day your contraceptive is removed. You won't need to use any extra methods of contraception to be protected. If you start the day after a break, you should use another form of contraception for 7 days to be protected, such as condoms.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3: Current contraceptive: Vaginal ring, Answer: No 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-41 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-42 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-43 MuiTypography-body1"
+  >
+    Start taking Hana on the day your contraceptive is removed. You won't need to use any extra methods of contraception to be protected. If you start the day after a break, you should use another form of contraception for 7 days to be protected, such as condoms.
+    <br />
+    <br />
+    Because you told us you might've had an unscheduled break, you'll need to take a pregnancy test. We recommend taking a pregnancy test approximately 3 weeks after having unprotected sex. If you do have a positive pregnancy test result, please visit your doctor.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3: Current contraceptive: Vaginal ring, Answer: Yes 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-37 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-38 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-39 MuiTypography-body1"
+  >
+    Start taking Hana on the day your contraceptive is removed. You won't need to use any extra methods of contraception to be protected. If you start the day after a break, you should use another form of contraception for 7 days to be protected, such as condoms.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3a, Answer: Implant 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-13 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-14 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-15 MuiTypography-body1"
+  >
+    Start taking Hana on the day your implant is removed. You won't need to use any extra methods of contraception to be protected.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3a, Answer: Injection 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-9 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-10 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-11 MuiTypography-body1"
+  >
+    Start taking Hana on the day your next injection is due. You won't need to use any extra methods of contraception to be protected.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q3a, Answer: Intrauterine system (coil/IUD) 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-17 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-18 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-19 MuiTypography-body1"
+  >
+    Start taking Hana on the day your intrauterine system (also known as the coil or IUD) is removed. You won't need to use any extra methods of contraception to be protected.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q5 Priority over Q3, Current contraception: Mini-pill 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-81 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-82 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-83 MuiTypography-body1"
+  >
+    Because you've told us that you have used emergency contraception recently, you should wait until the first day of your next period before you start taking Hana.
+    <br />
+    <br />
+    In the meantime, you should use another form of contraception to be protected, such as condoms.
+    <br />
+    <br />
+    If you have any concerns about this, please contact us and we'll arrange for you to speak to a pharmacist.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q5 Priority over Q3, Current contraceptive: Combined pill 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-69 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-70 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-71 MuiTypography-body1"
+  >
+    Because you've told us that you have used emergency contraception recently, you should wait until the first day of your next period before you start taking Hana.
+    <br />
+    <br />
+    In the meantime, you should use another form of contraception to be protected, such as condoms.
+    <br />
+    <br />
+    If you have any concerns about this, please contact us and we'll arrange for you to speak to a pharmacist.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q5 Priority over Q3, Current contraceptive: IUD 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-93 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-94 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-95 MuiTypography-body1"
+  >
+    Because you've told us that you have used emergency contraception recently, you should wait until the first day of your next period before you start taking Hana.
+    <br />
+    <br />
+    In the meantime, you should use another form of contraception to be protected, such as condoms.
+    <br />
+    <br />
+    If you have any concerns about this, please contact us and we'll arrange for you to speak to a pharmacist.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q5 Priority over Q3, Current contraceptive: Implant 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-89 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-90 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-91 MuiTypography-body1"
+  >
+    Because you've told us that you have used emergency contraception recently, you should wait until the first day of your next period before you start taking Hana.
+    <br />
+    <br />
+    In the meantime, you should use another form of contraception to be protected, such as condoms.
+    <br />
+    <br />
+    If you have any concerns about this, please contact us and we'll arrange for you to speak to a pharmacist.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q5 Priority over Q3, Current contraceptive: Injection 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-85 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-86 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-87 MuiTypography-body1"
+  >
+    Because you've told us that you have used emergency contraception recently, you should wait until the first day of your next period before you start taking Hana.
+    <br />
+    <br />
+    In the meantime, you should use another form of contraception to be protected, such as condoms.
+    <br />
+    <br />
+    If you have any concerns about this, please contact us and we'll arrange for you to speak to a pharmacist.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q5 Priority over Q3, Current contraceptive: Skin patch 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-77 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-78 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-79 MuiTypography-body1"
+  >
+    Because you've told us that you have used emergency contraception recently, you should wait until the first day of your next period before you start taking Hana.
+    <br />
+    <br />
+    In the meantime, you should use another form of contraception to be protected, such as condoms.
+    <br />
+    <br />
+    If you have any concerns about this, please contact us and we'll arrange for you to speak to a pharmacist.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q5 Priority over Q3, Current contraceptive: Vaginal ring 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-73 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-74 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-75 MuiTypography-body1"
+  >
+    Because you've told us that you have used emergency contraception recently, you should wait until the first day of your next period before you start taking Hana.
+    <br />
+    <br />
+    In the meantime, you should use another form of contraception to be protected, such as condoms.
+    <br />
+    <br />
+    If you have any concerns about this, please contact us and we'll arrange for you to speak to a pharmacist.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q5 Priority over Q3, no contraception 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-65 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-66 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-67 MuiTypography-body1"
+  >
+    Because you've told us that you have used emergency contraception recently, you should wait until the first day of your next period before you start taking Hana.
+    <br />
+    <br />
+    In the meantime, you should use another form of contraception to be protected, such as condoms.
+    <br />
+    <br />
+    If you have any concerns about this, please contact us and we'll arrange for you to speak to a pharmacist.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q5 Priority over Q3b, desogestrel 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-61 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <h3
+    class="MuiTypography-root makeStyles-title-62 MuiTypography-h3"
+  >
+    How to take Hana
+  </h3>
+  <p
+    class="MuiTypography-root makeStyles-content-63 MuiTypography-body1"
+  >
+    Because you've told us that you have used emergency contraception recently, please follow the below instructions.
+    <br />
+    <br />
+    If the emergency contraception contained levonorgestrel, you can take Hana on the same day, but you'll need to use another form of contraception for 7 days to be protected, such as condoms.
+    <br />
+    <br />
+    If it contained ulipristal acetate, please wait 5 days before you start taking Hana. You should use another form of contraception until you start taking Hana and for the first 7 days after, such as condoms.
+  </p>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q7, Answer: Chloasma 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-97 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-101 makeStyles-specialWarningsMessage-100"
+  >
+    <div
+      class="makeStyles-icon-103"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-104"
+    >
+      Chloasma can recur, avoid sun or UV exposure while taking Hana.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q7, Answer: Hypertension 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-113 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-117 makeStyles-specialWarningsMessage-116"
+  >
+    <div
+      class="makeStyles-icon-119"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-120"
+    >
+      You must see your doctor if your hypertension worsens or does not respond to any medication they prescribe for you.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q7, Answer: Thromboembolic disorders 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-105 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-109 makeStyles-specialWarningsMessage-108"
+  >
+    <div
+      class="makeStyles-icon-111"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-112"
+    >
+      Thromboembolic disorders can recur. You must visit your doctor urgently if you experience any of the following symptoms:
+      <br />
+      - Warm or swollen, painful leg
+      <br />
+      - Shortness of breath
+      <br />
+      - Coughing up blood
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Chloramphenicol 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-121 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-125 makeStyles-specialWarningsMessage-124"
+  >
+    <div
+      class="makeStyles-icon-127"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-128"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Clarithromycin 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-129 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-133 makeStyles-specialWarningsMessage-132"
+  >
+    <div
+      class="makeStyles-icon-135"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-136"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Don't know 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-209 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Erythromycin 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-137 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-141 makeStyles-specialWarningsMessage-140"
+  >
+    <div
+      class="makeStyles-icon-143"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-144"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Fluconazole 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-145 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-149 makeStyles-specialWarningsMessage-148"
+  >
+    <div
+      class="makeStyles-icon-151"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-152"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Griseofulvin 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-153 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-157 makeStyles-specialWarningsMessage-156"
+  >
+    <div
+      class="makeStyles-icon-159"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-160"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Itraconazole 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-161 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-165 makeStyles-specialWarningsMessage-164"
+  >
+    <div
+      class="makeStyles-icon-167"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-168"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Ketoconazole 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-169 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-173 makeStyles-specialWarningsMessage-172"
+  >
+    <div
+      class="makeStyles-icon-175"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-176"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Miconazole 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-177 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-181 makeStyles-specialWarningsMessage-180"
+  >
+    <div
+      class="makeStyles-icon-183"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-184"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: None of these 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-213 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Posaconazole 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-185 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-189 makeStyles-specialWarningsMessage-188"
+  >
+    <div
+      class="makeStyles-icon-191"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-192"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Rifampicin 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-193 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-197 makeStyles-specialWarningsMessage-196"
+  >
+    <div
+      class="makeStyles-icon-199"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-200"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<ImportantInfo /> should match the snapshot for Q11b, Answer: No, antibiotic: Voriconazole 1`] = `
+<div>
+  <h2
+    class="MuiTypography-root makeStyles-header-201 MuiTypography-h2"
+  >
+    Important information about your order
+  </h2>
+  <div
+    class="makeStyles-root-205 makeStyles-specialWarningsMessage-204"
+  >
+    <div
+      class="makeStyles-icon-207"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+        />
+      </svg>
+    </div>
+    <div
+      class="makeStyles-message-208"
+    >
+      You're taking an antibiotic or antifugal medication which may limit how effective Hana is. You should use another form of contraception during your course of treatment and for 28 days after you've finished taking the medication, such as condoms.
+    </div>
+  </div>
+</div>
+`;

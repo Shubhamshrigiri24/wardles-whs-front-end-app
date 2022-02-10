@@ -1,0 +1,438 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppointmentSelector /> should match the snapshot 1`] = `
+<div>
+  <div
+    class="makeStyles-container-1"
+  >
+    <div
+      class="makeStyles-item-3"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2"
+      >
+        Select a date
+      </p>
+      <div
+        class="MuiFormControl-root MuiTextField-root makeStyles-datePicker-4 MuiFormControl-marginNormal"
+        data-testid="keyboardDatePicker"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          data-shrink="true"
+          for="date-picker-dialog"
+          id="date-picker-dialog-label"
+        >
+          dd/mm/yyyy
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+            id="date-picker-dialog"
+            type="text"
+            value="05/12/2020"
+          />
+          <div
+            class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+          >
+            <button
+              aria-label="change date"
+              class="MuiButtonBase-root MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="makeStyles-item-3"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2"
+      >
+        Select a time
+      </p>
+      <div
+        class="makeStyles-root-5"
+      >
+        <div
+          class="MuiFormControl-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root makeStyles-input-6 MuiInputBase-formControl"
+          >
+            <div
+              aria-haspopup="listbox"
+              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input"
+              role="button"
+              tabindex="0"
+            >
+              <span>
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput"
+              data-testid="appointmentSlot/appointment-select"
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-8 MuiOutlinedInput-notchedOutline"
+              style="padding-left: 8px;"
+            >
+              <legend
+                class="PrivateNotchedOutline-legend-9"
+                style="width: 0.01px;"
+              >
+                <span>
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<AppointmentSelector /> should match the snapshot when loading 1`] = `
+<div>
+  <div
+    class="makeStyles-container-12"
+  >
+    <div
+      class="makeStyles-item-14"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2"
+      >
+        Select a date
+      </p>
+      <div
+        class="MuiFormControl-root MuiTextField-root makeStyles-datePicker-15 MuiFormControl-marginNormal"
+        data-testid="keyboardDatePicker"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          data-shrink="true"
+          for="date-picker-dialog"
+          id="date-picker-dialog-label"
+        >
+          dd/mm/yyyy
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+            id="date-picker-dialog"
+            type="text"
+            value="05/12/2020"
+          />
+          <div
+            class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+          >
+            <button
+              aria-label="change date"
+              class="MuiButtonBase-root MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div
+      class="makeStyles-item-14"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2"
+      >
+        Select a time
+      </p>
+      <div
+        class="makeStyles-root-16"
+      >
+        <div
+          class="MuiFormControl-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root makeStyles-input-17 Mui-disabled Mui-disabled MuiInputBase-formControl"
+          >
+            <div
+              aria-disabled="true"
+              aria-haspopup="listbox"
+              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input Mui-disabled Mui-disabled Mui-disabled"
+              role="button"
+            >
+              <div
+                class="makeStyles-loadingSpinnerCenter-18"
+              >
+                <div
+                  class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                  role="progressbar"
+                  style="width: 1em; height: 1em;"
+                >
+                  <svg
+                    class="MuiCircularProgress-svg"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                      cx="44"
+                      cy="44"
+                      fill="none"
+                      r="20.2"
+                      stroke-width="3.6"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput"
+              data-testid="appointmentSlot/appointment-select"
+              tabindex="-1"
+              value="loading"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined Mui-disabled"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-19 MuiOutlinedInput-notchedOutline"
+              style="padding-left: 8px;"
+            >
+              <legend
+                class="PrivateNotchedOutline-legend-20"
+                style="width: 0.01px;"
+              >
+                <span>
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<AppointmentSelector /> should match the snapshot with no availability 1`] = `
+<div>
+  <div
+    class="makeStyles-container-23"
+  >
+    <div
+      class="makeStyles-item-25"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2"
+      >
+        Select a date
+      </p>
+      <div
+        class="MuiFormControl-root MuiTextField-root makeStyles-datePicker-26 MuiFormControl-marginNormal"
+        data-testid="keyboardDatePicker"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-error Mui-error MuiFormLabel-filled"
+          data-shrink="true"
+          for="date-picker-dialog"
+          id="date-picker-dialog-label"
+        >
+          dd/mm/yyyy
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline Mui-error Mui-error MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+        >
+          <input
+            aria-describedby="date-picker-dialog-helper-text"
+            aria-invalid="true"
+            class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
+            id="date-picker-dialog"
+            type="text"
+            value="05/12/2020"
+          />
+          <div
+            class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
+          >
+            <button
+              aria-label="change date"
+              class="MuiButtonBase-root MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+        <p
+          class="MuiFormHelperText-root Mui-error MuiFormHelperText-filled"
+          id="date-picker-dialog-helper-text"
+        >
+          There are no available appointments on your selected date
+        </p>
+      </div>
+    </div>
+    <div
+      class="makeStyles-item-25"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body2"
+      >
+        Select a time
+      </p>
+      <div
+        class="makeStyles-root-16"
+      >
+        <div
+          class="MuiFormControl-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root makeStyles-input-17 Mui-disabled Mui-disabled MuiInputBase-formControl"
+          >
+            <div
+              aria-disabled="true"
+              aria-haspopup="listbox"
+              class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input Mui-disabled Mui-disabled Mui-disabled"
+              role="button"
+            >
+              <span>
+                ​
+              </span>
+            </div>
+            <input
+              aria-hidden="true"
+              class="MuiSelect-nativeInput"
+              data-testid="appointmentSlot/appointment-select"
+              tabindex="-1"
+              value=""
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOutlined Mui-disabled"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7 10l5 5 5-5z"
+              />
+            </svg>
+            <fieldset
+              aria-hidden="true"
+              class="PrivateNotchedOutline-root-27 MuiOutlinedInput-notchedOutline"
+              style="padding-left: 8px;"
+            >
+              <legend
+                class="PrivateNotchedOutline-legend-28"
+                style="width: 0.01px;"
+              >
+                <span>
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

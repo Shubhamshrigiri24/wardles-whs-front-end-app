@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PaymentMethod /> should match snapshot 1`] = `
+<div>
+  <p
+    class="MuiTypography-root makeStyles-subTitle-2 MuiTypography-body1"
+  >
+    Payment method
+  </p>
+  <div
+    class="makeStyles-spacing1-14"
+    data-testid="spacing/root"
+  />
+  
+  <p
+    class="MuiTypography-root makeStyles-paragraph-3 MuiTypography-body1"
+    data-testid="paymentMethod/lastFour"
+  >
+    XXXX XXXX XXXX 
+    1111
+  </p>
+  <div
+    class="makeStyles-spacing1-14"
+    data-testid="spacing/root"
+  />
+  <p
+    class="MuiTypography-root makeStyles-link-7 MuiTypography-body1"
+    data-testid="paymentMethod/change"
+  >
+    Change your payment method
+  </p>
+  <div
+    class="makeStyles-spacing4-20"
+    data-testid="spacing/root"
+  />
+</div>
+`;

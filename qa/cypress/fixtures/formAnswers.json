@@ -1,0 +1,141 @@
+{
+  "edFormExitMessage": "Thank you for your interest in Well Pharmacy's ED treatment service.",
+  "edFormNegative": {
+    "Q1": {
+      "T": "radio",
+      "Q": "Are you ordering for yourself?",
+      "A": "Yes"
+    },
+    "Q2": {
+      "T": "radio",
+      "Q": "Are you 18 or over, and male?",
+      "A": "No"
+    }
+  },
+  "edFormShort": {
+    "Q1": {
+      "T": "radio",
+      "Q": "Are you ordering for yourself?",
+      "A": "Yes"
+    },
+    "Q2": {
+      "T": "radio",
+      "Q": "Are you 18 or over, and male?",
+      "A": "Yes"
+    }
+  },
+  "edFormLong": {
+    "Q1": {
+      "T": "radio",
+      "Q": "Are you ordering for yourself?",
+      "A": "Yes"
+    },
+    "Q2": {
+      "T": "radio",
+      "Q": "Are you 18 or over, and male?",
+      "A": "Yes"
+    },
+    "Q3": {
+      "T": "radio",
+      "Q": "Do you have problems getting or keeping an erection (erectile dysfunction)?",
+      "A": "Yes"
+    },
+    "Q4": {
+      "T": "radio",
+      "Q": "Do you use poppers?",
+      "A": "No"
+    },
+    "Q5": {
+      "T": "radio",
+      "Q": "Do you ever experience chest pain or shortness of breath when doing light exercise?",
+      "A": "No"
+    },
+    "Q6": {
+      "T": "radio",
+      "Q": "Have you ever had any allergies or sensitivities to sildenafil, tadalafil or vardenafil?",
+      "A": "No"
+    },
+    "Q7": {
+      "T": "radio",
+      "Q": "Please select yes if you've ever had an erection that lasted more than four hours",
+      "A": "No"
+    },
+    "Q8": {
+      "T": "radio",
+      "Q": "Have you ever had a broken or crushed pelvis, or a spinal cord injury?",
+      "A": "No"
+    },
+    "Q9": {
+      "T": "radio",
+      "Q": "Have you had any of these problems in the last six months?",
+      "A": "I haven't had any of these"
+    },
+    "Q10": {
+      "T": "radio",
+      "Q": "Please tell me if you take any of these types of medication.",
+      "A": "None of these"
+    }
+  },
+  "hanaForm": {
+    "Q1": {
+      "T": "input",
+      "Q": "How old are you?",
+      "A": "21"
+    },
+    "Q2": {
+      "T": "radio",
+      "Q": "Have you used Hana before, or previously been prescribed desogestrel?",
+      "A": "No"
+    },
+    "Q3": {
+      "T": "radio",
+      "Q": "Are you currently using hormonal contraception?",
+      "A": "No"
+    },
+    "Q4": {
+      "T": "radio",
+      "Q": "Is there any chance you may be pregnant?",
+      "A": "No"
+    },
+    "Q5": {
+      "T": "radio",
+      "Q": "Have you used emergency contraception since your last period?",
+      "A": "No"
+    },
+    "Q6": {
+      "T": "radio",
+      "Q": "Do you ever experience bleeding between your periods, or after sex?",
+      "A": "No"
+    },
+    "Q7": {
+      "T": "radio",
+      "Q": "Do you have, or have you ever had any of the following conditions?",
+      "A": "None of these"
+    },
+    "Q8": {
+      "T": "radio",
+      "Q": "Have you experienced any changes in your health in the past three months?",
+      "A": "No"
+    },
+    "Q9": {
+      "T": "radio",
+      "Q": "Are you allergic to any of the following?",
+      "A": "I'm not allergic to any of these"
+    },
+    "Q10": {
+      "T": "radio",
+      "Q": "Do you have any other allergies?",
+      "A": "No"
+    },
+    "Q11": {
+      "T": "radio",
+      "Q": "Some medications can interact with Hana.",
+      "A": "None of these"
+    },
+    "Q12": {
+      "T": "radio",
+      "Q": "Have you taken any other prescription or over the counter medications or any herbal remedies in the last few weeks?",
+      "A": "No"
+    }
+  }
+}

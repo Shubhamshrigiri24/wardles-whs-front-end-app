@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Basket /> When the component is rendered with a product should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root MuiBox-root-633"
+  >
+    <div
+      class="MuiPaper-root MuiCard-root makeStyles-card-604 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <div
+        class="MuiCardContent-root makeStyles-cardContent-605"
+      >
+        <div
+          class="MuiCollapse-container"
+          style="min-height: 32px;"
+        >
+          <div
+            class="MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner"
+            >
+              <div
+                class="MuiBox-root MuiBox-root-634 makeStyles-titleWrapper-606 makeStyles-hasAction-607"
+              >
+                <div
+                  class="MuiBox-root MuiBox-root-635"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root makeStyles-titleIcon-608"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"
+                    />
+                  </svg>
+                  <h3
+                    class="MuiTypography-root makeStyles-darkColor-617 MuiTypography-h3"
+                  >
+                    Basket summary
+                  </h3>
+                  <div
+                    class="makeStyles-spacing4-644 makeStyles-spacing4Responsive-645"
+                    data-testid="spacing/root"
+                  />
+                </div>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root makeStyles-expand-609"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiBox-root MuiBox-root-662 makeStyles-productSummary-632"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap"
+                >
+                  <img
+                    alt="product"
+                    class="makeStyles-image-612"
+                    src="/static/media/sildenafil.3523fa82.png"
+                  />
+                  <div
+                    class="MuiGrid-root MuiGrid-item"
+                    style="flex: 1;"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-wrap-xs-nowrap MuiGrid-justify-xs-space-between"
+                    >
+                      <p
+                        class="MuiTypography-root makeStyles-defaultText-613 MuiTypography-body1"
+                      >
+                        Sildenafil
+                         
+                        50 mg
+                        ,
+                         
+                        16 tablets
+                      </p>
+                      <p
+                        class="MuiTypography-root makeStyles-defaultText-613 MuiTypography-body1"
+                        style="padding-left: 10px;"
+                      >
+                        £123.00
+                      </p>
+                    </div>
+                    <div
+                      class="makeStyles-spacing1-638"
+                      data-testid="spacing/root"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiBox-root MuiBox-root-663"
+              >
+                <div
+                  class="MuiBox-root MuiBox-root-664"
+                >
+                  <div
+                    class="MuiBox-root MuiBox-root-665"
+                  >
+                    <h6
+                      class="MuiTypography-root makeStyles-defaultText-613 MuiTypography-subtitle1"
+                    >
+                      Subscription discount
+                    </h6>
+                    <div
+                      class="makeStyles-spacing1-638"
+                      data-testid="spacing/root"
+                    />
+                    <div
+                      class="makeStyles-discountRow-621"
+                    >
+                      <div
+                        class="MuiBox-root MuiBox-root-666"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="MuiSvgIcon-root makeStyles-promoIcon-611 MuiSvgIcon-fontSizeSmall"
+                          focusable="false"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"
+                          />
+                        </svg>
+                        <span
+                          class="MuiTypography-root makeStyles-detailsText-614 MuiTypography-subtitle2"
+                        >
+                          Monthly saving
+                        </span>
+                      </div>
+                      <p
+                        class="MuiTypography-root makeStyles-discountValue-622 MuiTypography-body1"
+                      >
+                        <span
+                          class="makeStyles-detailsText-614"
+                        >
+                          -
+                          £5.20
+                        </span>
+                        <span
+                          class="makeStyles-iconPlaceholder-631"
+                        />
+                      </p>
+                    </div>
+                    <div
+                      class="makeStyles-spacing4-644"
+                      data-testid="spacing/root"
+                    />
+                  </div>
+                  <div
+                    class="MuiFormControl-root MuiTextField-root makeStyles-root-667 MuiFormControl-fullWidth"
+                  >
+                    <label
+                      class="MuiFormLabel-root MuiInputLabel-root makeStyles-label-673 MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined makeStyles-labelOutlined-674"
+                      data-shrink="false"
+                    >
+                      Enter new code
+                    </label>
+                    <div
+                      class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+                    >
+                      <input
+                        aria-invalid="false"
+                        class="MuiInputBase-input MuiOutlinedInput-input makeStyles-inputText-670"
+                        data-testid="basket/discount-code-input"
+                        type="text"
+                        value=""
+                      />
+                      <fieldset
+                        aria-hidden="true"
+                        class="PrivateNotchedOutline-root-676 MuiOutlinedInput-notchedOutline"
+                      >
+                        <legend
+                          class="PrivateNotchedOutline-legendLabelled-678"
+                        >
+                          <span>
+                            Enter new code
+                          </span>
+                        </legend>
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div
+                    class="MuiBox-root MuiBox-root-680"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-fullWidth"
+                      tabindex="0"
+                      type="button"
+                    >
+                      <span
+                        class="MuiButton-label"
+                      >
+                        <div
+                          class="makeStyles-children-683"
+                        >
+                          <p
+                            class="MuiTypography-root MuiTypography-body1"
+                            style="color: rgb(0, 97, 242);"
+                          >
+                            Apply discount
+                          </p>
+                        </div>
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiBox-root MuiBox-root-686"
+              >
+                <hr
+                  class="MuiDivider-root makeStyles-dividerDark-616"
+                />
+              </div>
+              <div
+                class="MuiBox-root MuiBox-root-687 makeStyles-totalWrapper-619"
+              >
+                <div
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  >
+                    <h4
+                      class="MuiTypography-root makeStyles-darkColor-617 MuiTypography-h4"
+                      style="font-weight: 700;"
+                    >
+                      Total to pay
+                    </h4>
+                  </div>
+                  <div
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  >
+                    <h2
+                      class="MuiTypography-root makeStyles-darkColor-617 makeStyles-totalPrice-620 MuiTypography-h2 MuiTypography-alignRight"
+                    >
+                      £49.99
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

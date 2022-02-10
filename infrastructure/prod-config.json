@@ -1,0 +1,10 @@
+[
+  {
+    "ParameterKey": "DomainName",
+    "ParameterValue": "online-clinic.well.co.uk"
+  },
+  {
+    "ParameterKey": "AcmCertificateArn",
+    "ParameterValue": "arn:aws:acm:us-east-1:465002129611:certificate/3d3748c0-1803-46e2-842c-9c0fe8f69fa4"
+  }
+]

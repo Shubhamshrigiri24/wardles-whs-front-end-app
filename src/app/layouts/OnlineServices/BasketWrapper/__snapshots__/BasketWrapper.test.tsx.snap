@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BasketWrapper /> should match the snapshot 1`] = `
+<div>
+  <div
+    class="makeStyles-header-2"
+  >
+    <div
+      class="makeStyles-logoContainer-6"
+    >
+      <img
+        alt="WellLogo"
+        class="makeStyles-wellLogo-7"
+        src="Well.svg"
+      />
+      <div
+        class="makeStyles-textContainer-8"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1"
+        >
+          Pharmacy Services
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr
+    class="MuiDivider-root makeStyles-divider-4"
+  />
+  <div>
+    <div
+      class="MuiGrid-root makeStyles-container-14 MuiGrid-container MuiGrid-spacing-xs-3"
+    >
+      <div
+        class="MuiGrid-root makeStyles-mainPanelBreaksDownwards-16 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8"
+      >
+        <div
+          class="MuiContainer-root makeStyles-container-1 MuiContainer-disableGutters MuiContainer-maxWidthMd"
+        >
+          <h1>
+            Hello
+          </h1>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root makeStyles-secondaryPanelBreaksUpwards-15 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+      >
+        <div
+          class="makeStyles-container-17"
+        >
+          <div
+            class="MuiGrid-root makeStyles-paddingBottom-19 MuiGrid-container"
+          >
+            <p
+              class="MuiTypography-root MuiTypography-body1"
+            >
+              <b>
+                Your basket
+              </b>
+            </p>
+            <div
+              class="MuiGrid-root makeStyles-padding-20 MuiGrid-item MuiGrid-grid-xs-12"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle1"
+              >
+                name-default 
+              </h6>
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle1"
+              >
+                label-default-pack-2
+              </h6>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle1"
+              >
+                Total
+              </h6>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignRight"
+              >
+                £
+                1.00
+              </h6>
+            </div>
+          </div>
+          <div
+            class="makeStyles-root-22 makeStyles-infoType-23"
+          >
+            <div
+              class="makeStyles-icon-24"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                />
+              </svg>
+            </div>
+            <div
+              class="makeStyles-message-25"
+            >
+              Includes ongoing support from our pharmacists.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

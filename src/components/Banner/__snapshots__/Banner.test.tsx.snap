@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> should match the snapshot 1`] = `
+<body>
+  <div />
+  <div
+    id="banner-portal"
+  >
+    <div
+      id="banner-portal-inner"
+    >
+      <div
+        class="makeStyles-banner-1"
+      >
+        <div
+          class="makeStyles-iconContainer-2"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root makeStyles-textColor-4"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+            />
+          </svg>
+        </div>
+        <div
+          class="makeStyles-textContainer-3"
+        >
+          <p
+            class="MuiTypography-root makeStyles-textColor-4 MuiTypography-body1"
+            data-testid="banner/text-content"
+          >
+            Here is a piece of text to demonstrate what a banner would look like on the page
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    id="banner-portal-mobile"
+  >
+    <div
+      id="banner-portal-mobile-inner"
+    >
+      <div
+        class="makeStyles-banner-1"
+      >
+        <div
+          class="makeStyles-iconContainer-2"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root makeStyles-textColor-4"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+            />
+          </svg>
+        </div>
+        <div
+          class="makeStyles-textContainer-3"
+        >
+          <p
+            class="MuiTypography-root makeStyles-textColor-4 MuiTypography-body1"
+            data-testid="banner/text-content"
+          >
+            Here is a piece of text to demonstrate what a banner would look like on the page
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;

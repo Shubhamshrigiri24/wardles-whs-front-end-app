@@ -1,0 +1,10 @@
+[
+  {
+    "ParameterKey": "DomainName",
+    "ParameterValue": "online-clinic-demo.dev.wellbd.co.uk"
+  },
+  {
+    "ParameterKey": "AcmCertificateArn",
+    "ParameterValue": "arn:aws:acm:us-east-1:978472575853:certificate/f94e52ae-66e2-4db1-92a5-954e850db7f8"
+  }
+]

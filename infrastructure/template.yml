@@ -1,0 +1,95 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Infrastructure to serve the well services website
+Parameters:
+  DomainName:
+    Type: String
+    Description: The website domain name.
+  AcmCertificateArn:
+    Type: String
+    Description: ARN of the ACM certificate for the CF distribution.
+
+Resources:
+  WebsiteBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${AWS::StackName}-static-content"
+
+  WebsiteCloudFrontOriginAccessIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: !Sub "CloudFront OAI for ${DomainName}"
+
+  WebsiteBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref WebsiteBucket
+      PolicyDocument:
+        Statement:
+          - Action:
+              - s3:GetObject
+            Effect: Allow
+            Resource: !Join ["", ["arn:aws:s3:::", !Ref WebsiteBucket, "/*"]]
+            Principal:
+              CanonicalUser: !GetAtt WebsiteCloudFrontOriginAccessIdentity.S3CanonicalUserId
+
+  WebsiteCloudfront:
+    Type: AWS::CloudFront::Distribution
+    DependsOn:
+      - WebsiteBucket
+    Properties:
+      DistributionConfig:
+        Comment: !Ref "DomainName"
+        Origins:
+          - DomainName: !GetAtt WebsiteBucket.RegionalDomainName
+            Id: website-s3-bucket
+            S3OriginConfig:
+              OriginAccessIdentity:
+                !Join [
+                  "",
+                  [
+                    "origin-access-identity/cloudfront/",
+                    !Ref WebsiteCloudFrontOriginAccessIdentity,
+                  ],
+                ]
+        Aliases:
+          - !Ref DomainName
+        ViewerCertificate:
+          AcmCertificateArn: !Ref "AcmCertificateArn"
+          MinimumProtocolVersion: TLSv1.2_2018
+          SslSupportMethod: sni-only
+        DefaultCacheBehavior:
+          ViewerProtocolPolicy: redirect-to-https
+          TargetOriginId: website-s3-bucket
+          Compress: true
+          ForwardedValues:
+            QueryString: true
+        CacheBehaviors:
+          - TargetOriginId: website-s3-bucket
+            ViewerProtocolPolicy: redirect-to-https
+            Compress: true
+            ForwardedValues:
+              QueryString: true
+            PathPattern: /index.html
+            MaxTTL: 0
+            MinTTL: 0
+            DefaultTTL: 0
+          - TargetOriginId: website-s3-bucket
+            ViewerProtocolPolicy: redirect-to-https
+            Compress: true
+            ForwardedValues:
+              QueryString: true
+            PathPattern: /service-worker.js
+            MaxTTL: 0
+            MinTTL: 0
+            DefaultTTL: 0
+        Enabled: true
+        HttpVersion: http2
+        DefaultRootObject: index.html
+        IPV6Enabled: true
+        CustomErrorResponses:
+          - ErrorCode: 403
+            ResponseCode: 200
+            ResponsePagePath: "/index.html"
+        PriceClass: PriceClass_100

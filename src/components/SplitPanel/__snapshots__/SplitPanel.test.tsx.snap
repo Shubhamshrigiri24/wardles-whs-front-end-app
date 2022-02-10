@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SplitPanel /> should match the snapshot 1`] = `
+<div>
+  <div
+    class="MuiGrid-root makeStyles-container-1 MuiGrid-container MuiGrid-spacing-xs-3"
+  >
+    <div
+      class="MuiGrid-root makeStyles-mainPanelBreaksDownwards-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8"
+    >
+      <h1>
+        Main
+      </h1>
+    </div>
+    <div
+      class="MuiGrid-root makeStyles-secondaryPanelBreaksUpwards-2 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4"
+    >
+      <h1>
+        Secondary
+      </h1>
+    </div>
+  </div>
+</div>
+`;

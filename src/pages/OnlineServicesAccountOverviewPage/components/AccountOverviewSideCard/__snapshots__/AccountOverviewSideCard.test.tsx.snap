@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccountOverviewBanner /> should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiCard-root makeStyles-card-1 MuiPaper-outlined MuiPaper-rounded"
+  >
+    <div
+      class="MuiCardContent-root makeStyles-cardContentWrapper-2"
+    >
+      <div
+        class="makeStyles-cardCollapseTrigger-3"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root makeStyles-expand-4"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiCollapse-container"
+        style="min-height: 24px;"
+      >
+        <div
+          class="MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner"
+          >
+            <ul
+              class="MuiList-root makeStyles-cardList-6"
+            >
+              <li
+                class="MuiListSubheader-root makeStyles-cardListSubHeader-8 makeStyles-cardListSubHeaderHasClick-11"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root makeStyles-cardListSubHeaderIcon-10"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                  />
+                </svg>
+                <p
+                  class="MuiTypography-root makeStyles-cardListSubHeaderText-9 MuiTypography-body1 MuiTypography-colorInherit"
+                >
+                  Personal details
+                </p>
+              </li>
+              <li
+                class="MuiListItem-root makeStyles-cardListItem-7 MuiListItem-alignItemsFlexStart"
+              >
+                <div
+                  class="MuiListItemText-root MuiListItemText-multiline"
+                  style="white-space: pre-line; margin: 0px;"
+                >
+                  <span
+                    class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                  >
+                    <span
+                      class="MuiTypography-root makeStyles-cardListItemHeader-12 MuiTypography-body2"
+                    >
+                      Firstname Lastname
+                    </span>
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                  >
+                    <span
+                      class="MuiTypography-root makeStyles-cardListItemText-14 MuiTypography-body1"
+                    >
+                      02/04/2000
+                    </span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <ul
+              class="MuiList-root makeStyles-cardList-6"
+            >
+              <li
+                class="MuiListSubheader-root makeStyles-cardListSubHeader-8"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root makeStyles-cardListSubHeaderIcon-10"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  />
+                </svg>
+                <p
+                  class="MuiTypography-root makeStyles-cardListSubHeaderText-9 MuiTypography-body1 MuiTypography-colorInherit"
+                >
+                  Contact details
+                </p>
+              </li>
+              <li
+                class="MuiListItem-root makeStyles-cardListItem-7 MuiListItem-alignItemsFlexStart"
+              >
+                <div
+                  class="MuiListItemText-root MuiListItemText-multiline"
+                  style="white-space: pre-line; margin: 0px;"
+                >
+                  <span
+                    class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                  >
+                    <span
+                      class="MuiTypography-root makeStyles-cardListItemHeader-12 MuiTypography-body2"
+                    >
+                      Email
+                    </span>
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                  >
+                    <span
+                      class="MuiTypography-root makeStyles-cardListItemText-14 MuiTypography-body1"
+                    >
+                      dummy@test.com
+                    </span>
+                  </p>
+                </div>
+              </li>
+              <li
+                class="MuiListItem-root makeStyles-cardListItem-7 MuiListItem-alignItemsFlexStart"
+              >
+                <div
+                  class="MuiListItemText-root MuiListItemText-multiline"
+                  style="white-space: pre-line; margin: 0px;"
+                >
+                  <span
+                    class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                  >
+                    <span
+                      class="MuiTypography-root makeStyles-cardListItemHeader-12 MuiTypography-body2"
+                    >
+                      Phone number
+                    </span>
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                  >
+                    <span
+                      class="MuiTypography-root makeStyles-cardListItemText-14 MuiTypography-body1"
+                    >
+                      7777777
+                    </span>
+                  </p>
+                </div>
+              </li>
+              <li
+                class="MuiListItem-root makeStyles-cardListItem-7 MuiListItem-alignItemsFlexStart"
+              >
+                <div
+                  class="MuiListItemText-root MuiListItemText-multiline"
+                  style="white-space: pre-line; margin: 0px;"
+                >
+                  <span
+                    class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                  >
+                    <span
+                      class="MuiTypography-root makeStyles-cardListItemHeader-12 MuiTypography-body2"
+                    >
+                      Registered address
+                    </span>
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                  >
+                    <span
+                      class="MuiTypography-root makeStyles-cardListItemText-14 MuiTypography-body1"
+                    >
+                      Nowhere street  M14LZ Los Angeles
+                    </span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <ul
+              class="MuiList-root makeStyles-cardList-6"
+            >
+              <li
+                class="MuiListSubheader-root makeStyles-cardListSubHeader-8"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root makeStyles-cardListSubHeaderIcon-10"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                  />
+                </svg>
+                <p
+                  class="MuiTypography-root makeStyles-cardListSubHeaderText-9 MuiTypography-body1 MuiTypography-colorInherit"
+                >
+                  GP details
+                </p>
+              </li>
+              <li
+                class="MuiListItem-root makeStyles-cardListItem-7 MuiListItem-alignItemsFlexStart"
+              >
+                <div
+                  class="MuiListItemText-root MuiListItemText-multiline"
+                  style="white-space: pre-line; margin: 0px;"
+                >
+                  <span
+                    class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                  >
+                    <span
+                      class="MuiTypography-root makeStyles-cardListItemHeader-12 MuiTypography-body2"
+                    />
+                  </span>
+                  <p
+                    class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-displayBlock"
+                  >
+                    <span
+                      class="MuiTypography-root makeStyles-cardListItemText-14 MuiTypography-body1"
+                    >
+                      Well GP Surgery
+                    </span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

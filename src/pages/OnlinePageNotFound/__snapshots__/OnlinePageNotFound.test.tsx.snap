@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OnlinePageNotFound /> should match the snapshot 1`] = `
+<div>
+  <div>
+    <div
+      class="MuiContainer-root makeStyles-header-2 MuiContainer-maxWidthLg"
+    >
+      <a
+        class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+        href="https://www.well.co.uk/"
+      >
+        <img
+          alt="WellLogo"
+          class="makeStyles-wellLogo-6"
+          src="WellLogo.svg"
+        />
+      </a>
+    </div>
+    <hr
+      class="MuiDivider-root makeStyles-divider-5"
+    />
+    <div
+      class="MuiContainer-root makeStyles-container-1 MuiContainer-disableGutters MuiContainer-maxWidthSm"
+    >
+      <h1
+        class="MuiTypography-root makeStyles-title-3 MuiTypography-h2"
+      >
+        Sorry, we can’t find the page you’re looking for
+      </h1>
+      <p
+        class="MuiTypography-root makeStyles-paragraph-4 MuiTypography-body1"
+      >
+        This can happen if the link you opened isn't working, has moved or has been viewed before.
+      </p>
+      <p
+        class="MuiTypography-root makeStyles-paragraph-4 MuiTypography-body1"
+      >
+        If you need any help or more information please email
+         
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-8 MuiTypography-colorPrimary"
+          href="mailto:support@well.co.uk"
+        >
+          support@well.co.uk
+        </a>
+        .
+      </p>
+      <a
+        aria-disabled="false"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-7"
+        href="https://www.well.co.uk/"
+        tabindex="0"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          Go to well.co.uk home
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </a>
+    </div>
+    <div
+      class="makeStyles-container-9"
+    >
+      <hr
+        class="MuiDivider-root"
+      />
+      <div
+        class="makeStyles-upperSection-11"
+      >
+        <div
+          class="makeStyles-upperCaptionContainer-13"
+        >
+          <a
+            href="https://www.well.co.uk/"
+          >
+            <img
+              alt="wellLogo"
+              class="makeStyles-wellLogo-22"
+              src="WellLogo.svg"
+            />
+          </a>
+          <p
+            class="MuiTypography-root makeStyles-caption-10 MuiTypography-body1"
+          >
+            This content was written and edited by Well. Our health information is evidence based, up-to-date and reviewed by health professionals. It isn’t intended to replace the medical information given to you by your doctor. We aim to provide you with the knowledge and support you need to make confident decisions about your health and wellbeing.
+          </p>
+        </div>
+        <div
+          class="makeStyles-linksList-15"
+        >
+          <h6
+            class="MuiTypography-root makeStyles-links-16 MuiTypography-h6"
+          >
+            <a
+              class="makeStyles-linkStyle-23"
+              href="https://www.well.co.uk/about-us/policies/terms-and-conditions-vaccination-services"
+            >
+              Terms and conditions
+            </a>
+          </h6>
+          <h6
+            class="MuiTypography-root makeStyles-links-16 MuiTypography-h6"
+          >
+            <a
+              class="makeStyles-linkStyle-23"
+              href="https://www.well.co.uk/about-us/policies/privacy"
+            >
+              Privacy policy
+            </a>
+          </h6>
+          <h6
+            class="MuiTypography-root makeStyles-links-16 MuiTypography-h6"
+          >
+            <a
+              class="makeStyles-linkStyle-23"
+              href="https://www.well.co.uk/about-us/policies/cookies"
+            >
+              Cookies
+            </a>
+          </h6>
+        </div>
+        <div
+          class="makeStyles-supportEmail-17"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1"
+          >
+            For support email
+          </p>
+          <h6
+            class="MuiTypography-root MuiTypography-h6"
+          >
+            <a
+              class="makeStyles-linkStyle-23"
+              href="mailto:hello@well.co.uk"
+            >
+              hello@well.co.uk
+            </a>
+          </h6>
+        </div>
+      </div>
+      <hr
+        class="MuiDivider-root"
+      />
+      <div
+        class="makeStyles-lowerSection-12"
+      >
+        <div
+          class="makeStyles-lowerCaptionContainer-14"
+        >
+          <p
+            class="MuiTypography-root makeStyles-caption-10 MuiTypography-body1"
+          >
+            Bestway National Chemists Limited is registered in England and Wales, trading as Well and Well Pharmacy. Our online pharmacy (well.co.uk) registration number is 9010492 and the registered pharmacy address is: Well, Healthcare Service Centre, Meir Park, Stoke-on-Trent, Staffordshire, ST3 7UN. If you would like to know who the Responsible Pharmacist is at any given time, please email nhspharmacy.stoke.well.co.ukfap20@nhs.net or call 01782 597313. You can also contact the pharmacy on hello@well.co.uk. Our Superintendent Pharmacist is Iftkhar Ahmad Khan, FRPharmS. GPhC Registration Number: 2041286. You can find out more about checking if an online pharmacy is operating legally from the General Pharmaceutical Council (GPhC).
+          </p>
+        </div>
+        <div
+          class="makeStyles-logoContainer-21"
+        >
+          <a
+            href="https://www.nhs.uk/"
+          >
+            <img
+              alt="nhs"
+              class="makeStyles-logo1-18"
+              src="NHS.png"
+            />
+          </a>
+          <a
+            href="https://www.legitscript.com/websites/well.co.uk"
+          >
+            <img
+              alt="well"
+              class="makeStyles-logo2-19"
+              src="Well.svg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

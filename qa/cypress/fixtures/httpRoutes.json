@@ -1,0 +1,19 @@
+{
+    "ed": {
+      "OverviewPath": "",
+      "StartPath": "/ed/start",
+      "ConsultationPath": "/ed/consultation",
+      "SelectionPath": "/ed/product-selection",
+      "SildenafilPath": "/ed/product/sildenafil",
+      "ViagraPath": "/ed/product/viagra",
+      "CheckoutPath": "/ed/checkout/your-details",
+      "DeliveryPath": "/ed/checkout/delivery-details",
+      "PaymentPath": "/ed/checkout/payment",
+      "ConfirmationPath": "/ed/checkout/confirmation"
+    },
+    "hana": {
+      "ConsultationPath": "/hana/consultation",
+      "SelectionPath": "/hana/product-selection",
+      "ConfirmationPath": "/hana/checkout/confirmation"
+    }
+}

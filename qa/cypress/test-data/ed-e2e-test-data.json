@@ -1,0 +1,20 @@
+{
+    "e2e_Tadalafil": {
+        "product_name": "Tadalafil", 
+        "product_strength": "10 mg", 
+        "pack_size": "16 tablets", 
+        "product_price": "Price: £75.99"
+    },
+    "e2e_Viagra": {
+        "product_name": "Viagra Connect", 
+        "product_strength": "50 mg", 
+        "pack_size": "4 tablets", 
+        "product_price": "Price: £19.99"
+    },
+    "e2e_Hana": {
+        "product_name": "Hana", 
+        "product_strength": "1 month", 
+        "pack_size": "", 
+        "product_price": ""
+    }
+}

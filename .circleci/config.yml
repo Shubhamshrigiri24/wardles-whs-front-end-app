@@ -1,0 +1,200 @@
+version: 2.1
+description: Who knows
+
+aliases:
+  - &root-dir
+    type: string
+    default: '~/project'
+  - &app
+    type: string
+  - &stage
+    type: string
+    default: dev
+
+orbs:
+  # Created as an orb so that when the feature set is good enough,
+  # we should be able to split this out and reuse in other projects.
+  # A blocker for this is the fact that you can't use globs for saving
+  # caches, meaning this isn't universal. yet.
+  node-services-online:
+    executors:
+      node:
+        parameters:
+          tag:
+            type: string
+            default: 'lts'
+            description: Pick a specific circleci/node version
+          timezone:
+            type: string
+            default: 'Europe/London'
+        docker:
+          - image: 'cimg/node:<<parameters.tag>>'
+            environment:
+              TZ: <<parameters.timezone>>
+        environment:
+          TZ: <<parameters.timezone>>
+      serverless:
+        parameters:
+          timezone:
+            type: string
+            default: 'Europe/London'
+        docker:
+          - image: welldigital/serverless-build:node
+            environment:
+              TZ: <<parameters.timezone>>
+        environment:
+          TZ: <<parameters.timezone>>
+    commands:
+      install-dependencies:
+        parameters:
+          root-dir: *root-dir
+          cache-version:
+            type: string
+            default: v2
+        steps:
+          - restore_cache:
+              name: Restore yarn cache
+              key: node-deps-<<parameters.cache-version>>-{{ .Branch }}-{{ checksum "<<parameters.root-dir>>/yarn.lock" }}
+          - run:
+              name: Setup scoped registry
+              command: echo "//npm.pkg.github.com/:_authToken=$GITHUB_PACKAGES_TOKEN" >> <<parameters.root-dir>>/.npmrc
+          - run:
+              name: Install dependencies
+              command: yarn install
+          - save_cache:
+              name: Save yarn cache
+              key: node-deps-<<parameters.cache-version>>-{{ .Branch }}-{{ checksum "<<parameters.root-dir>>/yarn.lock" }}
+              paths:
+                - <<parameters.root-dir>>/node_modules
+      build-app:
+        parameters:
+          root-dir: *root-dir
+          app: *app
+          stage: *stage
+        steps:
+          - run:
+              name: Build <<parameters.app>>
+              command: STAGE=<< parameters.stage >> yarn build:stage
+          - persist_to_workspace:
+              root: <<parameters.root-dir>>
+              paths:
+                - build
+      deploy-app:
+        parameters:
+          root-dir: *root-dir
+          app: *app
+          stage: *stage
+        steps:
+          - attach_workspace:
+              at: <<parameters.root-dir>>
+          - run:
+              name: Update <<parameters.app>>/<<parameters.stage>> infrastructure
+              command: |
+                cd <<parameters.root-dir>>/infrastructure &&
+                make update-stack-<< parameters.stage >>
+          - run:
+              name: Deploy <<parameters.app>>/<<parameters.stage>> static files
+              command: make deploy-<<parameters.stage>>
+          - run:
+              name: Notify slack success
+              when: on_success
+              command: |
+                curl -X POST -H 'Content-type: application/json' --data "{\"text\":\":syringe: :antivirus: Mono-repo: <<parameters.app>> deployed to <<parameters.stage>>\"}" $SLACK_RELEASE_WEBHOOK
+          - run:
+              name: Notify slack failure
+              when: on_fail
+              command: |
+                curl -X POST -H 'Content-type: application/json' --data "{\"text\":\":syringe: :antivirus: Mono-repo: <<parameters.app>> failed to deploy to <<parameters.stage>>\"}" $SLACK_RELEASE_WEBHOOK
+    jobs:
+      tests:
+        executor: node
+        steps:
+          - checkout
+          - install-dependencies
+          - run:
+              name: Run tests
+              command: yarn test:ci
+      build_app:
+        parameters:
+          app: *app
+          stage: *stage
+        executor: node
+        steps:
+          - checkout
+          - install-dependencies
+          - build-app:
+              app: <<parameters.app>>
+              stage: <<parameters.stage>>
+      deploy_app:
+        parameters:
+          app: *app
+          stage: *stage
+        executor: serverless
+        steps:
+          - checkout
+          - deploy-app:
+              app: <<parameters.app>>
+              stage: <<parameters.stage>>
+# TODO: Split workflows into respective apps instead of one
+workflows:
+  version: 2
+  main:
+    jobs:
+      - node-services-online/tests:
+          name: test-all
+          context: github
+      - node-services-online/build_app:
+          name: services-online-build
+          app: services-online
+          context: github
+          requires:
+            - test-all
+          filters:
+            branches:
+              ignore:
+                - dev
+                - uat
+                - prod
+                - demo
+      - node-services-online/build_app:
+          name: services-online-build-<<pipeline.git.branch>>
+          app: services-online
+          stage: <<pipeline.git.branch>>
+          requires:
+            - test-all
+          context: github
+          filters:
+            branches:
+              only:
+                - dev
+                - uat
+                - prod
+                - demo
+      - node-services-online/deploy_app:
+          name: services-online-deploy-<<pipeline.git.branch>>
+          app: services-online
+          stage: <<pipeline.git.branch>>
+          context:
+            - <<pipeline.git.branch>>
+            - github
+          requires:
+            - services-online-build-<<pipeline.git.branch>>
+          filters:
+            branches:
+              only:
+                - dev
+                - uat
+                - prod
+      - node-services-online/deploy_app:
+          name: services-online-deploy-<<pipeline.git.branch>>
+          app: services-online
+          stage: demo
+          context:
+            - dev
+            - github
+          requires:
+            - services-online-build-<<pipeline.git.branch>>
+          filters:
+            branches:
+              only:
+                - demo

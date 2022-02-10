@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProtectedOnlineRoute /> should match snapshot if no failed required step 1`] = `
+<div>
+  <div
+    data-testid="protected/page"
+  >
+    Payment page
+  </div>
+</div>
+`;

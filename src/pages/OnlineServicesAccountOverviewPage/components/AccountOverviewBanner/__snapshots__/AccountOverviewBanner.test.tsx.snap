@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccountOverviewBanner /> should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiPaper-root makeStyles-banner-1 MuiPaper-elevation0 MuiPaper-rounded"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <div
+        class="MuiBox-root MuiBox-root-4"
+      >
+        <h1
+          class="MuiTypography-root makeStyles-bannerTitle-2 MuiTypography-h1"
+          data-testid="accountOverviewBanner/title"
+        />
+        <div
+          class="makeStyles-spacing3-11 makeStyles-spacing3Responsive-12"
+          data-testid="spacing/root"
+        />
+        <div
+          class="MuiBox-root MuiBox-root-31"
+        >
+          <h4
+            class="MuiTypography-root makeStyles-bannerText-3 MuiTypography-h4"
+            data-testid="accountOverviewBanner/content"
+          >
+            Check the dates and status of your 
+            .
+          </h4>
+          <div
+            class="makeStyles-spacing3-11 makeStyles-spacing3Responsive-12"
+            data-testid="spacing/root"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
