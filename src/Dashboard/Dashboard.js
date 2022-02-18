@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import config from "../../config";
+// import config from "./config";
 
 const Dashboard = () => {
   const [dashboard, setDashboard] = useState(null);
@@ -17,19 +17,19 @@ const Dashboard = () => {
     }
   };
 
-  useEffect(() => {
-    fetch(`${config.baseUrl}/dashboard`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "auth-token": localStorage.getItem("token"),
-      },
-    })
-      .then((res) => res.json())
-      .then(({ error, data }) =>
-        error ? history.push("/login") : setDashboard(data)
-      );
-  }, [history]);
+  // useEffect(() => {
+  //   fetch(`${config.baseUrl}/dashboard`, {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "auth-token": localStorage.getItem("token"),
+  //     },
+  //   })
+  //     .then((res) => res.json())
+  //     .then(({ error, data }) =>
+  //       error ? history.push("/login") : setDashboard(data)
+  //     );
+  // }, [history]);
 
   return (
     <>

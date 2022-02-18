@@ -19,7 +19,7 @@ import IconButton from '@mui/material/IconButton';
 import DoneIcon from '@mui/icons-material/Done';
 import { useNavigate } from 'react-router-dom'
 
-export default function CreateAcc(props) {
+export default function CreateAccount(props) {
   const paperStyle={padding :20,paddingTop:'3%', width:340, margin:"10px auto",background: "#F7FBFF"};
   const [values, setValues] = React.useState({
     password: '',
@@ -211,8 +211,6 @@ export default function CreateAcc(props) {
         variant="body2"
         style={{marginLeft:"20%",marginTop: "3%"}}
         underline="none">Already Have An Account</Link>
-       
-         
       </Paper>
     </Grid>
   )

@@ -1,18 +1,18 @@
 import { Grid,Paper, TextField, Button, Typography } from '@material-ui/core';
 // import Errormessage from "./Error";
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 // import {Link} from 'react-router-dom' ;
 import { useNavigate } from 'react-router-dom'
 function Login(){ 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const navigate = useNavigate();
-    useEffect(() => {
-        if (localStorage.getItem('user-info')) {
-            navigate.push("/contact")
+    // useEffect(() => {
+    //     if (localStorage.getItem('user-info')) {
+    //         navigate.push("/HomeAddress")
         
-        }
-    }, [])
+    //     }
+    // }, [])
     async function login(){
     console.warn("data", email, password)
     let item = { email, password };
