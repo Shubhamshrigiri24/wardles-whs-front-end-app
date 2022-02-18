@@ -17,6 +17,7 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import IconButton from '@mui/material/IconButton';
 import DoneIcon from '@mui/icons-material/Done';
+import { useNavigate } from 'react-router-dom'
 
 export default function CreateAcc(props) {
   const paperStyle={padding :20,paddingTop:'3%', width:340, margin:"10px auto",background: "#F7FBFF"};
@@ -24,10 +25,29 @@ export default function CreateAcc(props) {
     password: '',
     showPassword: false,
   });
+  const[name, setName] = useState("")
+  const[password, setPassword] = useState("")
   const[email, setEmail] = useState("")
   const [confirmEmail, setConfirmEmail] = useState("")
+  const history=useNavigate();
 
-  
+  function signUp()
+  {
+    let item={name, password, email}
+    console.warn("item",item)
+    
+    let result = await fetch("http://localhost:3333/register", {
+      method: 'POST',      
+      headers:{
+        "Content-Type":'application/json',
+        "Acccept":'application/json'
+      },
+      body:JSON.stringify(item),
+    })
+    result  = await result.json()
+    localStorage.setItem("user-info", JSON.stringify(result))
+    history.push("/contact")
+  }
   const [values1,setValues1] = React.useState({
     confirmpassword : '',
     showConfirmPassword: false,
