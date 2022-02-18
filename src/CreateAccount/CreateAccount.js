@@ -20,6 +20,7 @@ import DoneIcon from '@mui/icons-material/Done';
 import { useNavigate } from 'react-router-dom'
 
 export default function CreateAccount(props) {
+  let navigate = useNavigate();
   const paperStyle={padding :20,paddingTop:'3%', width:340, margin:"10px auto",background: "#F7FBFF"};
   const [values, setValues] = React.useState({
     password: '',
@@ -203,9 +204,7 @@ export default function CreateAccount(props) {
         />
         <label>By continuing you are agreeing to our <a href="/" style={{textDecoration:"none"}}>terms and conditions</a> and<a href="/" style={{textDecoration:"none"}}> privacy policy.</a></label> 
         </FormControl>
-        <Button variant="contained" color="primary" fullWidth size="large" style={{textTransform:"none !important",backgroundColor:"#FFCD00",color:"#07283C",marginTop:"9px"}} onClick={() => {
-          props.history.push({pathname:'/checkyouremail'})
-        }}>Create Account</Button>
+        <Button variant="contained" color="primary" fullWidth size="large" style={{textTransform:"none !important",backgroundColor:"#FFCD00",color:"#07283C",marginTop:"9px"}} onClick={() => {navigate("/userdetails");}}>Create Account</Button>
       
         <Link component="button"
         variant="body2"

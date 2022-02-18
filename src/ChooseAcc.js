@@ -2,11 +2,13 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { Button } from '@material-ui/core';
-import UserIcon1 from './Assets/UserIcon1.svg'
-import UserIcon2 from './Assets/UserIcon2.svg'
+import UserIcon1 from './Assets/UserIcon1.svg';
+import UserIcon2 from './Assets/UserIcon2.svg';
 
+import { useNavigate } from "react-router-dom";
 
 export default function ChooseAcc() {
+  let navigate = useNavigate();
   return (
       <Container style={{display:"flex",justifyContent:"center",alignItems:"center",height:"70vh",width:"100vh"}}>
         <div>
@@ -17,7 +19,7 @@ export default function ChooseAcc() {
         <img src={UserIcon1} alt="Error"/>
         <h2>Personal</h2>
         <p>I am creating an account for myself to manage my own appliances. </p>
-        <Button variant="contained" fullWidth color="primary" size="large" style={{textTransform:"none",backgroundColor:"#FFCD00",color:"#07283C",marginTop:"10%",height:"20%",borderRadius:"1px"}}>Continue</Button>
+        <Button onClick={() => {navigate("/createaccount");}} variant="contained" fullWidth color="primary" size="large" style={{textTransform:"none",backgroundColor:"#FFCD00",color:"#07283C",marginTop:"10%",height:"20%",borderRadius:"1px"}}>Continue</Button>
         </Box>
       </Container>
       <Container maxWidth="sm">
@@ -25,7 +27,7 @@ export default function ChooseAcc() {
         <img src={UserIcon2} alt="Error"/>
         <h2>Health care professional</h2>
         <p>I am a healthcare professional managing someone else’s appliances</p>
-        <Button variant="contained" fullWidth color="primary" size="large" style={{textTransform:"none",backgroundColor:"#FFCD00",color:"#07283C",marginTop:"10%",height:"20%",borderRadius:"1px"}}>Continue</Button>
+        <Button onClick={() => {navigate("/createaccount");}} variant="contained" fullWidth color="primary" size="large" style={{textTransform:"none",backgroundColor:"#FFCD00",color:"#07283C",marginTop:"10%",height:"20%",borderRadius:"1px"}}>Continue</Button>
         </Box>
       </Container>
       </Container>

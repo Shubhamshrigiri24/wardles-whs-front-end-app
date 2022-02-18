@@ -2,8 +2,10 @@ import React from 'react'
 import { Container, Grid, Typography } from '@mui/material'
 import { Button } from '@mui/material'
 import { TextField } from '@mui/material'
+import { useNavigate } from 'react-router-dom';
 
 export default function HomeAddress() {
+  let navigate = useNavigate();
   return (
     <div>
         <Container style={{ margin: "4% auto" }} maxWidth="xs">
@@ -28,7 +30,7 @@ export default function HomeAddress() {
             </Grid>
             
             
-            <Button variant="contained" color="primary" fullWidth size="large" style={{textTransform:"none ",backgroundColor:"#FFCD00",color:"#07283C",border:"black"}}>Next</Button>
+            <Button onClick={() => {navigate("/confirmaddress");}}variant="contained" color="primary" fullWidth size="large" style={{textTransform:"none ",backgroundColor:"#FFCD00",color:"#07283C",border:"black"}}>Next</Button>
         </Container>
     </div>
   )

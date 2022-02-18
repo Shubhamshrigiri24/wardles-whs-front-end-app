@@ -8,7 +8,19 @@ import InputAdornment from '@mui/material/InputAdornment';
 import PermContactCalendarRoundedIcon from '@mui/icons-material/PermContactCalendarRounded';
 import CalendarTodayRoundedIcon from '@mui/icons-material/CalendarTodayRounded';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
+import { useNavigate } from 'react-router-dom';
+
 function UserDetails() {
+  let navigate = useNavigate();
+  const [values, setValues] = React.useState({
+    "First name": '',
+    "Last name":'',
+    "Date of birth":'',
+    "Phone number":''
+  });
+  function onSubmit(e){
+   
+  }
   return (
     <div>
         <Container component="main" maxWidth="xs">
@@ -103,6 +115,7 @@ function UserDetails() {
               variant="contained"
               sx={{ mt: 20}}
               size="large"
+              onClick={() => {navigate("/searchhomeaddress");}}
               style={{backgroundColor: "#FFCD00"}}
             >
               Next
