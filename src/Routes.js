@@ -3,25 +3,25 @@ import React from "react";
 import {
   Route,
   BrowserRouter as Router,
-  Switch,
-  Redirect,
+  Routes,
+  Navigate,
 } from "react-router-dom";
 
-import Login from "./Pages/Login/Login";
-import Register from "./Pages/Register/Register";
-import Dashboard from "./Pages/Dashboard/Dashboard";
-import NotFound from "./Pages/NotFound/NotFound";
+import Login from "./Login/Login";
+import Register from "./CreateAccount/CreateAccount";
+import Dashboard from "./Dashboard/Dashboard";
+import NotFound from "./NotFound/NotFound";
 
 const authGuard = (Component) => () => {
   return localStorage.getItem("token") ? (
     <Component />
   ) : (
-    <Redirect to="/login" />
+    <Navigate to="/login" />
   );
 };
-const Routes = (props) => (
+const Routing = (props) => (
   <Router {...props}>
-    <Switch>
+    <Routes>
       <Route path="/login">
         <Login />
       </Route>
@@ -30,13 +30,13 @@ const Routes = (props) => (
       </Route>
       <Route path="/dashboard" render={authGuard(Dashboard)}></Route>
       <Route exact path="/">
-        <Redirect to="/dashboard" />
+        <Navigate to="/dashboard" />
       </Route>
       <Route path="*">
         <NotFound />
       </Route>
-    </Switch>
+    </Routes>
   </Router>
 );
 
-export default Routes;
+export default Routing;

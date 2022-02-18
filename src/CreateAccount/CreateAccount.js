@@ -36,7 +36,7 @@ export default function CreateAcc(props) {
     let item={name, password, email}
     console.warn("item",item)
     
-    let result = await fetch("http://localhost:3333/register", {
+    let result =  fetch("http://localhost:3333/register", {
       method: 'POST',      
       headers:{
         "Content-Type":'application/json',
@@ -44,7 +44,7 @@ export default function CreateAcc(props) {
       },
       body:JSON.stringify(item),
     })
-    result  = await result.json()
+    result  =  result.json()
     localStorage.setItem("user-info", JSON.stringify(result))
     history.push("/contact")
   }

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import config from "../../config";
 
 const Dashboard = () => {
   const [dashboard, setDashboard] = useState(null);
-  const history = useHistory();
+  const history = useNavigate();
 
   const logout = () => {
     /* eslint-disable */
