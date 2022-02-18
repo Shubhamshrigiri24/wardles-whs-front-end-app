@@ -1,5 +1,5 @@
-import logo from './Assets/logo.svg';
-import Questionblack from './Assets/Questionblack.svg';
+import logo from '../Assets/logo.svg';
+import Questionblack from '../Assets/Questionblack.svg';
 import './Navbar.css';
 
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from './NavBar/Navbar';
 import Login from "./Login/Login";
 import CreateAccount from "./CreateAccount/CreateAccount";
 import NotFound from "./NotFound/NotFound";
@@ -15,6 +16,7 @@ import PrescriberSystem from "./PrescriberSystem/PrescriberSystem";
 import Consent from "./Consent/Consent";
 import EmailActivate from "./EmailActivate/EmailActivate";
 import CheckYourEmail from "./CheckYourEmail/CheckYourEmail";
+import ThankYou from "./ThankYou/ThankYou";
 
 import {
   Route,
@@ -26,8 +28,9 @@ import {
 
 function App() {
   return (
-
+   
 <Router>
+  <Navbar/>
     <Routes>
       <Route exact  path="/" element= {<ChooseAcc/>} />
       <Route path="/login" element= {<Login/>} />
@@ -43,6 +46,7 @@ function App() {
       <Route path="/prescribersystems" element= {<PrescriberSystem/>} />
       <Route path="/consent" element= {<Consent/>} />
       <Route path="/emailactivate" element= {<EmailActivate/>} />
+      <Route path="/thankyou" element= {<ThankYou/>} />
       <Route path="/CheckYourEmail" element= {<CheckYourEmail/>} />
       <Route path="*" element= {  <NotFound/>}></Route>
     </Routes>
