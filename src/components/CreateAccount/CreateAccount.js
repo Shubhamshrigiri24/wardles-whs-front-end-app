@@ -9,7 +9,6 @@ import { Grid } from '@material-ui/core'
 import LockIcon from '@mui/icons-material/Lock';
 import InputAdornment from '@mui/material/InputAdornment';
 import EmailIcon from '@mui/icons-material/Email';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { FormControl } from '@material-ui/core'
 import { FormControlLabel } from '@material-ui/core'
 import { Checkbox } from '@material-ui/core'
@@ -17,6 +16,8 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import IconButton from '@mui/material/IconButton';
 import DoneIcon from '@mui/icons-material/Done';
+import StrongPassModal from '../../StrongPassModal'
+
 
 export default function CreateAcc(props) {
   const paperStyle={padding :20,paddingTop:'3%', width:340, margin:"10px auto",background: "#F7FBFF"};
@@ -26,7 +27,6 @@ export default function CreateAcc(props) {
   });
   const[email, setEmail] = useState("")
   const [confirmEmail, setConfirmEmail] = useState("")
-
   
   const [values1,setValues1] = React.useState({
     confirmpassword : '',
@@ -54,9 +54,7 @@ export default function CreateAcc(props) {
       showConfirmPassword: !values1.showConfirmPassword,
     });
   };
-  // const handleMouseDownPassword = (event) => {
-  //   event.preventDefault();
-  // };
+
 
   return (
     <Grid>
@@ -172,7 +170,9 @@ export default function CreateAcc(props) {
               variant="outlined"
             />
           </Box>
-          <Button href="#contained-buttons" color="primary" size="large" style={{textTransform:"none"}} fullWidth endIcon={<ArrowForwardIosIcon/>}>Help setting a strong password</Button>
+
+           <StrongPassModal/>
+          
           <FormControl component="fieldset">
             <Box p={1.2} mt={1} mb={1} sx={{background:"#FFFFFF",border:"1px solid #CEDCE9",boxSizing:"border-box",boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)",borderRadius:"1px"}}>
           <FormControlLabel

@@ -1,6 +1,5 @@
-import {Grid, Paper, Button, Link } from '@material-ui/core';
-import Help from '../../Assets/Help.svg'
-import Arrowright from '../../Assets/Arrowright.svg';
+import {Grid, Paper, Button } from '@material-ui/core';
+import GetEmail from '../GetEmail';
 
 function CheckYourEmail() {
 
@@ -18,18 +17,7 @@ function CheckYourEmail() {
 
                 <Button variant="contained" size="Large" disableElevation style={{background: "#FFCD00",color:"#07283C" ,marginBottom:"17px", borderWidth: '0px', border: "1.5px solid ", fontSize:"18px", textTransform: "none"}} fullWidth type="submit" >Resend email</Button>
                 
-                <div style={{marginRight: 10 , size: "large" ,background:'#E8F8FF' ,padding: 18  , display :'flex',  justifyContent : "center" , alignItems :"center"}}>
-                <div style={{width: 50,margin:0,padding:0,display:'flex', justifyContent:"start", alignItems:"start", borderRadius: 4}}>
-                <img src={Help} alt="error" />
-                </div>  
-                <Link href="#" underline="none" margin = '' >
-                  Didn’t get an email?
-                </Link> 
-                <div style={{width: 50, margin:0,padding:0,display:'flex', justifyContent:"end", alignItems:"end", borderRadius: 4}}>
-                <img src={Arrowright} alt="error" />
-                </div>   
-                </div>
-
+                <GetEmail/>
 
             </Paper> 
       </Grid>      

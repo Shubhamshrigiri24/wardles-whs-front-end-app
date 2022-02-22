@@ -1,4 +1,7 @@
 import React  from 'react'
+// import CheckYourEmail from './components/CheckYourEmail/CheckYourEmail';
+// import EMailActivate from './components/EmailActivate/EmailActivate';
+// import CheckYourEmail from './components/CheckYourEmail/CheckYourEmail';
 // import {BrowserRouter as Router, Route, Routes} from 'react-router-dom' 
 // import logo from './logo.svg';
 // import Login from './components/login';
@@ -14,6 +17,7 @@ import CreateAccount from './components/CreateAccount/CreateAccount';
 // import EmailResetPwd from './components/EmailResetPwd/EmailResetPwd';
 // import KeepUpdate from './components/KeepUpdate/KeepUpdate';
 import Navbar from './components/NavBar/Navbar';
+// import StrongPassModal from './StrongPassModal';
 // import Form from './components/form'
 // import Adddress from './components/Adddress';
 // import KeepUpdate from './components/KeepUpdate/KeepUpdate';
@@ -26,14 +30,14 @@ import Navbar from './components/NavBar/Navbar';
 //  import Resetpassword from './components/Resetpassword/Resetpassword'
 // import Emailsuccess from './components/Emailsuccess/Emailsuccess';
 // import EmailResetPwd from './components/EmailResetPwd/EmailResetPwd';
-
+// import MyPrescriber1 from './components/MyPrescriber1';
 
 function App() {
   return (
       
     <div>
     <Navbar />
-    <CreateAccount/>
+     <CreateAccount/>
     </div>
     
   )
