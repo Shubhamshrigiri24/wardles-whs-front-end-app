@@ -1,0 +1,123 @@
+import { Grid, Paper, TextField, Button } from '@material-ui/core';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import {useLocation} from 'react-router-dom';
+
+//import Question from './Assets/Question.svg';
+//import Arrowright from './Assets/Arrowright.svg';
+
+const initialState = {
+    addressLineOne: '',
+    addressLineTwo: '',
+    city: '',
+    postcode: '',
+    err: '',
+    errEmpty: '',
+    success: ''
+
+}
+
+function HomeAddressmanual() {
+    let navigate = useNavigate();
+
+    const location = useLocation();
+
+    const email = location.state.email;
+    const password = location.state.password;
+    const firstName = location.state.firstName;
+    const lastName = location.state.lastName;
+    const dob = location.state.dob;
+    const phoneNumber = location.state.phoneNumber;
+
+    const [user, setUser] = useState(initialState)
+    const { addressLineOne, addressLineTwo, city, postcode, err, errEmpty, success } = user
+
+    const paperStyle = { padding: 20, width: 340, margin: "10px auto", background: "#F7FBFF" };
+
+    const handleChangeInput = e => {
+        const { name, value } = e.target
+        setUser({ ...user, [name]: value, err: '', success: '' })
+    }
+
+    const handleSubmit = async e => {
+        // console.log(password)
+        // console.log(user)
+        navigate('/prescriberdetails', { state: { addressLineOne: addressLineOne, addressLineTwo: addressLineTwo, city: city, postcode: postcode, email,password: password,firstName : firstName,lastName : lastName,dob : dob,phoneNumber : phoneNumber, } })
+        // console.log(user)
+        e.preventDefault()
+    }
+
+
+
+    return (
+        <Grid>
+            <Paper elevation={0} style={paperStyle}>
+                <form onSubmit={handleSubmit}>
+                    <Grid align='left'>
+                        <h2 style={{ fontSize: 28, margin: 0 }}>Enter your home address</h2>
+                    </Grid>
+
+                    <p style={{ fontSize: 18, marginBottom: 15 }}>Use the address registered with your prescriber.</p>
+
+                    <TextField size="small"
+                        style={{ marginBottom: "17px", boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)", background: "white" }}
+                        placeholder="Address line one"
+                        id="addressLineOne"
+                        name="addressLineOne"
+                        value={addressLineOne}
+                        onChange={handleChangeInput}
+                        type="text" variant="outlined"
+                        fullWidth
+                    />
+
+                    <TextField size="small"
+                        style={{ marginBottom: "17px", boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)", background: "white" }}
+                        placeholder="Address line two"
+                        type="text" variant="outlined"
+                        id="addressLineTwo"
+                        name="addressLineTwo"
+                        value={addressLineTwo}
+                        onChange={handleChangeInput}
+                        fullWidth
+                    />
+
+                    <TextField size="small"
+                        style={{ marginBottom: "17px", boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)", background: "white" }}
+                        placeholder="City"
+                        id="city"
+                        name="city"
+                        value={city}
+                        onChange={handleChangeInput}
+                        type="text" variant="outlined"
+                        fullWidth
+                    />
+
+                    <TextField size="small"
+                        style={{ marginBottom: "17px", boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)", background: "white" }}
+                        placeholder="Postcode"
+                        id="postcode"
+                        name="postcode"
+                        value={postcode}
+                        onChange={handleChangeInput}
+                        type="text" variant="outlined"
+                        fullWidth
+                    />
+
+                    <Button variant="contained" size="Large" disableElevation style={{ background: "#FFCD00", color: "#07283C", marginBottom: "17px", fontSize: "18px", textTransform: "none" }} fullWidth type="submit" >Next</Button>
+
+                    <Button variant="contained" size="Large" disableElevation style={{ background: "#E8F8FF", color: "#0066BE", borderRadius: '6px', fontSize: "18px", textTransform: "none", display: "flex", justifyContent: "space-between" }} fullWidth type="submit" >
+                        <div style={{ display: "flex", justifyContent: "flex-start", margin: 0, padding: 0 }}>
+                            {/* <img src={Question} alt="error" /> */}
+                            <p style={{ margin: 0, padding: 0, marginLeft: 10, fontSize: 16 }}>Who is my prescriber?</p>
+                        </div>
+                        {/* <img src={Arrowright} alt="error" /> */}
+                    </Button>
+
+
+                </form>
+            </Paper>
+        </Grid>
+    )
+}
+
+export default HomeAddressmanual;

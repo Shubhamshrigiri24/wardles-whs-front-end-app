@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,157 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.page {
+position: relative;
+/* width: 1920px; */
+/* height: 950px; */
+background: #F7FBFF;
 }
+.navbar{
+  position: relative;
+  z-index: 10;
+}
+.container-fluid {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 10px 130px;
+position: absolute;
+width: 1920px;
+height: 90px;
+left: 0px;
+top: 15px;
+background: #FFFFFF;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.09);
+}
+.nav-link{
+position: static;
+width: 40px;
+height: 22px;
+left: 1751px;
+top: 49px;
+bottom:879px;
+right:130px;
+font-family: "lato";
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+letter-spacing: 0.5px;
+color: #4E4E4E;
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 12px;
+}
+.callimg{
+position: absolute;
+width:23.33px;
+height:21px;
+left: 1725px;
+right: 180px;
+top: 45px;
+bottom: 875px;
+}
+.textsize{
+position: absolute;
+width: 466px;
+height: 616px;
+left: 436px;
+top: 199px;
+bottom: 135px;
+right: 1018px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+}
+.textsize1 {
+  position: absolute;
+width: 466px;
+height: 616px;
+left: 994px;
+top: 199px;
+right:460px;
+bottom:135px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+}
+#doc-img-1{
+  /* border:2px solid #1C1A1A; */
+  padding-left:169px;
+  padding-right:170.97px;
+  padding-top:101px;
+  padding-bottom:auto;
+  /* padding-left: 20px; */
+}
+#doc-img-2{
+  padding-left:159px;
+  padding-right:180.98px;
+  padding-top:101px;
+  padding-bottom:auto;
+}
+.card-body-1{
+position: absolute;
+width: 289px;
+height: 180px;
+font-family: "lato";
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 45px;
+text-align: center;
+margin-left:88px;
+  margin-right:89px;
+  margin-top:263px;
+  margin-bottom:173px;
+color: #000000;
+}
+.card-body-2{
+  position: absolute;
+width: 349.5px;
+height: 177.12px;
+font-family: "lato";
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 45px;
+text-align:center;
+margin-left:58.25px;
+margin-right:58.25px;
+margin-top:263.72px;
+margin-bottom:175.16px;
+color: #000000;
+}
+.backclass{
+position: absolute;
+width: 43px;
+height: 0px;
+left: 396px;
+top: 182px;
+font-family: "lato";
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 0px;
+color: #4B4B4B;
+}
+.main-heading{
+  position: absolute;
+height: 86px;
+left: 709px;
+right: 547px;
+top: 131px;
+font-family: "lato";
+font-style: normal;
+font-weight: 600;
+font-size: 34px;
+line-height: 125%;
+letter-spacing: 0.25px;
+color: #07283C;
+z-index: 10;
+}
+
+
