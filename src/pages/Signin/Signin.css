@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+
+.detailscontainer{
+    width:50%;
+    background-color: #009ADB;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    
+    height: auto;
+}
+
+.detailsdiv{
+    width: 50%;
+    display: grid;
+    align-content: center;
+    justify-items: left;
+}
+
+.image{
+    margin-bottom: 5%;
+}
+
+.detailstext{
+    color: white;
+    font-weight: 400;
+}
+
+.header{
+    margin-bottom: 5%;
+}
+.singincontainer{
+    width:50%;
+    display: grid;
+    height: auto;
+}
+
+.helpcontainer{
+    display: flex;
+    justify-content: right;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+
+.helptext{
+    margin-left: 3px;
+    font-weight: 500;
+}

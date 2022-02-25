@@ -1,0 +1,74 @@
+.edituser{
+    padding :10px;
+    width:65%;
+    margin:auto;
+    display:grid;
+    justify-items: center;
+}
+
+.line1{
+    margin:0;
+    padding:0;
+    display:flex; 
+    justify-content:flex-start;
+    align-items:center;
+    width: 100%;
+}
+
+.header{
+    font-size: 25;
+}
+
+.subcontainer{
+    width:60%;
+}
+
+.edituser .textarea{
+    background-color: #F2F2F2;
+    margin-bottom:22px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.07);
+}
+
+.edituser .addusertextarea{
+    margin-bottom:22px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.07);
+}
+
+.edituser .checkboxcontainer{
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
+    margin-top: 17px;
+}
+
+
+.buttoncontainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.adduserbuttoncontainer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.edituser .button1{
+    background: white;
+    color:"#404040";
+    margin-top:17px;
+    font-size:18px; 
+    text-transform: none;
+    width: 28%;
+}
+
+.edituser .button2{
+    background: #404040;
+    color:white;
+    margin-top:17px;
+    font-size:18px; 
+    text-transform: none;
+    width: 28%;
+}
+

@@ -1,22 +1,24 @@
-import React from "react";
-import Navbar from './NavBar/Navbar';
-import Login from "./Login/Login";
-import CreateAccount from "./CreateAccount/CreateAccount";
-import NotFound from "./NotFound/NotFound";
-import ChooseAcc from "./ChooseAcc";
-import UserDetails from "./UserDetails/UserDetails";
-import HomeAddress from "./HomeAddress/HomeAddress";
-import ConfirmAddress from "./ConfirmAddress/ConfirmAddress";
-import SearchHomeAddress from "./SearchHomeAddress/SearchHomeAddress";
-import HomeAddressManual from "./HomeAddressManual/HomeAddressmanual";
-import SelectPrescriber from "./SelectPrescriber/SelectPrescriber";
-import SearchPrescriber from "./SearchPrescriber/SearchPrescriber";
-import PrescriberDetails from "./PrescriberDetails/PrescriberDetails";
-import PrescriberSystem from "./PrescriberSystem/PrescriberSystem";
-import Consent from "./Consent/Consent";
-import EmailActivate from "./EmailActivate/EmailActivate";
-import CheckYourEmail from "./CheckYourEmail/CheckYourEmail";
-import ThankYou from "./ThankYou/ThankYou";
+import './App.css';
+import Signin from "./pages/Signin/Signin";
+import SigninHq from "./pages/Signin/SigninHq";
+import SigninSales from "./pages/Signin/Signinsales";
+import Signup from "./pages/Signup/Signup";
+import Yourdetails from './pages/Userdetails/Yourdetails';
+import Pharmacydetails from './pages/Userdetails/Pharmacydetails';
+import EMailActivate from './pages/EmailAuth/EmailActivate';
+import MyProfile from './pages/MyProfile/MyProfile';
+import ResetPassword from './pages/MyProfile/ResetPassword';
+import ForgotPasswordEmail from './pages/ForgotPassword/ForgotPasswordEmail';
+import Checkemail from "./pages/ForgotPassword/Checkemail";
+import ChangePassword from "./pages/ForgotPassword/ChangePassword";
+import Notfound from './pages/NotFound/Notfound';
+import ManageUsers from './pages/ManageUsers/ManageUsers';
+import EditUsers from './pages/ManageUsers/EditUSer';
+import Adduser from './pages/ManageUsers/Adduser';
+import Resetsuccess from './pages/ForgotPassword/Resetsuccess';
+// import Navbar from './Components/Navbar/Navbar';
+// import SigninContainer from './Components/Routes/SigninContainer';
+// import DefaultContainer from './Components/Routes/DefaultContainer';
 
 import {
   Route,
@@ -26,29 +28,33 @@ import {
 
 
 
+
+
 function App() {
+
   return (
    
-<Router>
-  <Navbar/>
+    <Router>
+      {/* <Navbar/> */}
     <Routes>
-      <Route exact  path="/" element= {<ChooseAcc/>} />
-      <Route path="/login" element= {<Login/>} />
-      <Route path="/createaccount" element= {  <CreateAccount />}/>
-      <Route path="/userdetails" element= {<UserDetails/>} />
-      <Route path="/searchhomeaddress" element= {<SearchHomeAddress/>} />
-      <Route path="/homeaddress" element= {<HomeAddress/>} />
-      <Route path="/confirmaddress" element= {<ConfirmAddress/>} />
-      <Route path="/homeaddressmanual" element= {<HomeAddressManual/>} />
-      <Route path="/selectprescriber" element= {<SelectPrescriber/>} />
-      <Route path="/searchprescriber" element= {<SearchPrescriber/>} />
-      <Route path="/prescriberdetails" element= {<PrescriberDetails/>} />
-      <Route path="/prescribersystems" element= {<PrescriberSystem/>} />
-      <Route path="/consent" element= {<Consent/>} />
-      <Route path="/emailactivate" element= {<EmailActivate/>} />
-      <Route path="/thankyou" element= {<ThankYou/>} />
-      <Route path="/CheckYourEmail" element= {<CheckYourEmail/>} />
-      <Route path="*" element= {  <NotFound/>}></Route>
+    <Route exact path="/" element= {<Signin/>} />
+      <Route path="/signin" element= {<Signin/>} />
+      <Route path="/signinhq" element= {<SigninHq/>} />
+      <Route path="/signinsales" element= {<SigninSales/>} />
+      <Route path="/signup" element= {<Signup/>} />
+      <Route path="/emailactivate" element= {<EMailActivate/>} />
+      <Route path="/yourdetails" element= {<Yourdetails/>} />
+      <Route path="/pharmacydetails" element= {<Pharmacydetails/>} />
+      <Route path="/myprofile" element= {<MyProfile/>} />
+      <Route path="/resetpassword" element= {<ResetPassword/>} />
+      <Route path="/forgotpasswordemail" element= {<ForgotPasswordEmail/>} />
+      <Route path="/checkmail" element= {<Checkemail/>} />
+      <Route path="/changepassword" element= {<ChangePassword/>} />
+      <Route path="/resetsuccess" element= {<Resetsuccess/>} />
+      <Route path="/manageusers" element= {<ManageUsers/>} />
+      <Route path="/editusers" element= {<EditUsers/>} />
+      <Route path="/adduser" element= {<Adduser/>} />
+      <Route path="*" element= {  <Notfound/>}></Route>
     </Routes>
 
     </Router>
@@ -56,3 +62,5 @@ function App() {
 }
 
 export default App;
+
+
