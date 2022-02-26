@@ -1,6 +1,7 @@
 import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Navbar from "./components/NavBar/Navbar";
 import Login from "./components/login/login";
 import CreateAccount from "./components/CreateAccount/CreateAccount";
@@ -58,6 +59,8 @@ function App() {
 =======
 =======
 >>>>>>> parent of 2aaf493 (updated at 3.43am)
+=======
+>>>>>>> parent of 2aaf493 (updated at 3.43am)
 import Navbar from './NavBar/Navbar';
 import Login from "./Login/Login";
 import CreateAccount from "./CreateAccount/CreateAccount";
@@ -111,6 +114,9 @@ function App() {
     </Routes>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 2aaf493 (updated at 3.43am)
+=======
 >>>>>>> parent of 2aaf493 (updated at 3.43am)
 =======
 >>>>>>> parent of 2aaf493 (updated at 3.43am)
