@@ -1,75 +1,70 @@
-.main-container{
-    width: 45%;
-
+.main-container {
+  width: 45%;
 }
 
-.heading{
-    position: static;
-height: 38px;
-left: 0px;
-right: 0px;
-top: 0px;
-/* font-family: Gilroy Alt; */
-font-size: 32px;
-line-height: 120%;
-letter-spacing: 0.005em;
-font-feature-settings: 'liga' off;
-color: #07283C;
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 24px 0px;
+.heading {
+  position: static;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  /* font-family: Gilroy Alt; */
+  font-size: 32px;
+  letter-spacing: 0.005em;
+  font-feature-settings: "liga" off;
+  color: #07283c;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 24px 0px;
 }
-.paragraph{
-    position: static;
-left: 0px;
-right: 0px;
-/* font-family: Gilroy Alt; */
-font-size: 18px;
-line-height: 140%;
-letter-spacing: 0.01em;
-font-feature-settings: 'liga' off;
-color: #1E4B68;
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 5px 0px;
+.paragraph {
+  position: static;
+  left: 0px;
+  right: 0px;
+  /* font-family: Gilroy Alt; */
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  font-feature-settings: "liga" off;
+  color: #1e4b68;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 5px 0px;
 }
-.checkbox-container{
-    display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 20px;
-position: static;
-width: 408px;
-height: 103px;
-left: 0px;
-top: 0px;
-background: #FFFFFF;
-border: 1px solid #CEDCE9;
-box-sizing: border-box;
-box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.07);
-border-radius: 4px;
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 24px 0px;
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: static;
+  width: 408px;
+  height: 103px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  border: 1px solid #cedce9;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 24px 0px;
 }
 
-
-.label-container{
-    position: static;
-    width: 408px;
-    left: 0px;
-    /* font-family: Gilroy Alt; */
-    font-size: 18px;
-    line-height: 140%;
-    letter-spacing: 0.01em;
-    font-feature-settings: 'liga' off;
-    color: #1E4B68;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 24px 0px;
+.label-container {
+  position: static;
+  width: 408px;
+  left: 0px;
+  /* font-family: Gilroy Alt; */
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  font-feature-settings: "liga" off;
+  color: #1e4b68;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 24px 0px;
 }

@@ -1,12 +1,11 @@
 import React from "react";
 import { Container, Grid, Typography } from "@mui/material";
 import { Button } from "@mui/material";
-import { Box } from "@mui/system";
 import { TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { ThemeConsumer } from "styled-components";
 import { useState } from "react";
+import { accessStart } from "../../API/userOps";
 
 const initialState = {
   prescriberName: "",
@@ -54,47 +53,24 @@ export default function PrescriberDetails() {
     e.preventDefault();
 
     console.log("fetching data.....");
-    let result = fetch(
-      "https://3ms0k4a2ke.execute-api.eu-west-2.amazonaws.com/dev/access/start",
-      {
-        method: "POST",
 
-        headers: {
-          "Content-Type": "application/json",
-          Acccept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Origin":
-            "https://3ms0k4a2ke.execute-api.eu-west-2.amazonaws.com/dev/access/start",
-          mode: "cors",
-        },
-        body: JSON.stringify({
-          email: location.state.email,
-          password: location.state.password,
-          phoneNumber: location.state.phoneNumber,
-          firstName: location.state.firstName,
-          lastName: location.state.lastName,
-          prescriberName: prescriberName,
-          prescriberaddressLineOne: prescriberaddressLineOne,
-          prescriberaddressLineTwo: prescriberaddressLineTwo,
-          productCode: "whs",
-          prescribercity: prescribercity,
-          prescriberpostcode: prescriberpostcode,
-        }),
-      }
-    );
+    accessStart(
+            location.state.email,
+          location.state.password,
+           location.state.phoneNumber,
+           location.state.firstName,
+          location.state.lastName,
+           prescriberName,
+           prescriberaddressLineOne,
+          prescriberaddressLineTwo,
+          // productCode = "whs",
+           prescribercity,
+           prescriberpostcode,     
+      )
+  
+          navigate("/prescribersystems");
+      
 
-    result.then(function (web_response) {
-      console.log(web_response);
-      console.log(web_response.status);
-        (web_response.json())
-        .then(function (response_object) {
-          console.log("got the following result");
-          console.log(response_object);
-          console.log(".....");
-          //su
-          navigate("/consent");
-        });
-    });
   };
 
   return (
@@ -188,3 +164,48 @@ export default function PrescriberDetails() {
     </div>
   );
 }
+
+
+
+
+
+
+
+{/*  let result = fetch(
+      "https://3ms0k4a2ke.execute-api.eu-west-2.amazonaws.com/dev/access/start",
+      {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+          Acccept: "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Origin":
+            "https://3ms0k4a2ke.execute-api.eu-west-2.amazonaws.com/dev/access/start",
+          mode: "cors",
+        },
+        body: JSON.stringify({
+          email: location.state.email,
+          password: location.state.password,
+          phoneNumber: location.state.phoneNumber,
+          firstName: location.state.firstName,
+          lastName: location.state.lastName,
+          prescriberName: prescriberName,
+          prescriberaddressLineOne: prescriberaddressLineOne,
+          prescriberaddressLineTwo: prescriberaddressLineTwo,
+          productCode: "whs",
+          prescribercity: prescribercity,
+          prescriberpostcode: prescriberpostcode,
+        }),
+      }
+    );
+
+    result.then(function (web_response) {
+      console.log(web_response);
+      console.log(web_response.status);
+        (web_response.json())
+        .then(function (response_object) {
+          console.log("got the following result");
+          console.log(response_object);
+        console.log("....."); */}
+          

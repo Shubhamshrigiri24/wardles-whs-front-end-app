@@ -20,7 +20,7 @@ export default function ChooseAcc() {
         <img src={UserIcon1} alt="Error"/>
         <h2 style={{fontFamily:"Gilroy Alt"}}>Personal</h2>
         <p style={{fontFamily:"Gilroy Alt"}}>I am creating an account for myself to manage my own appliances. </p>
-        <Button variant="contained" fullWidth color="primary" size="large" style={{textTransform:"none",fontSize:"16px",fontFamily:"Gilroy Alt", backgroundColor:"#FFCD00",color:"#07283C",marginTop:"10%",height:"20%",borderRadius:"1px"}}>Continue</Button>
+        <Button variant="contained" fullWidth color="primary" size="large" style={{textTransform:"none",fontSize:"16px",fontFamily:"Gilroy Alt", backgroundColor:"#FFCD00",color:"#07283C",marginTop:"10%",height:"20%",borderRadius:"1px"}}  onClick={() => {navigate("/createaccount");}}>Continue</Button>
         </Box>
       </Container>
       <Container maxWidth="sm">
