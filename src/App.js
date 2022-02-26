@@ -1,5 +1,6 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Navbar from "./components/NavBar/Navbar";
 import Login from "./components/login/login";
 import CreateAccount from "./components/CreateAccount/CreateAccount";
@@ -55,6 +56,8 @@ function App() {
         <Route path="/emailactivate" element={<EmailActivate />} />
       </Routes>
 =======
+=======
+>>>>>>> parent of 2aaf493 (updated at 3.43am)
 import Navbar from './NavBar/Navbar';
 import Login from "./Login/Login";
 import CreateAccount from "./CreateAccount/CreateAccount";
@@ -107,6 +110,9 @@ function App() {
       <Route path="*" element= {  <NotFound/>}></Route>
     </Routes>
 
+<<<<<<< HEAD
+>>>>>>> parent of 2aaf493 (updated at 3.43am)
+=======
 >>>>>>> parent of 2aaf493 (updated at 3.43am)
     </Router>
   );
