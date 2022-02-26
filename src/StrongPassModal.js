@@ -6,6 +6,7 @@ import Modal from '@mui/material/Modal';
 import HelpIcon from '../src/Assets/HelpIcon.svg'
 import Cross from '../src/Assets/Cross.svg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import LiveHelpOutlinedIcon from '@material-ui/icons/LiveHelpOutlined';
 
 const style = {
     position: 'absolute',
@@ -25,7 +26,7 @@ export default function StrongPassModal() {
 
     return (
         <div >
-        <Button href="#contained-buttons" color="primary" size="large" style={{textTransform:"none"}} fullWidth endIcon={<ArrowForwardIosIcon/>}  onClick={handleOpen}>Help setting a strong password</Button>
+        <Button href="#contained-buttons" color="primary" size="large" style={{textTransform:"none",fontFamily:"Gilroy Alt"}} fullWidth startIcon={<LiveHelpOutlinedIcon/>} endIcon={<ArrowForwardIosIcon/>}  onClick={handleOpen}>Help setting a strong password</Button>
             <Modal
                 open={open}
                 onClose={handleClose}
