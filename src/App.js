@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from './components/NavBar/Navbar';
+import Navbar from "./components/NavBar/Navbar";
 import Login from "./components/login/login";
 import CreateAccount from "./components/CreateAccount/CreateAccount";
 // import NotFound from "./NotFound/NotFound";
@@ -17,50 +17,44 @@ import Consent from "./components/Consent/Consent";
 import EmailActivate from "./components/EmailActivate/EmailActivate";
 import CheckYourEmail from "./components/CheckYourEmail/CheckYourEmail";
 import ThankYou from "./components/ThankYou/ThankYou";
-
-
-
-import {
-Route,
-BrowserRouter as Router,
-Routes,
-} from "react-router-dom";
-
-
-
-
+import Resetpassword from "./components/Resetpassword/Resetpassword";
+import EmailResetPwd from "./components/EmailResetPwd/EmailResetPwd";
+import ResetpasswordSuccess from "./components/ResetpasswordSuccess/ResetpasswordSuccess";
+import Signin from "./components/loginapi/loginapi";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 function App() {
-return (
-
-<Router>
-<Navbar/>
-<Routes>
-<Route exact path="/" element= {<ChooseAcc/>} />
-<Route path="/login" element= {<Login/>} />
-<Route path="/createaccount" element= { <CreateAccount />}/>
-<Route path="/userdetails" element= {<UserDetails/>} />
-{/*<Route path="/searchhomeaddress" element= {<SearchHomeAddress/>} /> */}
-{/*<Route path="/homeaddress" element= {<HomeAddress/>} /> */}
-<Route path="/confirmaddress" element= {<ConfirmAddress/>} />
-<Route path="/homeaddressmanual" element= {<HomeAddressmanual/>} />
-<Route path="/selectprescriber" element= {<SelectPrescriber/>} />
-<Route path="/searchprescriber" element= {<SearchPrescriber/>} />
-<Route path="/prescriberdetails" element= {<PrescriberDetails/>} />
-<Route path="/prescribersystems" element= {<PrescriberSystem/>} />
-<Route path="/consent" element= {<Consent/>} />
-<Route path="/emailactivate" element= {<EmailActivate/>} />
-<Route path="/thankyou" element= {<ThankYou/>} />
-<Route path="/CheckYourEmail" element= {<CheckYourEmail/>} />
-
-</Routes>
-
-
-
-</Router>
-);
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/access/complete/:rnd/:token" element={<Signin />} />
+        <Route exact path="/" element={<ChooseAcc />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/createaccount" element={<CreateAccount />} />
+        <Route path="/userdetails" element={<UserDetails />} />
+        {/*<Route path="/searchhomeaddress" element= {<SearchHomeAddress/>} /> */}
+        {/*<Route path="/homeaddress" element= {<HomeAddress/>} /> */}
+        <Route path="/confirmaddress" element={<ConfirmAddress />} />
+        <Route path="/homeaddressmanual" element={<HomeAddressmanual />} />
+        <Route path="/selectprescriber" element={<SelectPrescriber />} />
+        <Route path="/searchprescriber" element={<SearchPrescriber />} />
+        <Route path="/prescriberdetails" element={<PrescriberDetails />} />
+        <Route path="/prescribersystems" element={<PrescriberSystem />} />
+        <Route path="/consent" element={<Consent />} />
+        <Route path="/emailactivate" element={<EmailActivate />} />
+        <Route path="/thankyou" element={<ThankYou />} />
+        <Route path="/CheckYourEmail" element={<CheckYourEmail />} />
+        <Route path="/Resetpassword" element={<Resetpassword />} />
+        <Route path="/emailresetpwd" element={<EmailResetPwd />} />
+        <Route
+          path="/Resetpasswordsuccess"
+          element={<ResetpasswordSuccess />}
+        />
+        <Route path="/emailactivate" element={<EmailActivate />} />
+      </Routes>
+    </Router>
+  );
 }
-
-
 
 export default App;
