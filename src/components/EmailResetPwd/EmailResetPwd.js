@@ -3,6 +3,7 @@ import { InputAdornment } from "@material-ui/core";
 import EmailIcon from "@material-ui/icons/Email";
 import "./EmailResetPwd.css";
 import { useNavigate } from "react-router-dom";
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 
 function EmailResetPwd() {
     let navigate = useNavigate();
@@ -17,6 +18,24 @@ function EmailResetPwd() {
 
   return (
     <Paper elevation={0} style={paperStyle}>
+      <div style={{ marginTop: "2%" }}>
+        <a
+          href=" /homeaddressmanual"
+          style={{
+            textDecoration: "none",
+            color: "black",
+            display: "flex",
+            alignItems: "center",
+            margin: 0,
+            padding: 0,
+            marginLeft: 150,
+            marginTop: 0,
+          }}
+        >
+          <ArrowBackIcon />
+          <p>Back</p>
+        </a>
+      </div>
       <h2 className="heading">Enter your email address</h2>
       <p className="paragraph">
         Enter the email address you used to create your account.

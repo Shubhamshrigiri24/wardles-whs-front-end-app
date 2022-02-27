@@ -36,7 +36,7 @@ function ConfirmAddress() {
     );
     // console.log(password)
     // console.log(user)
-    navigate("/hcp/emailactivate", {
+    navigate("/patient/selectprescriber", {
       state: {
         email: email,
       },

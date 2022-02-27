@@ -1,12 +1,10 @@
-// Modal for Select prescriber page.
-
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import HelpIcon from "./Assets/HelpIcon.svg";
-import Cross from "./Assets/Cross.svg";
+import HelpIcon from "../../Assets/HelpIcon.svg";
+import Cross from "../../Assets/Cross.svg";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LiveHelpOutlinedIcon from "@material-ui/icons/LiveHelpOutlined";
 
@@ -15,17 +13,16 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 330,
+  width: 341,
   bgcolor: "background.paper",
   borderRadius: "8px",
   p: 4,
 };
 
-export default function HomeAddressModal() {
-  const [open1, setOpen1] = React.useState(false);
-
-  const handleOpen1 = () => setOpen1(true);
-  const handleClose1 = () => setOpen1(false);
+export default function RegistraionModal() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
     <div>
@@ -36,13 +33,13 @@ export default function HomeAddressModal() {
         fullWidth
         startIcon={<LiveHelpOutlinedIcon />}
         endIcon={<ArrowForwardIosIcon />}
-        onClick={handleOpen1}
+        onClick={handleOpen}
       >
-        Who is my prescriber?
+        What is my registration number?
       </Button>
       <Modal
-        open={open1}
-        onClose={handleClose1}
+        open={open}
+        onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -50,27 +47,22 @@ export default function HomeAddressModal() {
           <Box mb={2} sx={{ display: "flex" }}>
             <img src={HelpIcon} alt="" />
             <img
-              onClick={handleClose1}
+              onClick={handleClose}
               style={{ paddingLeft: "82%" }}
               src={Cross}
               alt=""
             />
           </Box>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Who is my prescriber?
+            What is my registration number?
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Your prescriber is the place that approves your appliance
-            prescriptions. This might be your GP surgery, a nurse prescriber, or
-            a prescribing hub, for example.
+            This is a number that identifies you as healthcare staff. For
+            example, you might have an employee NHS identifier.
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Search for your prescriber and select from the list. If you can't
-            find your prescriber, you can enter their details manually and we
-            will try to add your prescriber into our system.
-          </Typography>
+
           <Button
-            onClick={handleClose1}
+            onClick={handleClose}
             variant="contained"
             size="large"
             disableElevation
@@ -86,7 +78,7 @@ export default function HomeAddressModal() {
               fontWeight: "bold",
             }}
             fullWidth
-            // type="submit"
+            type="submit"
           >
             Close
           </Button>

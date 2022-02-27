@@ -1,12 +1,9 @@
-import React from 'react'
-import './PrescriberSystem.css'
+import React from "react";
+import "./PrescriberSystem.css";
 import { useNavigate } from "react-router-dom";
 
- 
 function PrescriberSystem() {
-
   let navigate = useNavigate();
-
   return (
     <div className="prescriber-section">
       <div className="container">
@@ -22,10 +19,10 @@ function PrescriberSystem() {
           </p>
           <div className="button-container">
             <button
-              className="button"
               onClick={() => {
-                navigate("/consent");
+                navigate("/patient/consent");
               }}
+              className="button"
             >
               Next
             </button>
@@ -36,4 +33,4 @@ function PrescriberSystem() {
   );
 }
 
-export default PrescriberSystem
+export default PrescriberSystem;

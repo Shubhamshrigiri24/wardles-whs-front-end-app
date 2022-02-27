@@ -1,23 +1,23 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Container } from "@material-ui/core";
 import FormHelperText from "@mui/material/FormHelperText";
 import { Box } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import InputAdornment from "@mui/material/InputAdornment";
-import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 import PermContactCalendarRoundedIcon from "@mui/icons-material/PermContactCalendarRounded";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import Stack from "@mui/material/Stack";
-import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
+// import AdapterDateFns from "@mui/lab/AdapterDateFns";
+// import LocalizationProvider from "@mui/lab/LocalizationProvider";
+// import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
+// import Stack from "@mui/material/Stack";
 // import "date-fns";
-import { useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router";
+import { useNavigate } from "react-router";
+import RegistraionModal from "./RegistrationModal";
 
 let initialState1 = {
-  phoneNumber: "",
+  registrationNumber: "",
   firstName: "",
   lastName: "",
   err: "",
@@ -25,7 +25,7 @@ let initialState1 = {
   success: "",
 };
 
-function UserDetails() {
+function HCPUserDetails() {
   const location = useLocation();
 
   const email = location.state.email;
@@ -35,11 +35,6 @@ function UserDetails() {
 
   let navigate = useNavigate();
 
-  const [value, setValue] = React.useState(new Date("2014-08-18T21:11:54"));
-
-  const handleChange = (newValue) => {
-    setValue(newValue);
-  };
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setUser1({ ...user1, [name]: value, err: "" });
@@ -52,19 +47,26 @@ function UserDetails() {
   //       setUser1({...user1, [name]:value, err: ''})
   //   }
 
-  const { firstName, lastName, phoneNumber, dob, err, errEmpty, success } =
-    user1;
+  const {
+    firstName,
+    lastName,
+    registrationNumber,
+    dob,
+    err,
+    errEmpty,
+    success,
+  } = user1;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log(user1);
     // if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(phoneNumber))
     //         return setUser1({...user1, err: "Please check the information above is correct",success: ''})
-    navigate("/patient/searchhomeaddress", {
+    navigate("/hcp/searchhomeaddress", {
       state: {
         email: email,
         password: password,
-        phoneNumber: phoneNumber,
+        registrationNumber: registrationNumber,
         firstName: firstName,
         lastName: lastName,
       },
@@ -79,31 +81,11 @@ function UserDetails() {
 
   return (
     <div>
-      <div style={{ marginTop: "2%" }}>
-        <a
-          href=" "
-          style={{
-            textDecoration: "none",
-            color: "black",
-            display: "flex",
-            alignItems: "center",
-            margin: 0,
-            padding: 0,
-            marginLeft: 150,
-            marginTop: 0,
-          }}
-        >
-          <ArrowBackIcon />
-          <p>Back</p>
-        </a>
-      </div>
-
       <form onSubmit={handleSubmit}>
         <Container component="main" maxWidth="xs">
           <Box
             sx={{
-              marginTop: 15,
-              marginBottom: "15%",
+              marginTop: 25,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
@@ -111,7 +93,6 @@ function UserDetails() {
           >
             <Box sx={{ mt: 0.5 }}>
               <h1 className="heading">Your details</h1>
-
               <TextField
                 margin="normal"
                 required
@@ -138,7 +119,6 @@ function UserDetails() {
                 <FormHelperText
                   style={{
                     color: "red",
-                    fontFamily: "Gilroy Alt",
                     margin: "1.68464px 0px",
                     fontWeight: "bold",
                   }}
@@ -149,7 +129,6 @@ function UserDetails() {
               ) : (
                 ""
               )}
-
               <TextField
                 margin="normal"
                 required
@@ -173,30 +152,31 @@ function UserDetails() {
                   ),
                 }}
               />
-              {lastName === "" && phoneNumber !== "" ? (
-                <FormHelperText
-                  style={{ color: "red" }}
-                  id="component-error-text"
-                >
-                  This Field Is Required
-                </FormHelperText>
-              ) : (
-                ""
-              )}
-
-              <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <Stack spacing={3}>
-                  <DesktopDatePicker
-                    label="Date desktop"
-                    inputFormat="MM/dd/yyyy"
-                    value={value}
-                    onChange={handleChange}
-                    renderInput={(params) => <TextField {...params} />}
-                  />
-                </Stack>
-              </LocalizationProvider>
+              {/* {lastName === "" && phoneNumber !== "" ? ( */}
 
               <TextField
+                margin="normal"
+                required
+                fullWidth
+                placeholder="Registration number"
+                id="registrationNumber"
+                label="Registration number"
+                type="text"
+                name="registrationNumber"
+                value={registrationNumber}
+                autoComplete="fname"
+                onChange={handleChangeInput}
+                autoFocus
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PermContactCalendarRoundedIcon />
+                    </InputAdornment>
+                  ),
+                }}
+                variant="outlined"
+              />
+              {/* <TextField
                 margin="normal"
                 required
                 fullWidth
@@ -217,7 +197,9 @@ function UserDetails() {
                   ),
                 }}
                 variant="outlined"
-              />
+              /> */}
+
+              <RegistraionModal />
 
               <Button
                 variant="contained"
@@ -225,12 +207,12 @@ function UserDetails() {
                 fullWidth
                 size="large"
                 style={{
+                  fontFamily: "Gilroy Alt",
                   textTransform: "none",
                   backgroundColor: "#FFCD00",
                   color: "#07283C",
                   marginTop: "9px",
                   borderRadius: "2px",
-                  marginBottom: "5%",
                 }}
                 type="submit"
               >
@@ -244,4 +226,4 @@ function UserDetails() {
   );
 }
 
-export default UserDetails;
+export default HCPUserDetails;

@@ -54,7 +54,7 @@ function HomeAddressmanual() {
   const handleSubmit = async (e) => {
     // console.log(password)
     // console.log(user)
-    navigate("/hcp/confirmaddress", {
+    navigate("/patient/confirmaddress", {
       state: {
         addressLineOne: addressLineOne,
         addressLineTwo: addressLineTwo,

@@ -8,7 +8,6 @@ import "./SearchHomeAddress.css";
 import MyPrescriber1 from "../MyPrescriber1";
 import { useNavigate } from "react-router";
 import { useLocation } from "react-router";
-import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 
 export default function SearchHomeAddress() {
   const location = useLocation();
@@ -26,7 +25,7 @@ export default function SearchHomeAddress() {
     // console.log(user1);
     // if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(phoneNumber))
     //         return setUser1({...user1, err: "Please check the information above is correct",success: ''})
-    navigate("/hcp/homeaddressmanual", {
+    navigate("/patient/homeaddressmanual", {
       state: {
         email: email,
         password: password,
@@ -38,24 +37,6 @@ export default function SearchHomeAddress() {
   };
   return (
     <div style={{ textTransform: "none !important", background: "E5E5E5" }}>
-      <div style={{ marginTop: "2%" }}>
-        <a
-          href=" /homeaddressmanual"
-          style={{
-            textDecoration: "none",
-            color: "black",
-            display: "flex",
-            alignItems: "center",
-            margin: 0,
-            padding: 0,
-            marginLeft: 150,
-            marginTop: 0,
-          }}
-        >
-          <ArrowBackIcon />
-          <p>Back</p>
-        </a>
-      </div>
       <form onSubmit={handleSubmit}>
         <Container style={{ margin: "4% auto" }} maxWidth="xs">
           <Typography

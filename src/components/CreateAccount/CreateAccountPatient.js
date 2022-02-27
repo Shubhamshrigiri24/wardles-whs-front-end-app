@@ -24,11 +24,8 @@ import {
   isMatch,
   isMatchemail,
   passwordValidate,
-} from "../../components/validation/Validation";
-import {
-  showErrMsg,
-  showErrMsgEmpty,
-} from "../../components/notification/Notification";
+} from "../validation/Validation";
+import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
 const initialState = {
   email: "",
   confirm_email: "",
@@ -134,7 +131,7 @@ export default function CreateAcc(props) {
         success: "",
       });
 
-    navigate("/hcp/userdetails", {
+    navigate("/patient/userdetails", {
       state: { email: email, password: password },
     });
     console.log(user);
@@ -354,11 +351,17 @@ export default function CreateAcc(props) {
 
             <label>
               By continuing you are agreeing to our{" "}
-              <a target="blank" href="https://www.well.co.uk/about-us/policies/terms-and-conditions-well-healthcare-supplies ">
+              <a
+                target="blank"
+                href="https://www.well.co.uk/about-us/policies/terms-and-conditions-well-healthcare-supplies "
+              >
                 terms and conditions
               </a>{" "}
               and
-              <a target="blank" href="https://www.well.co.uk/about-us/policies/privacy">
+              <a
+                target="blank"
+                href="https://www.well.co.uk/about-us/policies/privacy"
+              >
                 {" "}
                 privacy policy.
               </a>
