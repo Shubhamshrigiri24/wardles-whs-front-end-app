@@ -29,6 +29,7 @@ export default function MyPrescriber1() {
   return (
     <div>
       <Button
+        href="#contained-buttons"
         color="primary"
         size="large"
         style={{ textTransform: "none" }}

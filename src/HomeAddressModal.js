@@ -30,6 +30,7 @@ export default function HomeAddressModal() {
   return (
     <div>
       <Button
+        href="#contained-buttons"
         color="primary"
         size="large"
         style={{ textTransform: "none" }}

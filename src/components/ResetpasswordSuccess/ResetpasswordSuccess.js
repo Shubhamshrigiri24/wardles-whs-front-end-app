@@ -1,7 +1,6 @@
 import { Grid, Paper, Button } from "@material-ui/core";
 import Succestick from "../../Assets/succestick.svg";
 import "./ResetpasswordSuccess.css";
-import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 
 function ResetpasswordSuccess() {
   const paperStyle = {
@@ -14,24 +13,6 @@ function ResetpasswordSuccess() {
 
   return (
     <Paper elevation={0} style={paperStyle}>
-      <div style={{ marginTop: "2%" }}>
-        <a
-          href=" "
-          style={{
-            textDecoration: "none",
-            color: "black",
-            display: "flex",
-            alignItems: "center",
-            margin: 0,
-            padding: 0,
-            marginLeft: 150,
-            marginTop: 0,
-          }}
-        >
-          <ArrowBackIcon />
-          <p>Back</p>
-        </a>
-      </div>
       <Grid align="Center">
         <img src={Succestick} alt="error" />
       </Grid>
