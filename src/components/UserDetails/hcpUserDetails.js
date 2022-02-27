@@ -14,7 +14,9 @@ import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 // import "date-fns";
 import { useLocation } from "react-router";
 import { useNavigate } from "react-router";
-import RegistraionModal from "./RegistrationModal";
+import RegistraionModal from "./RegistrationModal"
+import { isSpace,isEmpty } from "../validation/Validation";
+import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
 
 let initialState1 = {
   registrationNumber: "",
@@ -30,6 +32,7 @@ function HCPUserDetails() {
 
   const email = location.state.email;
   const password = location.state.password;
+  console.log(email, password)
 
   const [user1, setUser1] = useState(initialState1);
 
@@ -59,9 +62,12 @@ function HCPUserDetails() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(user1);
-    // if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(phoneNumber))
-    //         return setUser1({...user1, err: "Please check the information above is correct",success: ''})
+    
+    if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(registrationNumber))
+      return setUser1({...user1, err: "Please check the information above is correct",success: ''})
+    if(isSpace(firstName) || isSpace(lastName) || isSpace(registrationNumber))
+      return setUser1({...user1, err: "Please check the information above is correct", success: ''})
+  
     navigate("/hcp/searchhomeaddress", {
       state: {
         email: email,
@@ -95,7 +101,7 @@ function HCPUserDetails() {
               <h1 className="heading">Your details</h1>
               <TextField
                 margin="normal"
-                required
+              
                 fullWidth
                 placeholder="First name"
                 id="firstName"
@@ -115,7 +121,7 @@ function HCPUserDetails() {
                 }}
                 variant="outlined"
               />
-              {firstName === "" && lastName !== "" ? (
+              {/* {firstName === "" && lastName !== "" ? (
                 <FormHelperText
                   style={{
                     color: "red",
@@ -128,10 +134,9 @@ function HCPUserDetails() {
                 </FormHelperText>
               ) : (
                 ""
-              )}
+              )} */}
               <TextField
                 margin="normal"
-                required
                 fullWidth
                 placeholder="Last name"
                 name="lastName"
@@ -156,7 +161,7 @@ function HCPUserDetails() {
 
               <TextField
                 margin="normal"
-                required
+                
                 fullWidth
                 placeholder="Registration number"
                 id="registrationNumber"
@@ -200,6 +205,7 @@ function HCPUserDetails() {
               /> */}
 
               <RegistraionModal />
+              {err && showErrMsg(err)}
 
               <Button
                 variant="contained"

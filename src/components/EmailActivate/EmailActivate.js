@@ -2,7 +2,6 @@ import { Grid, Paper, Button } from "@material-ui/core";
 import Message from "../../Assets/message.svg";
 import Msgmail from "../../Assets/msgmail.svg";
 import GetEmail from "../GetEmail";
-import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -10,13 +9,12 @@ function EMailActivate() {
   let navigate = useNavigate();
 
   const location = useLocation();
-
   const email = location.state.email;
 
   const paperStyle = {
     padding: 20,
     paddingTop: 0,
-    width: 380,
+    width: 340,
     margin: "10px auto",
     background: "#F7FBFF",
   };
@@ -30,57 +28,41 @@ function EMailActivate() {
   return (
     // <Grid>
     <Paper elevation={0} style={paperStyle}>
-      <div style={{ marginTop: "2%" }}>
-        <a
-          href=" /homeaddressmanual"
-          style={{
-            textDecoration: "none",
-            color: "black",
-            display: "flex",
-            alignItems: "center",
-            margin: 0,
-            padding: 0,
-            marginLeft: 150,
-            marginTop: 0,
-          }}
-        >
-          <ArrowBackIcon />
-          <p>Back</p>
-        </a>
-      </div>
       <Grid align="Center">
         <img src={Message} alt="error" />
       </Grid>
-      <h2 style={{ marginTop: 0, fontFamily: "Gilroy Alt" }}>
+      <h2 style={{ marginTop: 0 }}>
         Check your email to <br /> activate your account
       </h2>
 
       <Paper elevation={0} style={paperStyle2}>
         <img src={Msgmail} alt="error" />
         <div style={{ marginLeft: 15 }}>
-          <p style={{ fontFamily: "Gilroy Alt" }}>We’ve sent an email to </p>
-          <p style={{ fontFamily: "Gilroy Alt", fontWeight: "bold" }}>
+          <p style={{ padding: 0, margin: 0 }}>We’ve sent an email to </p>
+          <p style={{ padding: 0, margin: 0, fontWeight: "bolder" }}>
             {email}
           </p>
         </div>
       </Paper>
 
-      <p style={{ fontFamily: "Gilroy Alt" }}>
+      <p>
         To complete sign up and process your future orders, we need to confirm
         your email address.
       </p>
-      <p style={{ fontFamily: "Gilroy Alt" }}>
+      <p>
         Please check your email and follow the link in the email we sent you.
       </p>
 
       <Button
+        onClick={() => {
+          navigate("/patient/emailsuccess");
+        }}
         variant="contained"
         size="Large"
         disableElevation
         style={{
           background: "#F7FBFF",
           color: "#07283C",
-          fontFamily: "Gilroy Alt",
           marginBottom: "17px",
           border: "1.5px solid #07283C",
           fontSize: "18px",

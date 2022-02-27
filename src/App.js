@@ -29,8 +29,8 @@ import PrescriberSystem from "./components/PrescriberSystem/PrescriberSystem";
 
 import Consent from "./components/Consent/Consent";
 
-import EmailActivate from "./components/EmailActivate/EmailActivatePatient";
-import EmailActivatePatient from "./components/EmailActivate/EmailActivatePatient";
+import EmailActivate from "./components/EmailActivate/EmailActivatehcp";
+import EmailActivatePatient from "./components/EmailActivate/EmailActivate";
 
 import CheckYourEmail from "./components/CheckYourEmail/CheckYourEmail";
 import ThankYou from "./components/ThankYou/ThankYou";
@@ -66,8 +66,8 @@ function App() {
         <Route path="/hcp/createaccount" element={<CreateAccount />} />
         <Route path="/hcp/userdetails" element={<HcpUserDetails />} />
         <Route path="/hcp/searchhomeaddress" element={<SearchHomeAddress />} />
-        <Route path="/hcp/confirmaddress" element={<ConfirmAddress />} />
         <Route path="/hcp/homeaddressmanual" element={<HomeAddressmanual />} />
+        <Route path="/hcp/confirmaddress" element={<ConfirmAddress />} />
         <Route path="/hcp/selectprescriber" element={<SelectPrescriber />} />
         <Route path="/hcp/searchprescriber" element={<SearchPrescriber />} />
 

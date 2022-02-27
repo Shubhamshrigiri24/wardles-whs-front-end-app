@@ -5,7 +5,12 @@ import { Typography } from "@material-ui/core";
 import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { accessStart } from "../../API/userOps";
+import {
+  isEmpty,
+  isSpace
+} from "../validation/Validation";
+import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
+
 
 function ConfirmAddress() {
   let navigate = useNavigate();
@@ -16,33 +21,33 @@ function ConfirmAddress() {
   const password = location.state.password;
   const firstName = location.state.firstName;
   const lastName = location.state.lastName;
-  const registrationNumber = location.state.registrationNumber;
+  const phoneNumber = location.state.phoneNumber;
   const addressLineOne = location.state.addressLineOne;
   const addressLineTwo = location.state.addressLineTwo;
   const city = location.state.city;
   const postcode = location.state.postcode;
 
   const handleSubmit = async (e) => {
-    accessStart(
-      location.state.email,
-      location.state.password,
-      location.state.registrationNumber,
-      location.state.firstName,
-      location.state.lastName,
-      location.state.addressLineOne,
-      location.state.addressLineTwo,
-      location.state.postcode,
-      location.state.city
-    );
+
+    e.preventDefault();
+    
     // console.log(password)
     // console.log(user)
     navigate("/patient/selectprescriber", {
       state: {
+        addressLineOne: addressLineOne,
+        addressLineTwo: addressLineTwo,
+        city: city,
+        postcode: postcode,
         email: email,
+        password: password,
+        firstName: firstName,
+        lastName: lastName,
+        phoneNumber: phoneNumber,
       },
     });
     // console.log(user)
-    e.preventDefault();
+    
   };
 
   return (
@@ -118,6 +123,7 @@ function ConfirmAddress() {
             >
               Change Address
             </Button>
+
 
             <Button
               variant="contained"

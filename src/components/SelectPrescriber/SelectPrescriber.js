@@ -9,12 +9,50 @@ import { InputAdornment } from "@mui/material";
 import "./SelectPrescriber.css";
 import MyPrescriber1 from "../MyPrescriber1";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function SelectPrescriber() {
   const navigate = useNavigate();
+ 
+
+  const location = useLocation();
+
+  const email = location.state.email;
+  const password = location.state.password;
+  const firstName = location.state.firstName;
+  const lastName = location.state.lastName;
+  const phoneNumber = location.state.phoneNumber;
+  const addressLineOne = location.state.addressLineOne;
+  const addressLineTwo = location.state.addressLineTwo;
+  const city = location.state.city;
+  const postcode = location.state.postcode;
+
+  const handleSubmit = async (e) => {
+
+    e.preventDefault();
+    
+    // console.log(password)
+    // console.log(user)
+    navigate("/patient/prescriberdetails", {
+      state: {
+        addressLineOne: addressLineOne,
+        addressLineTwo: addressLineTwo,
+        city: city,
+        postcode: postcode,
+        email: email,
+        password: password,
+        firstName: firstName,
+        lastName: lastName,
+        phoneNumber: phoneNumber,
+      },
+    });
+    // console.log(user)
+    
+  };
 
   return (
     <div style={{ textTransform: "none !important", background: "E5E5E5" }}>
+      <form onSubmit= {handleSubmit}>
       <Container style={{ margin: "4% auto" }} maxWidth="xs">
         <Typography
           mb={1}
@@ -52,9 +90,7 @@ export default function SelectPrescriber() {
           color="primary"
           fullWidth
           size="large"
-          onClick={() => {
-            navigate("/patient/prescriberdetails");
-          }}
+          type="submit"
           style={{
             textTransform: "none ",
             background: "White",
@@ -70,6 +106,7 @@ export default function SelectPrescriber() {
         </Button>
         <MyPrescriber1 />
       </Container>
+      </form>
     </div>
   );
 }

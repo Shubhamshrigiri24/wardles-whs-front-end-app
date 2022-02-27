@@ -8,13 +8,15 @@ import InputAdornment from "@mui/material/InputAdornment";
 import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 import PermContactCalendarRoundedIcon from "@mui/icons-material/PermContactCalendarRounded";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import Stack from "@mui/material/Stack";
-import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
+// import AdapterDateFns from "@mui/lab/AdapterDateFns";
+// import LocalizationProvider from "@mui/lab/LocalizationProvider";
+// import Stack from "@mui/material/Stack";
+// import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 // import "date-fns";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { isSpace,isEmpty } from "../validation/Validation";
+import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
 
 let initialState1 = {
   phoneNumber: "",
@@ -35,31 +37,25 @@ function UserDetails() {
 
   let navigate = useNavigate();
 
-  const [value, setValue] = React.useState(new Date("2014-08-18T21:11:54"));
 
-  const handleChange = (newValue) => {
-    setValue(newValue);
-  };
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setUser1({ ...user1, [name]: value, err: "" });
   };
 
-  // const [curr_dob, new_dob] = React.useState(new Date(''));
-
-  // const handleChangeInput = e => {
-  //       const {name, value} = e.target
-  //       setUser1({...user1, [name]:value, err: ''})
-  //   }
+  
 
   const { firstName, lastName, phoneNumber, dob, err, errEmpty, success } =
     user1;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(user1);
-    // if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(phoneNumber))
-    //         return setUser1({...user1, err: "Please check the information above is correct",success: ''})
+    
+    if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(phoneNumber))
+            return setUser1({...user1, err: "Please check the information above is correct",success: ''})
+    if(isSpace(firstName) || isSpace(lastName) || isSpace(phoneNumber))
+            return setUser1({...user1, err: "Please check the information above is correct", success: ''})
+
     navigate("/patient/searchhomeaddress", {
       state: {
         email: email,
@@ -71,11 +67,7 @@ function UserDetails() {
     });
   };
 
-  // let lastNameEl = useRef()
 
-  // function clickFun(){
-  //   lastNameEl.current.focus()
-  // }
 
   return (
     <div>
@@ -184,7 +176,7 @@ function UserDetails() {
                 ""
               )}
 
-              <LocalizationProvider dateAdapter={AdapterDateFns}>
+              {/* <LocalizationProvider dateAdapter={AdapterDateFns}>
                 <Stack spacing={3}>
                   <DesktopDatePicker
                     label="Date desktop"
@@ -194,7 +186,7 @@ function UserDetails() {
                     renderInput={(params) => <TextField {...params} />}
                   />
                 </Stack>
-              </LocalizationProvider>
+              </LocalizationProvider> */}
 
               <TextField
                 margin="normal"
@@ -218,6 +210,7 @@ function UserDetails() {
                 }}
                 variant="outlined"
               />
+              {err && showErrMsg(err)}
 
               <Button
                 variant="contained"

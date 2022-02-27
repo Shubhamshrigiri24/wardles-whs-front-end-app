@@ -23,7 +23,7 @@ import {
   isEmail,
   isMatch,
   isMatchemail,
-  passwordValidate,
+  isPasswordValid,
 } from "../validation/Validation";
 import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
 const initialState = {
@@ -99,42 +99,31 @@ export default function CreateAcc(props) {
 
   const handleSubmit = async (e) => {
     // console.log(password)
-    console.log(user);
-
+   
     e.preventDefault();
-    const passwordValidate = (password, passwordValidator) => {
-      if (password.match(passwordValidator)) return true;
-      return false;
-    };
+    if(isEmpty(email) || isEmpty(password) || isEmpty(confirm_email)) 
+              return setUser({...user, err: "Please fill in all fields.", success: ''})
 
-    if (!isEmail(email))
-      return setUser({ ...user, err: "Invalid emails.", success: "" });
+        if(!isEmail(email, confirm_email))
+          return setUser({...user, err: "Invalid email address.", success: ''})
 
-    if (!isMatchemail(email, confirm_email))
-      return setUser({
-        ...user,
-        err: "Make sure your email matches in both fields.",
-        success: "",
-      });
+        
+        if(!isMatchemail(email, confirm_email))
+        return setUser({...user, err: "Make sure your email address matches in both fields.", success: ''})
+        
+        
+        if(!isPasswordValid(password,passwordValidator))
+        return setUser({...user,err:"Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!", success:''})
 
-    if (!passwordValidate(password, passwordValidator))
-      return setUser({
-        ...user,
-        err: "Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!",
-        success: "",
-      });
 
-    if (!isMatch(password, cf_password))
-      return setUser({
-        ...user,
-        err: "Make sure your password matches in both fields.",
-        success: "",
-      });
+        
+        if(!isMatch(password, cf_password))
+            return setUser({...user, err: "Make sure your password matches in both fields.", success: ''})
 
     navigate("/patient/userdetails", {
       state: { email: email, password: password },
     });
-    console.log(user);
+    
   };
 
   return (

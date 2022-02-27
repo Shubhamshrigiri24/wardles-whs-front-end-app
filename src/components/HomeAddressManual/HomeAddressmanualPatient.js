@@ -6,6 +6,12 @@ import HomeAddressModal from "../../HomeAddressModal";
 import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 //import Question from './Assets/Question.svg';
 //import Arrowright from './Assets/Arrowright.svg';
+import {
+  isEmpty,
+  isSpace
+} from "../validation/Validation";
+import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
+
 
 const initialState = {
   addressLineOne: "",
@@ -26,7 +32,7 @@ function HomeAddressmanual() {
   const password = location.state.password;
   const firstName = location.state.firstName;
   const lastName = location.state.lastName;
-  const registrationNumber = location.state.registrationNumber;
+  const phoneNumber = location.state.phoneNumber;
 
   const [user, setUser] = useState(initialState);
   const {
@@ -48,12 +54,17 @@ function HomeAddressmanual() {
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
+    
     setUser({ ...user, [name]: value, err: "", success: "" });
   };
 
   const handleSubmit = async (e) => {
-    // console.log(password)
-    // console.log(user)
+    e.preventDefault();
+    if(isEmpty(addressLineOne) || isEmpty(addressLineTwo) || isEmpty(city) || isEmpty(postcode)) 
+        return setUser({...user, err: "Please fill in all fields.", success: ''})
+    if(isSpace(addressLineOne) || isSpace(addressLineTwo) || isSpace(city) || isSpace(postcode)) 
+        return setUser({...user, err: "Please fill in all fields.", success: ''})
+
     navigate("/patient/confirmaddress", {
       state: {
         addressLineOne: addressLineOne,
@@ -64,11 +75,11 @@ function HomeAddressmanual() {
         password: password,
         firstName: firstName,
         lastName: lastName,
-        registrationNumber: registrationNumber,
+        phoneNumber: phoneNumber,
       },
     });
     // console.log(user)
-    e.preventDefault();
+    
   };
 
   return (
@@ -96,7 +107,7 @@ function HomeAddressmanual() {
         <form onSubmit={handleSubmit}>
           <Grid align="left">
             <h2 style={{ fontSize: 28, margin: 0, marginBottom: 15 }}>
-              Enter your work address
+              Enter your home address
             </h2>
           </Grid>
 
@@ -167,7 +178,7 @@ function HomeAddressmanual() {
             variant="outlined"
             fullWidth
           />
-
+ {err && showErrMsg(err)}
           <Button
             variant="contained"
             size="Large"
