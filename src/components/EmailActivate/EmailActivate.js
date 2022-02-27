@@ -2,17 +2,8 @@ import { Grid, Paper, Button } from "@material-ui/core";
 import Message from "../../Assets/message.svg";
 import Msgmail from "../../Assets/msgmail.svg";
 import GetEmail from "../GetEmail";
-import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
-import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 function EMailActivate() {
-  let navigate = useNavigate();
-
-  const location = useLocation();
-
-  const email = location.state.email;
-
   const paperStyle = {
     padding: 20,
     paddingTop: 0,
@@ -30,24 +21,6 @@ function EMailActivate() {
   return (
     // <Grid>
     <Paper elevation={0} style={paperStyle}>
-      <div style={{ marginTop: "2%" }}>
-        <a
-          href=" /homeaddressmanual"
-          style={{
-            textDecoration: "none",
-            color: "black",
-            display: "flex",
-            alignItems: "center",
-            margin: 0,
-            padding: 0,
-            marginLeft: 150,
-            marginTop: 0,
-          }}
-        >
-          <ArrowBackIcon />
-          <p>Back</p>
-        </a>
-      </div>
       <Grid align="Center">
         <img src={Message} alt="error" />
       </Grid>
@@ -60,7 +33,7 @@ function EMailActivate() {
         <div style={{ marginLeft: 15 }}>
           <p style={{ fontFamily: "Gilroy Alt" }}>We’ve sent an email to </p>
           <p style={{ fontFamily: "Gilroy Alt", fontWeight: "bold" }}>
-            {email}
+            emailaddress@email.com
           </p>
         </div>
       </Paper>

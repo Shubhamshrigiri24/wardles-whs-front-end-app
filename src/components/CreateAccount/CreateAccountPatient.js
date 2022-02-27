@@ -102,10 +102,7 @@ export default function CreateAcc(props) {
     console.log(user);
 
     e.preventDefault();
-    const passwordValidate = (password, passwordValidator) => {
-      if (password.match(passwordValidator)) return true;
-      return false;
-    };
+    
 
     if (!isEmail(email))
       return setUser({ ...user, err: "Invalid emails.", success: "" });
@@ -132,9 +129,9 @@ export default function CreateAcc(props) {
       });
 
     navigate("/patient/userdetails", {
-      state: { email: email, password: password },
+      state: { email: email, password: password},
     });
-    console.log(user);
+    // console.log(user);
   };
 
   return (

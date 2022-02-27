@@ -77,7 +77,7 @@ export default function Consent() {
     e.preventDefault();
     if (A === true && B === true && C === true && D === true) {
       setError("");
-      navigate("/patient/emailactivate");
+      navigate("/emailactivate");
     } else {
       setError("You must agree to all of the statements above to continue.");
     }

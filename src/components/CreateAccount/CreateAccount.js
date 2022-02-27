@@ -18,17 +18,7 @@ import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 import "./CreateAccount.css";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
-import {
-  isEmpty,
-  isEmail,
-  isMatch,
-  isMatchemail,
-  passwordValidate,
-} from "../../components/validation/Validation";
-import {
-  showErrMsg,
-  showErrMsgEmpty,
-} from "../../components/notification/Notification";
+
 const initialState = {
   email: "",
   confirm_email: "",
@@ -52,7 +42,7 @@ const initialState = {
 export default function CreateAcc(props) {
   let navigate = useNavigate();
 
-  const passwordValidator = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z@]{12,}$/;
+  const passwordValidator = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z@]{8,}$/;
 
   const paperStyle = {
     padding: 10,
@@ -105,38 +95,22 @@ export default function CreateAcc(props) {
     console.log(user);
 
     e.preventDefault();
-    const passwordValidate = (password, passwordValidator) => {
-      if (password.match(passwordValidator)) return true;
-      return false;
-    };
+    // if(isEmpty(email) || isEmpty(password) || isEmpty(confirm_email))
+    //         return setUser({...user, err: "Please fill in all fields.", success: ''})
 
-    if (!isEmail(email))
-      return setUser({ ...user, err: "Invalid emails.", success: "" });
+    // // if(!isEmail(email))
+    // //     return setUser({...user, errEmpty: "Invalid emails.", success: ''})
 
-    if (!isMatchemail(email, confirm_email))
-      return setUser({
-        ...user,
-        err: "Make sure your email matches in both fields.",
-        success: "",
-      });
+    // if(!isMatchemail(email, confirm_email))
+    // return setUser({...user, err: "Make sure your email matches in both fields.", success: ''})
 
-    if (!passwordValidate(password, passwordValidator))
-      return setUser({
-        ...user,
-        err: "Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!",
-        success: "",
-      });
+    // if(!passwordValidate(password,passwordValidator))
+    // return setUser({...user,err:"Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!", success:''})
 
-    if (!isMatch(password, cf_password))
-      return setUser({
-        ...user,
-        err: "Make sure your password matches in both fields.",
-        success: "",
-      });
+    // if(!isMatch(password, cf_password))
+    //     return setUser({...user, err: "Make sure your password matches in both fields.", success: ''})
 
-    navigate("/hcp/userdetails", {
-      state: { email: email, password: password },
-    });
+    navigate("/userdetails", { state: { email: email, password: password } });
     console.log(user);
   };
 
@@ -149,11 +123,10 @@ export default function CreateAcc(props) {
             textDecoration: "none",
             color: "black",
             display: "flex",
-            alignItems: "center",
+            alignItems: "left",
             margin: 0,
             padding: 0,
             marginLeft: 150,
-            marginTop: 0,
           }}
         >
           <ArrowBackIcon />
@@ -176,25 +149,15 @@ export default function CreateAcc(props) {
             </p>
             <Box mt={2} mb={0}>
               <TextField
-                size="large"
-                error={errEmpty}
-                // helperText={errEmpty && showErrMsgEmpty(errEmpty)}
-                // style={{
-                //   marginBottom: "17px",
-                //   boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)",
-                //   // background: "white",
-                //   // borderRadius: 4,  border:(errEmpty ? "1px solid #BB4035" : null )
-                // }}
-                placeholder="Email address"
-                variant="outlined"
-                label="Email address"
-                type="text"
-                id="email"
+                margin="normal"
+                required
+                fullWidth
+                onChange={handleChangeInput}
                 value={email}
+                id="email"
+                label="E-mail"
                 name="email"
-                onChange={handleChangeInput}
-                style={{ marginTop: 17 }}
-                fullWidth
+                autoComplete="email"
                 autoFocus
                 InputProps={{
                   startAdornment: (
@@ -202,28 +165,30 @@ export default function CreateAcc(props) {
                       <EmailIcon />
                     </InputAdornment>
                   ),
+
                   endAdornment: (
                     <InputAdornment position="end">
-                      {isEmail(email) ? (
-                        <DoneIcon style={{ color: "#52B057" }} />
-                      ) : null}
+                      <IconButton>
+                        {email !== "" && email === confirm_email ? (
+                          <DoneIcon style={{ color: "green" }} />
+                        ) : null}
+                      </IconButton>
                     </InputAdornment>
                   ),
                 }}
+                variant="outlined"
               />
 
               <TextField
-                size="large"
-                error={errEmpty}
-                style={{ marginTop: 17 }}
-                placeholder="Confirm Email address"
-                variant="outlined"
+                margin="normal"
+                required
+                fullWidth
                 id="confirm_email"
-                value={confirm_email}
+                label="Confirm email"
                 name="confirm_email"
-                type="text"
+                autoComplete="email"
                 onChange={handleChangeInput}
-                fullWidth
+                value={confirm_email}
                 autoFocus
                 InputProps={{
                   startAdornment: (
@@ -231,27 +196,30 @@ export default function CreateAcc(props) {
                       <EmailIcon />
                     </InputAdornment>
                   ),
+
                   endAdornment: (
                     <InputAdornment position="end">
-                      {isEmail(confirm_email) ? (
-                        <DoneIcon style={{ color: "#52B057" }} />
-                      ) : null}
+                      <IconButton>
+                        {email !== "" && email === confirm_email ? (
+                          <DoneIcon style={{ color: "green" }} />
+                        ) : null}
+                      </IconButton>
                     </InputAdornment>
                   ),
                 }}
+                variant="outlined"
               />
 
               <TextField
-                placeholder="Password"
-                label="Password"
-                variant="outlined"
-                style={{ marginTop: 17 }}
+                margin="normal"
+                required
                 fullWidth
-                type={user.showPassword ? "text" : "password"}
                 id="password"
                 name="password"
-                value={password}
+                label="Password"
+                type={user.showPassword ? "text" : "password"}
                 onChange={handleChangeInput}
+                value={password}
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
@@ -266,30 +234,29 @@ export default function CreateAcc(props) {
                         // onMouseDown={handleMouseDownPassword}
                         edge="end"
                       >
-                        {user.showPassword ? (
-                          <Visibility style={{ color: "grey" }} />
+                        {values.showPassword ? (
+                          <Visibility />
                         ) : (
-                          <VisibilityOff style={{ color: "grey" }} />
+                          <VisibilityOff />
                         )}
                       </IconButton>
                     </InputAdornment>
                   ),
                 }}
+                variant="outlined"
               />
-
               {/* Confirm Password*/}
 
               <TextField
-                placeholder="Confirm Password"
-                label="Confirm Password"
-                variant="outlined"
+                margin="normal"
+                required
                 fullWidth
-                type={user.showPassword ? "text" : "password"}
                 id="cf_password"
+                label="ConfirmPassword"
                 name="cf_password"
-                value={cf_password}
+                type={user.showConfirmPassword ? "text" : "password"}
                 onChange={handleChangeInput}
-                style={{ marginTop: 17 }}
+                value={cf_password}
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
@@ -304,15 +271,16 @@ export default function CreateAcc(props) {
                         // onMouseDown={handleMouseDownPassword}
                         edge="end"
                       >
-                        {user.showPassword ? (
-                          <Visibility style={{ color: "grey" }} />
+                        {values.showConfirmPassword ? (
+                          <Visibility />
                         ) : (
-                          <VisibilityOff style={{ color: "grey" }} />
+                          <VisibilityOff />
                         )}
                       </IconButton>
                     </InputAdornment>
                   ),
                 }}
+                variant="outlined"
               />
             </Box>
 
@@ -349,20 +317,6 @@ export default function CreateAcc(props) {
                 name="checked"
               />
             </div>
-
-            {err && showErrMsg(err)}
-
-            <label>
-              By continuing you are agreeing to our{" "}
-              <a target="blank" href="https://www.well.co.uk/about-us/policies/terms-and-conditions-well-healthcare-supplies ">
-                terms and conditions
-              </a>{" "}
-              and
-              <a target="blank" href="https://www.well.co.uk/about-us/policies/privacy">
-                {" "}
-                privacy policy.
-              </a>
-            </label>
 
             <Button
               variant="contained"

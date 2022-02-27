@@ -1,93 +1,102 @@
-.explore-section {
-  background-color: #f5f7fa;
-  height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+.explore-section{
+    background-color: #f5f7fa;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-.container {
-  padding: 3%;
+.container{
+     padding:3%;
 }
-.inner-container {
-  margin: auto;
-  width: 40%;
-  padding: 1%;
+.inner-container{
+    margin:auto;
+    width: 40%;
+    padding:1%;
 }
-.header-section {
-  margin: 2%;
-  position: static;
-  left: 16px;
-  top: 16px;
-  line-height: 120%;
-  letter-spacing: 0.005em;
-  font-feature-settings: "liga" off;
-  color: #07283c;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 24px 0px;
+.header-section{
+    margin:2%;
+    position: static;
+    width: 380px;
+    height: 38px;
+    left: 16px;
+    top: 16px;
+    font-family: Gilroy Alt;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+    font-feature-settings: 'liga' off;
+    color: #07283C;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 24px 0px;
 }
-.text-section {
-  margin: 2%;
-  position: static;
-  width: 408px;
-  height: 44px;
-  left: 16px;
-  top: 78px;
-  line-height: 140%;
-  letter-spacing: 0.01em;
-  font-feature-settings: "liga" off;
-  color: #1e4b68;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  margin: 24px 0px;
+.text-section{
+    font-size: small;
+    margin:2%;
+    position: static;
+    width: 408px;
+    height: 44px;
+    left: 16px;
+    top: 78px;
+    font-family: Gilroy Alt;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    font-feature-settings: 'liga' off;
+    color: #1E4B68;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 24px 0px;
 }
-.textarea {
-  width: 92%;
-  resize: none;
-  margin: 3% 2%;
-}
-
-.button-1 {
-  border: 1.5px solid #07283c;
-  border-radius: 4px;
-  width: 92%;
-  line-height: 308%;
-  margin: 3% 2%;
-  background-color: #f5f7fa;
-  font-size: small;
-  font-weight: 500;
-}
-.button-2 {
-  background: #ffcd00;
-  border-radius: 4px;
-  border-width: 0px;
-  width: 100%;
-  line-height: 308%;
-  font-size: small;
-  font-weight: 500;
-  margin: 0% 2%;
+.textarea{
+    width:92%;
+    resize: none;
+    margin: 3% 2%;
 }
 
-.checkbox {
-  margin-left: 90px;
-  height: 25px;
-  width: 25px;
+.button-1{
+    border: 1.5px solid #07283C;
+    border-radius: 4px;
+    width:92%;
+    line-height:308%;
+    margin: 3% 2%;
+    background-color: #f5f7fa;
+    font-size: small;
+    font-weight: 500;
 }
-.typography-heading {
-  position: static;
-  width: 332px;
-  height: 22px;
-  left: 0px;
-  top: 0px;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: 0.005em;
-  font-feature-settings: "liga" off;
-  color: #07283c;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 8px 0px;
+.button-2{
+background: #FFCD00;
+border-radius: 4px;
+border-width: 0px;
+width:100%;
+line-height:308%;
+font-size: small;
+font-weight: 500;
+margin:0% 2%;
+}
+
+.checkbox{
+    margin-left: 90px;
+    height: 25px;
+    width: 25px;
+}
+.typography-heading{
+    position: static;
+    width: 332px;
+    height: 22px;
+    left: 0px;
+    top: 0px;
+    font-family: Gilroy Alt;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+    font-feature-settings: 'liga' off;
+    color: #07283C;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 8px 0px;
 }

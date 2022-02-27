@@ -1,6 +1,6 @@
 import { Grid,Paper, TextField, Button } from '@material-ui/core';
-//import Question from './Assets/Question.svg';
-//import Arrowright from './Assets/Arrowright.svg';
+import Question from '../../Assets/Question.svg';
+import Arrowright from '../../Assets/Arrowright.svg';
 
 function HomeAddressmanual(){ 
 
@@ -48,10 +48,10 @@ function HomeAddressmanual(){
 
                 <Button variant="contained" size="Large" disableElevation style={{background: "#E8F8FF",color:"#0066BE",borderRadius: '6px', fontSize:"18px", textTransform: "none", display:"flex", justifyContent:"space-between"}} fullWidth type="submit" >
                       <div style={{display:"flex", justifyContent:"flex-start", margin:0,padding:0}}>
-                        {/* <img src={Question} alt="error" /> */}
+                        <img src={Question} alt="error" />
                         <p style={{margin:0,padding:0, marginLeft:10, fontSize:16}}>Who is my prescriber?</p>
                       </div>
-                      {/* <img src={Arrowright} alt="error" /> */}
+                      <img src={Arrowright} alt="error" />
                 </Button>
     
 
