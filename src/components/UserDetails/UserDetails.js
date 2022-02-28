@@ -37,7 +37,6 @@ function UserDetails() {
 
   let navigate = useNavigate();
 
-
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setUser1({ ...user1, [name]: value, err: "" });
