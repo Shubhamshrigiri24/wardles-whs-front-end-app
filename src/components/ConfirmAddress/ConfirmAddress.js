@@ -3,6 +3,44 @@ import './ConfirmAddress.css'
 import { Button } from '@material-ui/core'
 import { Typography } from '@material-ui/core'
 function ConfirmAddress() {
+  let navigate = useNavigate();
+
+  const location = useLocation();
+
+  const email = location.state.email;
+  const password = location.state.password;
+  const firstName = location.state.firstName;
+  const lastName = location.state.lastName;
+  const registrationNumber = location.state.registrationNumber;
+  const addressLineOne = location.state.addressLineOne;
+  const addressLineTwo = location.state.addressLineTwo;
+  const city = location.state.city;
+  const postcode = location.state.postcode;
+  
+
+  const handleSubmit = async (e) => {
+    accessStart(
+      location.state.email,
+      location.state.password,
+      location.state.registrationNumber,
+      location.state.firstName,
+      location.state.lastName,
+      location.state.addressLineOne,
+      location.state.addressLineTwo,
+      location.state.postcode,
+      location.state.city
+    );
+    // console.log(password)
+    // console.log(user)
+    navigate("/hcp/emailactivate", {
+      state: {
+        email: email,
+      },
+    });
+    // console.log(user)
+    e.preventDefault();
+  };
+
   return (
       <>
       <div className="explore-section">

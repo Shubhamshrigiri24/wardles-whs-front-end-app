@@ -14,7 +14,7 @@ export default function SearchHomeAddress() {
 
   const email = location.state.email;
   const password = location.state.password;
-  const registrationNumber = location.state.registrationNumber;
+  const phoneNumber = location.state.phoneNumber;
   const firstName = location.state.firstName;
   const lastName = location.state.lastName;
 
@@ -22,14 +22,12 @@ export default function SearchHomeAddress() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(user1);
-    // if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(phoneNumber))
-    //         return setUser1({...user1, err: "Please check the information above is correct",success: ''})
+    
     navigate("/patient/homeaddressmanual", {
       state: {
         email: email,
         password: password,
-        registrationNumber: registrationNumber,
+        phoneNumber: phoneNumber,
         firstName: firstName,
         lastName: lastName,
       },

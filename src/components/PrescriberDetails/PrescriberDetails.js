@@ -3,30 +3,36 @@ import { Container, Grid, Typography } from "@mui/material";
 import { Button } from "@mui/material";
 import { TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { ThemeConsumer } from "styled-components";
+import {
+  isEmpty,
+  isSpace
+} from "../../components/validation/Validation";
+
+import {
+  showErrMsg,
+} from "../../components/notification/Notification";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
-import { accessStart } from "../../API/userOps";
+
 
 const initialState = {
-  prescriberName: "",
-  prescriberaddressLineOne: "",
-  prescriberaddressLineTwo: "",
-  prescribercity: "",
-  prescriberpostcode: "",
+  prescriberName:"",
+  prescriberaddresLineone:"",
+  prescriberaddresLinetwo:"",
+  prescriberCity:"",
+  prescriberpostcode:"",
   err: "",
-  errEmpty: "",
   success: "",
 };
 
 export default function PrescriberDetails() {
   let navigate = useNavigate();
   const location = useLocation();
-
   const email = location.state.email;
   const password = location.state.password;
   const firstName = location.state.firstName;
   const lastName = location.state.lastName;
-  const dob = location.state.dob;
   const phoneNumber = location.state.phoneNumber;
   const addressLineOne = location.state.addressLineOne;
   const addressLineTwo = location.state.addressLineTwo;
@@ -34,132 +40,136 @@ export default function PrescriberDetails() {
   const postcode = location.state.postcode;
 
   const [user, setUser] = useState(initialState);
+
   const {
-    prescriberName,
-    prescriberaddressLineOne,
-    prescriberaddressLineTwo,
-    prescribercity,
-    prescriberpostcode,
-    err,
-    errEmpty,
-    success,
+    prescriberName,prescriberCity,prescriberaddresLineone,prescriberaddresLinetwo, prescriberpostcode, err
   } = user;
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
-    setUser({ ...user, [name]: value, err: "" });
+    setUser({ ...user, [name]: value, err: "", success: "" });
   };
+
   const handleSubmit = async (e) => {
-    // console.log(location.state.email,location.state.password,location.state.phoneNumber, location.state.firstName,location.state.lastName,pharm_name,pharm_code,pharm_accno)
     e.preventDefault();
-
-    console.log("fetching data.....");
-
-    accessStart(
-            location.state.email,
-          location.state.password,
-           location.state.phoneNumber,
-           location.state.firstName,
-          location.state.lastName,
-           prescriberName,
-           prescriberaddressLineOne,
-          prescriberaddressLineTwo,
-          // productCode = "whs",
-           prescribercity,
-           prescriberpostcode,     
-      )
+        if(isEmpty(prescriberName) || isEmpty(prescriberCity) || isEmpty(prescriberaddresLineone) || isEmpty(prescriberaddresLinetwo) || isEmpty(prescriberpostcode)) 
+              return setUser({...user, err: "Please fill in all fields.", success: ''})
+        if(isSpace(prescriberName) || isSpace(prescriberCity) || isSpace(prescriberaddresLineone) || isSpace(prescriberaddresLinetwo) || isSpace(prescriberpostcode)) 
+              return setUser({...user, err: "Please fill in all fields.", success: ''})
   
-          navigate("/prescribersystems");
-      
-
+    navigate("/patient/prescribersystem", {
+      state: { 
+        addressLineOne: addressLineOne,
+        addressLineTwo: addressLineTwo,
+        city: city,
+        postcode: postcode,
+        email: email,
+        password: password,
+        firstName: firstName,
+        lastName: lastName,
+        phoneNumber: phoneNumber,
+        prescriberName:prescriberName,
+        prescriberCity:prescriberCity,
+        prescriberaddresLineone:prescriberaddresLineone,
+        prescriberaddresLinetwo:prescriberaddresLinetwo,
+        prescriberpostcode:prescriberpostcode
+       },
+    });
+    
   };
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Container style={{ margin: "4% auto" }} maxWidth="xs">
-          <Typography variant="h5">Enter your prescriber details</Typography>
-
-          <p fullWidth="large">
-            If you can't find your GP surgery, prescriber or prescribing hub,
-            enter their details below.
-          </p>
-          <Grid mb={2}>
-            <TextField
-              placeholder="Prescriber name"
-              label="Prescriber name"
-              fullWidth="large"
-              id="prescriberName"
-              name="prescriberName"
-              variant="outlined"
-              value={prescriberName}
-              onChange={handleChangeInput}
-            />
-          </Grid>
-          <Grid mb={2}>
-            <TextField
-              placeholder="Address line 1"
-              label="Address line 1"
-              fullWidth="large"
-              value={prescriberaddressLineOne}
-              id="prescriberaddressLineOne"
-              name="prescriberaddressLineOne"
-              variant="outlined"
-              onChange={handleChangeInput}
-            />
-          </Grid>
-          <Grid mb={2}>
-            <TextField
-              placeholder="Address line 2"
-              label="Address line 2"
-              fullWidth="large"
-              value={prescriberaddressLineTwo}
-              id="prescriberaddressLineTwo"
-              name="prescriberaddressLineTwo"
-              variant="outlined"
-              onChange={handleChangeInput}
-            />
-          </Grid>
-          <Grid mb={2}>
-            <TextField
-              placeholder="City"
-              label="City"
-              fullWidth="large"
-              value={prescribercity}
-              id="prescribercity"
-              name="prescribercity"
-              variant="outlined"
-              onChange={handleChangeInput}
-            />
-          </Grid>
-          <Grid mb={1}>
-            <TextField
-              placeholder="Postcode"
-              label="Postcode"
-              fullWidth="large"
-              value={prescriberpostcode}
-              id="prescriberpostcode"
-              name="prescriberpostcode"
-              variant="outlined"
-              onChange={handleChangeInput}
-            />
-          </Grid>
-          <br />
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            fullWidth
-            size="large"
-            style={{
-              textTransform: "none",
-              backgroundColor: "#FFCD00",
-              color: "#07283C",
-              border: "black",
-            }}
-          >
-            Next
-          </Button>
-        </Container>
+      <Container style={{ margin: "4% auto" }} maxWidth="xs">
+        <Typography mb={1} variant="h4" style={{ color: "#07283C" }}>
+          Enter your prescriber details
+        </Typography>
+        <Typography mb={2} style={{ color: "#1E4B68" }}>
+          If you can't find your GP surgery, prescriber or prescribing hub,
+          enter their details below.
+        </Typography>
+        <Grid mb={2}>
+          <TextField
+            value={prescriberName}
+            name="prescriberName"
+            onChange={handleChangeInput}
+            type="text"
+            placeholder="Prescriber name"
+            label="Prescriber name"
+            fullWidth="large"
+            id="prescriberName"
+            variant="outlined"
+          />
+        </Grid>
+        <Grid mb={2}>
+          <TextField
+            value={prescriberaddresLineone}
+            name="prescriberaddresLineone"
+            type="text"
+            onChange={handleChangeInput}
+            placeholder="Address line 1"
+            label="Address line 1"
+            fullWidth="large"
+            id="prescriberaddresLineone"
+            variant="outlined"
+          />
+        </Grid>
+        <Grid mb={2}>
+          <TextField
+            value={prescriberaddresLinetwo}
+            name="prescriberaddresLinetwo"
+            type="text"
+            onChange={handleChangeInput}
+            placeholder="Address line 2"
+            label="Address line 2"
+            fullWidth="large"
+            id="prescriberaddresLinetwo"
+            variant="outlined"
+          />
+        </Grid>
+        <Grid mb={2}>
+          <TextField
+            value={prescriberCity}
+            name="prescriberCity"
+            type="text"
+            placeholder="City"
+            label="City"
+            onChange={handleChangeInput}
+            fullWidth="large"
+            id="prescriberCity"
+            variant="outlined"
+          />
+        </Grid>
+        <Grid mb={1}>
+          <TextField
+            value={prescriberpostcode}
+            name="prescriberpostcode"
+            type="text"
+            placeholder="Postcode"
+            label="Postcode"
+            onChange={handleChangeInput}
+            fullWidth="large"
+            id="prescriberpostcode"
+            variant="outlined"
+          />
+        </Grid>
+        <br />
+        {err && showErrMsg(err)}
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+          fullWidth
+          size="large"
+          style={{
+            textTransform: "none",
+            backgroundColor: "#FFCD00",
+            color: "#07283C",
+            border: "black",
+          }}
+        >
+          Next
+        </Button>
+      </Container>
       </form>
     </div>
   );

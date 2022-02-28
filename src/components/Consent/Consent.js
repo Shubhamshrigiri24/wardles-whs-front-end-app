@@ -3,8 +3,11 @@ import { useState } from "react";
 import Redcross from "../../Assets/Redcross.svg";
 import { useNavigate } from "react-router-dom";
 import "./Consent.css";
+import { accessStart } from "../../API/userOps";
+import { useLocation } from "react-router-dom";
 
 export const showErrMsg = (msg) => {
+
   return (
     <div className="errMsg">
       <div
@@ -46,6 +49,11 @@ export const showErrMsgEmpty = (msg) => {
 
 export default function Consent() {
   let navigate = useNavigate();
+  
+  const location = useLocation();
+
+  const email = location.state.email;
+  
 
   const [A, setA] = useState(false);
 
@@ -81,8 +89,29 @@ export default function Consent() {
     } else {
       setError("You must agree to all of the statements above to continue.");
     }
-  };
 
+    accessStart(
+      location.state.email,
+      location.state.password,
+      location.state.phoneNumber,
+      location.state.firstName,
+      location.state.lastName,
+      location.state.addressLineOne,
+      location.state.addressLineTwo,
+      location.state.postcode,
+      location.state.city,
+      location.state.postcode,
+      location.state.prescriberName,
+      location.state.prescriberaddresLineone,
+      location.state.prescriberaddresLinetwo,
+      location.state.prescriberCity,
+      location.state.prescriberpostcode,
+
+    );
+    navigate("/patient/emailactivate", {
+      state: { email: email}})   
+  }
+  
   return (
     <div className="consent-section">
       <div className="container">

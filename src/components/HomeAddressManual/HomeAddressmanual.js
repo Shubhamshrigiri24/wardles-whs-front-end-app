@@ -6,6 +6,11 @@ import HomeAddressModal from "../../HomeAddressModal";
 
 //import Question from './Assets/Question.svg';
 //import Arrowright from './Assets/Arrowright.svg';
+import {
+  isEmpty,
+  isSpace
+} from "../validation/Validation";
+import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
 
 const initialState = {
   addressLineOne: "",
@@ -28,6 +33,7 @@ function HomeAddressmanual() {
   const lastName = location.state.lastName;
   const dob = location.state.dob;
   const phoneNumber = location.state.phoneNumber;
+
 
   const [user, setUser] = useState(initialState);
   const {
@@ -53,9 +59,14 @@ function HomeAddressmanual() {
   };
 
   const handleSubmit = async (e) => {
-    // console.log(password)
-    // console.log(user)
-    navigate("/prescriberdetails", {
+      e.preventDefault();
+      if(isEmpty(addressLineOne) || isEmpty(addressLineTwo) || isEmpty(city) || isEmpty(postcode)) 
+        return setUser({...user, err: "Please fill in all fields.", success: ''})
+      if(isSpace(addressLineOne) || isSpace(addressLineTwo) || isSpace(city) || isSpace(postcode)) 
+        return setUser({...user, err: "Please fill in all fields.", success: ''})
+
+    
+    navigate("/hcp/confirmaddress", {
       state: {
         addressLineOne: addressLineOne,
         addressLineTwo: addressLineTwo,
@@ -152,6 +163,8 @@ function HomeAddressmanual() {
             variant="outlined"
             fullWidth
           />
+
+{err && showErrMsg(err)}
 
           <Button
             variant="contained"

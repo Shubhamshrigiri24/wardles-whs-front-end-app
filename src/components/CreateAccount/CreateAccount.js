@@ -18,7 +18,18 @@ import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 import "./CreateAccount.css";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import {
+  isEmpty,
+  isEmail,
+  isMatch,
+  isMatchemail,
+  isPasswordValid
+} from "../../components/validation/Validation";
 
+import {
+  showErrMsg,
+  showErrMsgEmpty,
+} from "../../components/notification/Notification";
 const initialState = {
   email: "",
   confirm_email: "",
@@ -91,27 +102,34 @@ export default function CreateAcc(props) {
   };
 
   const handleSubmit = async (e) => {
-    // console.log(password)
-    console.log(user);
+    
 
     e.preventDefault();
-    // if(isEmpty(email) || isEmpty(password) || isEmpty(confirm_email))
-    //         return setUser({...user, err: "Please fill in all fields.", success: ''})
+        if(isEmpty(email) || isEmpty(password) || isEmpty(confirm_email)) 
+              return setUser({...user, err: "Please fill in all fields.", success: ''})
 
-    // // if(!isEmail(email))
-    // //     return setUser({...user, errEmpty: "Invalid emails.", success: ''})
+        if(!isEmail(email, confirm_email))
+          return setUser({...user, err: "Invalid email address.", success: ''})
 
-    // if(!isMatchemail(email, confirm_email))
-    // return setUser({...user, err: "Make sure your email matches in both fields.", success: ''})
+        
+        if(!isMatchemail(email, confirm_email))
+        return setUser({...user, err: "Make sure your email address matches in both fields.", success: ''})
+        
+        
+        if(!isPasswordValid(password,passwordValidator))
+        return setUser({...user,err:"Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!", success:''})
 
-    // if(!passwordValidate(password,passwordValidator))
-    // return setUser({...user,err:"Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!", success:''})
 
-    // if(!isMatch(password, cf_password))
-    //     return setUser({...user, err: "Make sure your password matches in both fields.", success: ''})
+        
+        if(!isMatch(password, cf_password))
+            return setUser({...user, err: "Make sure your password matches in both fields.", success: ''})
 
-    navigate("/userdetails", { state: { email: email, password: password } });
-    console.log(user);
+    
+
+    navigate("/hcp/userdetails", {
+      state: { email: email, password: password },
+    });
+    
   };
 
   return (

@@ -31,6 +31,101 @@ export default function SearchHomeAddress() {
                 <MyPrescriber1/>
 
             </Container>
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    navigate("/hcp/homeaddressmanual", {
+      state: {
+        email: email,
+        password: password,
+        registrationNumber: registrationNumber,
+        firstName: firstName,
+        lastName: lastName,
+      },
+    });
+  };
+  return (
+    <div style={{ textTransform: "none !important", background: "E5E5E5" }}>
+      <div style={{ marginTop: "2%" }}>
+        <a
+          href=" /homeaddressmanual"
+          style={{
+            textDecoration: "none",
+            color: "black",
+            display: "flex",
+            alignItems: "center",
+            margin: 0,
+            padding: 0,
+            marginLeft: 150,
+            marginTop: 0,
+          }}
+        >
+          <ArrowBackIcon />
+          <p>Back</p>
+        </a>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <Container style={{ margin: "4% auto" }} maxWidth="xs">
+          <Typography
+            mb={1}
+            variant="h5"
+            style={{
+              color: "#07283C",
+              fontSize: "32px",
+              fontFamily: "Gilroy Alt",
+              fontWeight: "600",
+            }}
+          >
+            Enter your home address
+          </Typography>
+          <Typography
+            mb={2}
+            style={{
+              color: "#1E4B68",
+              fontFamily: "Gilroy Alt",
+              fontSize: "18px",
+            }}
+          >
+            Use the address registered with your prescriber.
+          </Typography>
+          <Grid mb={2}>
+            <TextField
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchOutlinedIcon />
+                  </InputAdornment>
+                ),
+              }}
+              placeholder="Start typing your address"
+              fullWidth="large"
+              id="outlined-basic"
+              variant="outlined"
+            />
+          </Grid>
+          <Grid className="or" mt={2}>
+            Or
+          </Grid>
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            fullWidth
+            size="large"
+            style={{
+              textTransform: "none ",
+              background: "White",
+              marginTop: "2%",
+              marginBottom: "4%",
+              color: "black",
+              border: "black",
+              height: "56px",
+              border: "1.5px solid #07283C",
+              borderradius: "4px",
+            }}
+          >
+            Enter your address manually
+          </Button>
 
         </div>
     )
