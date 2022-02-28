@@ -29,7 +29,7 @@ export default function GetEmail() {
     return (
         <div >
              
-        <Button  href="#contained-buttons" color="primary" size="large" style={{textTransform:"none" ,display:"flex",flexDirection:"row",justifyContent:"start" ,paddingRight:"30%"}} fullWidth startIcon={<LiveHelpOutlinedIcon/>} endIcon={<ArrowForwardIosIcon/>}  onClick={handleOpen}>Didn’t get an email?</Button>
+        <Button color="primary" size="large" style={{textTransform:"none" ,display:"flex",flexDirection:"row",justifyContent:"start" ,paddingRight:"30%"}} fullWidth startIcon={<LiveHelpOutlinedIcon/>} endIcon={<ArrowForwardIosIcon/>}  onClick={handleOpen}>Didn’t get an email?</Button>
            
              <Modal
                 open={open}
