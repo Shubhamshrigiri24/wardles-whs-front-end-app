@@ -10,7 +10,6 @@ function ResetpasswordSuccess() {
     margin: "10px auto",
     background: "#F7FBFF",
   };
-
   return (
     <Paper elevation={0} style={paperStyle}>
       <Grid align="Center">
