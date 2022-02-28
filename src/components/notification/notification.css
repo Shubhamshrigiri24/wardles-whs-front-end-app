@@ -1,0 +1,22 @@
+.errMsg{
+    background: #FFF0F0;
+    color: #BB4035;
+    text-align: start;
+    padding: 10px;
+    font-size: small;
+    margin-top: 10px;
+    display:flex;
+    flex-direction: row;
+    height:80px, 
+}
+
+.close{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.emptyfield{
+    color: #BB4035;
+    
+}

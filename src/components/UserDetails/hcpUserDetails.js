@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Container } from "@material-ui/core";
 import FormHelperText from "@mui/material/FormHelperText";
 import { Box } from "@material-ui/core";
@@ -12,11 +12,12 @@ import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 // import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 // import Stack from "@mui/material/Stack";
 // import "date-fns";
-import { useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router";
+import { useNavigate } from "react-router";
+import RegistraionModal from "./RegistrationModal";
 
 let initialState1 = {
-  phoneNumber: "",
+  registrationNumber: "",
   firstName: "",
   lastName: "",
   err: "",
@@ -24,7 +25,7 @@ let initialState1 = {
   success: "",
 };
 
-function UserDetails() {
+function HCPUserDetails() {
   const location = useLocation();
 
   const email = location.state.email;
@@ -46,15 +47,30 @@ function UserDetails() {
   //       setUser1({...user1, [name]:value, err: ''})
   //   }
 
-  const { firstName, lastName, phoneNumber, dob, err, errEmpty, success } =
-    user1;
+  const {
+    firstName,
+    lastName,
+    registrationNumber,
+    dob,
+    err,
+    errEmpty,
+    success,
+  } = user1;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     // console.log(user1);
     // if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(phoneNumber))
     //         return setUser1({...user1, err: "Please check the information above is correct",success: ''})
-     navigate('/homeaddressmanual',{state:{email:email, password:password, phoneNumber: phoneNumber,firstName: firstName,lastName: lastName, }})
+    navigate("/hcp/searchhomeaddress", {
+      state: {
+        email: email,
+        password: password,
+        registrationNumber: registrationNumber,
+        firstName: firstName,
+        lastName: lastName,
+      },
+    });
   };
 
   // let lastNameEl = useRef()
@@ -77,7 +93,6 @@ function UserDetails() {
           >
             <Box sx={{ mt: 0.5 }}>
               <h1 className="heading">Your details</h1>
-
               <TextField
                 margin="normal"
                 required
@@ -104,7 +119,6 @@ function UserDetails() {
                 <FormHelperText
                   style={{
                     color: "red",
-                    fontFamily: "Gilroy Alt",
                     margin: "1.68464px 0px",
                     fontWeight: "bold",
                   }}
@@ -115,7 +129,6 @@ function UserDetails() {
               ) : (
                 ""
               )}
-
               <TextField
                 margin="normal"
                 required
@@ -139,38 +152,31 @@ function UserDetails() {
                   ),
                 }}
               />
-              {lastName === "" && phoneNumber !== "" ? (
-                <FormHelperText
-                  style={{ color: "red" }}
-                  id="component-error-text"
-                >
-                  This Field Is Required
-                </FormHelperText>
-              ) : (
-                ""
-              )}
-
-              {/*  <div style={{}} >
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
-            <Stack spacing={3}>
-              <DesktopDatePicker
-                margin="normal"
-                variant="outlined"
-                label="Date of birth"
-                inputFormat="dd/MM/yyyy"
-                name= "dob"
-                placeholder='Date of birth DD/MM/YYYY'
-                value={dob}
-                id = "dob"
-                onChange={handleChangeInput}
-                renderInput={(params) => <TextField {...params} />}
-              />  
-              </Stack>  
-            </LocalizationProvider>
-           
-            </div> */}
+              {/* {lastName === "" && phoneNumber !== "" ? ( */}
 
               <TextField
+                margin="normal"
+                required
+                fullWidth
+                placeholder="Registration number"
+                id="registrationNumber"
+                label="Registration number"
+                type="text"
+                name="registrationNumber"
+                value={registrationNumber}
+                autoComplete="fname"
+                onChange={handleChangeInput}
+                autoFocus
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PermContactCalendarRoundedIcon />
+                    </InputAdornment>
+                  ),
+                }}
+                variant="outlined"
+              />
+              {/* <TextField
                 margin="normal"
                 required
                 fullWidth
@@ -191,7 +197,9 @@ function UserDetails() {
                   ),
                 }}
                 variant="outlined"
-              />
+              /> */}
+
+              <RegistraionModal />
 
               <Button
                 variant="contained"
@@ -218,4 +226,4 @@ function UserDetails() {
   );
 }
 
-export default UserDetails;
+export default HCPUserDetails;

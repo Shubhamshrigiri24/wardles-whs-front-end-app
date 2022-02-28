@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import HomeAddressModal from "../../HomeAddressModal";
-
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 //import Question from './Assets/Question.svg';
 //import Arrowright from './Assets/Arrowright.svg';
 
@@ -26,8 +26,7 @@ function HomeAddressmanual() {
   const password = location.state.password;
   const firstName = location.state.firstName;
   const lastName = location.state.lastName;
-  const dob = location.state.dob;
-  const phoneNumber = location.state.phoneNumber;
+  const registrationNumber = location.state.registrationNumber;
 
   const [user, setUser] = useState(initialState);
   const {
@@ -55,18 +54,17 @@ function HomeAddressmanual() {
   const handleSubmit = async (e) => {
     // console.log(password)
     // console.log(user)
-    navigate("/prescriberdetails", {
+    navigate("/patient/confirmaddress", {
       state: {
         addressLineOne: addressLineOne,
         addressLineTwo: addressLineTwo,
         city: city,
         postcode: postcode,
-        email,
+        email: email,
         password: password,
         firstName: firstName,
         lastName: lastName,
-        dob: dob,
-        phoneNumber: phoneNumber,
+        registrationNumber: registrationNumber,
       },
     });
     // console.log(user)
@@ -75,15 +73,32 @@ function HomeAddressmanual() {
 
   return (
     <Grid>
+      <div style={{ marginTop: "2%" }}>
+        <a
+          href=" "
+          style={{
+            textDecoration: "none",
+            color: "black",
+            display: "flex",
+            alignItems: "center",
+            margin: 0,
+            padding: 0,
+            marginLeft: 150,
+            marginTop: 0,
+          }}
+        >
+          <ArrowBackIcon />
+          <p>Back</p>
+        </a>
+      </div>
+
       <Paper elevation={0} style={paperStyle}>
         <form onSubmit={handleSubmit}>
           <Grid align="left">
-            <h2 style={{ fontSize: 28, margin: 0 }}>Enter your home address</h2>
+            <h2 style={{ fontSize: 28, margin: 0, marginBottom: 15 }}>
+              Enter your work address
+            </h2>
           </Grid>
-
-          <p style={{ fontSize: 18, marginBottom: 15 }}>
-            Use the address registered with your prescriber.
-          </p>
 
           <TextField
             size="small"
@@ -172,7 +187,6 @@ function HomeAddressmanual() {
         </form>
 
         <HomeAddressModal />
-
       </Paper>
     </Grid>
   );

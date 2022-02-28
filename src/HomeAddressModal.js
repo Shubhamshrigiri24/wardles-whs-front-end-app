@@ -5,8 +5,8 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import HelpIcon from "../../src/Assets/HelpIcon.svg";
-import Cross from "../../src/Assets/Cross.svg";
+import HelpIcon from "./Assets/HelpIcon.svg";
+import Cross from "./Assets/Cross.svg";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LiveHelpOutlinedIcon from "@material-ui/icons/LiveHelpOutlined";
 
@@ -21,10 +21,11 @@ const style = {
   p: 4,
 };
 
-export default function MyPrescriber1() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+export default function HomeAddressModal() {
+  const [open1, setOpen1] = React.useState(false);
+
+  const handleOpen1 = () => setOpen1(true);
+  const handleClose1 = () => setOpen1(false);
 
   return (
     <div>
@@ -36,13 +37,13 @@ export default function MyPrescriber1() {
         fullWidth
         startIcon={<LiveHelpOutlinedIcon />}
         endIcon={<ArrowForwardIosIcon />}
-        onClick={handleOpen}
+        onClick={handleOpen1}
       >
         Who is my prescriber?
       </Button>
       <Modal
-        open={open}
-        onClose={handleClose}
+        open={open1}
+        onClose={handleClose1}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -50,7 +51,7 @@ export default function MyPrescriber1() {
           <Box mb={2} sx={{ display: "flex" }}>
             <img src={HelpIcon} alt="" />
             <img
-              onClick={handleClose}
+              onClick={handleClose1}
               style={{ paddingLeft: "82%" }}
               src={Cross}
               alt=""
@@ -70,7 +71,7 @@ export default function MyPrescriber1() {
             will try to add your prescriber into our system.
           </Typography>
           <Button
-            onClick={handleClose}
+            onClick={handleClose1}
             variant="contained"
             size="large"
             disableElevation
@@ -86,7 +87,7 @@ export default function MyPrescriber1() {
               fontWeight: "bold",
             }}
             fullWidth
-            type="submit"
+            // type="submit"
           >
             Close
           </Button>
