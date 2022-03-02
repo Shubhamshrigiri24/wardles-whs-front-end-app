@@ -40,8 +40,6 @@ function UserDetails() {
 
   const [user1, setUser1] = useState(initialState1);
 
-  const [value, setValue] = React.useState(new Date());
-
   let navigate = useNavigate();
 
   const handleChangeInput = (e) => {
