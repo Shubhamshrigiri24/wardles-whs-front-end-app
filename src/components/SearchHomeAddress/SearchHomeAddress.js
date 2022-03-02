@@ -21,7 +21,7 @@ export default function SearchHomeAddress() {
 
   let navigate = useNavigate();
 
-            </Container>
+           
   const handleSubmit = async (e) => {
     e.preventDefault();
     
