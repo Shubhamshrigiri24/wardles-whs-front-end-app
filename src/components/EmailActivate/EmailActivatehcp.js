@@ -13,7 +13,7 @@ function EMailActivate() {
 
   const email = location.state.email;
 
-  console.log(email)
+  console.log(email);
 
   const paperStyle = {
     padding: 20,
@@ -32,29 +32,26 @@ function EMailActivate() {
   return (
     // <Grid>
     <Paper elevation={0} style={paperStyle}>
-      
       <Grid align="Center">
         <img src={Message} alt="error" />
       </Grid>
-      <h2 style={{ marginTop: 0, fontFamily: "Gilroy Alt" }}>
+      <h2 style={{ marginTop: 0 }}>
         Check your email to <br /> activate your account
       </h2>
 
       <Paper elevation={0} style={paperStyle2}>
         <img src={Msgmail} alt="error" />
         <div style={{ marginLeft: 15 }}>
-          <p style={{ fontFamily: "Gilroy Alt" }}>We’ve sent an email to </p>
-          <p style={{ fontFamily: "Gilroy Alt", fontWeight: "bold" }}>
-            {email}
-          </p>
+          <p>We’ve sent an email to </p>
+          <p style={{ fontWeight: "bold" }}>{email}</p>
         </div>
       </Paper>
 
-      <p style={{ fontFamily: "Gilroy Alt" }}>
+      <p>
         To complete sign up and process your future orders, we need to confirm
         your email address.
       </p>
-      <p style={{ fontFamily: "Gilroy Alt" }}>
+      <p>
         Please check your email and follow the link in the email we sent you.
       </p>
 
@@ -65,7 +62,6 @@ function EMailActivate() {
         style={{
           background: "#F7FBFF",
           color: "#07283C",
-          fontFamily: "Gilroy Alt",
           marginBottom: "17px",
           border: "1.5px solid #07283C",
           fontSize: "18px",

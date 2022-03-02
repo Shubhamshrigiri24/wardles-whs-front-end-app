@@ -21,10 +21,9 @@ export default function SearchHomeAddress() {
 
   let navigate = useNavigate();
 
-           
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     navigate("/hcp/homeaddressmanual", {
       state: {
         email: email,
@@ -97,6 +96,8 @@ export default function SearchHomeAddress() {
           <Grid className="or" mt={2}>
             Or
           </Grid>
+   
+
           <Button
             variant="contained"
             color="primary"
@@ -118,7 +119,7 @@ export default function SearchHomeAddress() {
             Enter your address manually
           </Button>
 
-          
+          <MyPrescriber1 />
         </Container>
       </form>
     </div>

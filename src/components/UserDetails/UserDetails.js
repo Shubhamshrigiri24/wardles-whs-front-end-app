@@ -9,17 +9,13 @@ import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 import PermContactCalendarRoundedIcon from "@mui/icons-material/PermContactCalendarRounded";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 
+import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import { KeyboardDatePicker } from "@material-ui/pickers";
+import DateFnsUtils from "@date-io/date-fns";
 
-
-// import Stack from '@mui/material/Stack';
-// import AdapterDateFns from "@mui/lab/AdapterDateFns";
-// import LocalizationProvider from "@mui/lab/LocalizationProvider";
-// import Stack from "@mui/material/Stack";
-// import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
-// import "date-fns";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { isSpace,isEmpty } from "../validation/Validation";
+import { isSpace, isEmpty, isPhone } from "../validation/Validation";
 import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
 
 let initialState1 = {
@@ -29,6 +25,7 @@ let initialState1 = {
   err: "",
   dob: "",
   success: "",
+  err1: "",
 };
 
 function UserDetails() {
@@ -36,6 +33,8 @@ function UserDetails() {
 
   const email = location.state.email;
   const password = location.state.password;
+
+  const [value, setValue] = React.useState(new Date());
 
   const [user1, setUser1] = useState(initialState1);
 
@@ -46,18 +45,48 @@ function UserDetails() {
     setUser1({ ...user1, [name]: value, err: "" });
   };
 
-  
-
-  const { firstName, lastName, phoneNumber, dob, err, errEmpty, success } =
-    user1;
+  const {
+    firstName,
+    lastName,
+    phoneNumber,
+    dob,
+    err,
+    err1,
+    errEmpty,
+    success,
+  } = user1;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(phoneNumber))
-            return setUser1({...user1, err: "Please check the information above is correct",success: ''})
-    if(isSpace(firstName) || isSpace(lastName) || isSpace(phoneNumber))
-            return setUser1({...user1, err: "Please check the information above is correct", success: ''})
+
+    if (
+      isEmpty(firstName) ||
+      isEmpty(lastName) ||
+      isEmpty(phoneNumber)
+      // isEmpty(dob)
+    ) {
+      return setUser1({
+        ...user1,
+        err: "This field is required",
+        err1: "Please check the information above is correct",
+        success: "",
+      });
+    }
+    if (!isPhone(phoneNumber)) {
+      return setUser1({
+        ...user1,
+        err: "Please provide a valid phone number",
+        err1: "Please check the information above is correct ",
+        success: "",
+      });
+    }
+    if (isSpace(phoneNumber) || isSpace(firstName) || isSpace(lastName)) {
+      return setUser1({
+        ...user1,
+        err1: "Please check the information above is correct",
+        success: "",
+      });
+    }
 
     navigate("/patient/searchhomeaddress", {
       state: {
@@ -69,8 +98,6 @@ function UserDetails() {
       },
     });
   };
-
-
 
   return (
     <div>
@@ -109,7 +136,6 @@ function UserDetails() {
 
               <TextField
                 margin="normal"
-                required
                 fullWidth
                 placeholder="First name"
                 id="firstName"
@@ -119,6 +145,8 @@ function UserDetails() {
                 value={firstName}
                 autoComplete="fname"
                 onChange={handleChangeInput}
+                error={isEmpty(firstName) && err}
+                style={{ marginBottom: "23px" }}
                 autoFocus
                 InputProps={{
                   startAdornment: (
@@ -129,35 +157,20 @@ function UserDetails() {
                 }}
                 variant="outlined"
               />
-              {firstName === "" && lastName !== "" ? (
-                <FormHelperText
-                  style={{
-                    color: "red",
-                    fontFamily: "Gilroy Alt",
-                    margin: "1.68464px 0px",
-                    fontWeight: "bold",
-                  }}
-                  id="component-error-text"
-                >
-                  This Field Is Required
-                </FormHelperText>
-              ) : (
-                ""
-              )}
+              {isEmpty(firstName) && showErrMsgEmpty(err)}
 
               <TextField
                 margin="normal"
-                required
                 fullWidth
+                style={{ marginBottom: "23px" }}
                 placeholder="Last name"
                 name="lastName"
                 label="Last name"
-                // ref={lastNameEl}
                 onChange={handleChangeInput}
-                // onClick={clickFun}
                 type="text"
                 id="lastName"
                 value={lastName}
+                error={isEmpty(lastName) && err}
                 autoComplete="lname"
                 variant="outlined"
                 InputProps={{
@@ -168,32 +181,27 @@ function UserDetails() {
                   ),
                 }}
               />
-              {lastName === "" && phoneNumber !== "" ? (
-                <FormHelperText
-                  style={{ color: "red" }}
-                  id="component-error-text"
-                >
-                  This Field Is Required
-                </FormHelperText>
-              ) : (
-                ""
-              )}
 
-              {/* <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <Stack spacing={3}>
-                  <DesktopDatePicker
-                    label="Date desktop"
-                    inputFormat="MM/dd/yyyy"
+              {isEmpty(lastName) && showErrMsgEmpty(err)}
+
+              <div style={{ marginBottom: "23px" }}>
+                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                  <KeyboardDatePicker
+                    autoOk
+                    fullWidth
+                    variant="inline"
+                    inputVariant="outlined"
+                    label="Date of birth DD/MM/YYYY"
+                    format="dd/MM/yyyy"
                     value={value}
-                    onChange={handleChange}
-                    renderInput={(params) => <TextField {...params} />}
+                    InputAdornmentProps={{ position: "start" }}
+                    onChange={(date) => setValue(date)}
                   />
-                </Stack>
-              </LocalizationProvider> */}
+                </MuiPickersUtilsProvider>
+              </div>
 
               <TextField
                 margin="normal"
-                required
                 fullWidth
                 name="phoneNumber"
                 label="Phone number"
@@ -201,7 +209,12 @@ function UserDetails() {
                 id="phoneNumber"
                 autoComplete="pno"
                 value={phoneNumber}
+                style={{ marginBottom: "23px" }}
                 onChange={handleChangeInput}
+                error={
+                  (isEmpty(phoneNumber) && err) ||
+                  (!isPhone(phoneNumber) && err)
+                }
                 InputProps={{
                   inputMode: "numeric",
                   pattern: "[0-9]",
@@ -213,7 +226,10 @@ function UserDetails() {
                 }}
                 variant="outlined"
               />
-              {err && showErrMsg(err)}
+              {(isEmpty(phoneNumber) && showErrMsgEmpty(err)) ||
+                (!isPhone(phoneNumber) && showErrMsgEmpty(err))}
+
+              {err1 && showErrMsg(err1)}
 
               <Button
                 variant="contained"
@@ -227,6 +243,8 @@ function UserDetails() {
                   marginTop: "9px",
                   borderRadius: "2px",
                   marginBottom: "5%",
+                  fontWeight: "500",
+                  fontFamily: "Arial",
                 }}
                 type="submit"
               >

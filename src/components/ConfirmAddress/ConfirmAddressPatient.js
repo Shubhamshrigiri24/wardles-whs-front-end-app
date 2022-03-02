@@ -5,12 +5,8 @@ import { Typography } from "@material-ui/core";
 import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import {
-  isEmpty,
-  isSpace
-} from "../validation/Validation";
+import { isEmpty, isSpace } from "../validation/Validation";
 import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
-
 
 function ConfirmAddress() {
   let navigate = useNavigate();
@@ -28,9 +24,8 @@ function ConfirmAddress() {
   const postcode = location.state.postcode;
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
-    
+
     // console.log(password)
     // console.log(user)
     navigate("/patient/selectprescriber", {
@@ -47,7 +42,6 @@ function ConfirmAddress() {
       },
     });
     // console.log(user)
-    
   };
 
   return (
@@ -63,7 +57,7 @@ function ConfirmAddress() {
               alignItems: "center",
               margin: 0,
               padding: 0,
-              marginLeft: 150,
+
               marginTop: 0,
             }}
           >
@@ -71,102 +65,66 @@ function ConfirmAddress() {
             <p>Back</p>
           </a>
         </div>
-        <div className="container">
-          <div className="inner-container">
-            <div className="header-section">
-              <h1>Confirm your address</h1>
-            </div>
-            <div className="text-section">
-              <p>
-                Double-check your address is correct and that it's the address
-                registered with your prescriber.
-              </p>
-            </div>
-            <Button
-              className="textarea"
-              fullWidth
-              style={{
-                display: "block",
-                textAlign: "left",
-                border: "1px solid black",
-                marginBottom: "2%",
-                marginTop: "2%",
-                padding: "20px",
-              }}
-            >
-              <Typography variant="Body1" className="typography-heading">
-                {addressLineOne} 
-              </Typography>
-              <br />
-              <Typography className="typography" variant="caption">
-                {addressLineTwo},{city},{postcode}
-                
-              </Typography>
-              
-              <input style={{marginLeft:"80%"}} type="checkbox" className="checkbox" />
-              
-            </Button>
-            {/* <Button
-             onClick={() => {
-              
-            
-            navigate("/patient/homeaddressmanual", {
-              state: {
-               
-                email: email,
-                password: password,
-                firstName: firstName,
-                lastName: lastName,
-                phoneNumber: phoneNumber,
-              },
-            });
-          }
-        }
-              variant="contained"
-              size="large"
-              disableElevation
-              style={{
-                marginTop: "10px",
-                background: "white",
-                color: "#07283C",
-                fontSize: "16px",
-                textTransform: "none",
-                solid: "#07283C",
-                borderRadius: "2px",
-                fontWeight: "bold",
-                border: "1px solid black",
-              }}
-              fullWidth
-               type="submit"
-            >
-              Change Address
-            </Button> */}
 
-
-            <Button
-              variant="contained"
-              size="large"
-              disableElevation
-              style={{
-                marginTop: "10px",
-                background: "#FFCD00",
-                color: "#07283C",
-                fontSize: "16px",
-                textTransform: "none",
-                solid: "#07283C",
-                borderRadius: "2px",
-                fontWeight: "bold",
-                border: "0px solid ",
-              }}
-              fullWidth
-              type="submit"
-            >
-              Confirm
-            </Button>
+        <div className="inner-container">
+          <div className="header-section">
+            <h4>Confirm your address</h4>
           </div>
+          <div className="text-section">
+            <p>
+              Double-check your address is correct and that it's the address
+              registered with your prescriber.
+            </p>
+          </div>
+          <Button
+            className="textarea"
+            style={{
+              display: "block",
+              textAlign: "left",
+              border: "1px solid black",
+              marginBottom: "2%",
+              marginTop: "2%",
+              padding: "20px",
+            }}
+          >
+            <Typography variant="Body1" className="typography-heading">
+              {addressLineOne}
+            </Typography>
+            <br />
+            <Typography className="typography" variant="caption">
+              {addressLineTwo},{city},{postcode}
+            </Typography>
+
+            <input
+              style={{ marginLeft: "80%" }}
+              type="checkbox"
+              className="checkbox"
+            />
+          </Button>
+
+          <Button
+            variant="contained"
+            size="large"
+            fullWidth
+            disableElevation
+            style={{
+              marginTop: "10px",
+              background: "#FFCD00",
+              color: "#07283C",
+              fontSize: "16px",
+              textTransform: "none",
+              solid: "#07283C",
+              borderRadius: "2px",
+              fontWeight: "bold",
+              border: "0px solid ",
+              width: "70%",
+            }}
+            type="submit"
+          >
+            Confirm
+          </Button>
         </div>
       </form>
-      
     </div>
   );
 }

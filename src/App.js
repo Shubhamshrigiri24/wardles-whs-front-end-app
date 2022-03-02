@@ -38,6 +38,11 @@ import Resetpassword from "./components/Resetpassword/Resetpassword";
 import EmailResetPwd from "./components/EmailResetPwd/EmailResetPwd";
 import ResetpasswordSuccess from "./components/ResetpasswordSuccess/ResetpasswordSuccess";
 import Signin from "./components/loginapi/loginapi";
+import AddressEngland from "./components/AddressEngland/Addressengland";
+import WeAreSorry from "./components/WeAreSorry/WeAreSorry";
+import KeepUpdate from "./components/KeepUpdate/KeepUpdate";
+import KeepUpdate2 from "./components/KeepUpdate2/KeepUpdate2";
+
 // import HomeAddress from "./components/HomeAddress/HomeAddress";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Emailsuccess from "./components/Emailsuccess/Emailsuccess";
@@ -60,6 +65,12 @@ function App() {
           path="/Resetpasswordsuccess"
           element={<ResetpasswordSuccess />}
         />
+        <Route path="/addressengland" element={<AddressEngland />} />
+        <Route path="/wearesorry" element={<WeAreSorry />} />
+        <Route path="/keepupdate" element={<KeepUpdate />} />
+        <Route path="/keepupdate2" element={<KeepUpdate2 />} />
+        <Route path="/thankyou" element={<ThankYou />} />
+
         <Route path="/access/complete/:rnd/:token" element={<Signin />} />
 
         {/* routes for HCP-Signup  */}

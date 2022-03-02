@@ -14,7 +14,7 @@ function CheckYourEmail() {
     margin: "10px auto",
     background: "#F7FBFF",
   };
-  
+
   return (
     <Grid>
       <Paper elevation={0} style={paperStyle}>

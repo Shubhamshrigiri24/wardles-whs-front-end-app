@@ -22,7 +22,7 @@ export default function SearchHomeAddress() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     navigate("/patient/homeaddressmanual", {
       state: {
         email: email,
@@ -77,6 +77,31 @@ export default function SearchHomeAddress() {
           <Grid className="or" mt={2}>
             Or
           </Grid>
+
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            fullWidth
+            size="large"
+            style={{
+              textTransform: "none ",
+              background: "White",
+              marginTop: "2%",
+              marginBottom: "4%",
+              color: "blue",
+              border: "black",
+              height: "56px",
+
+              borderradius: "4px",
+            }}
+            onClick={() => {
+              navigate("/addressengland");
+            }}
+          >
+            Dummy
+          </Button>
+
           <Button
             variant="contained"
             color="primary"
