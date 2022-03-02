@@ -2,9 +2,9 @@ import React from "react";
 import { Container, Grid, Typography } from "@mui/material";
 import { Button } from "@mui/material";
 
-import { TextField } from "@mui/material";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import { InputAdornment } from "@mui/material";
+// import { TextField } from "@mui/material";
+// import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+// import { InputAdornment } from "@mui/material";
 
 import { TextField } from '@mui/material'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
@@ -12,7 +12,7 @@ import { InputAdornment } from '@mui/material'
 
 
 import './SelectPrescriber.css'
-import MyPrescriber1 from '../MyPrescriber1';
+// import MyPrescriber1 from '../MyPrescriber1';
 
 
 import "./SelectPrescriber.css";
