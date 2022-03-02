@@ -7,15 +7,11 @@ import { Button } from "@material-ui/core";
 import InputAdornment from "@mui/material/InputAdornment";
 import PermContactCalendarRoundedIcon from "@mui/icons-material/PermContactCalendarRounded";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
-// import AdapterDateFns from "@mui/lab/AdapterDateFns";
-// import LocalizationProvider from "@mui/lab/LocalizationProvider";
-// import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
-// import Stack from "@mui/material/Stack";
-// import "date-fns";
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 import { useLocation } from "react-router";
 import { useNavigate } from "react-router";
-import RegistraionModal from "./RegistrationModal"
-import { isSpace,isEmpty } from "../validation/Validation";
+import RegistraionModal from "./RegistrationModal";
+import { isSpace, isEmpty } from "../validation/Validation";
 import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
 
 let initialState1 = {
@@ -32,7 +28,7 @@ function HCPUserDetails() {
 
   const email = location.state.email;
   const password = location.state.password;
-  console.log(email, password)
+  console.log(email, password);
 
   const [user1, setUser1] = useState(initialState1);
 
@@ -62,12 +58,20 @@ function HCPUserDetails() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(registrationNumber))
-      return setUser1({...user1, err: "Please check the information above is correct",success: ''})
-    if(isSpace(firstName) || isSpace(lastName) || isSpace(registrationNumber))
-      return setUser1({...user1, err: "Please check the information above is correct", success: ''})
-  
+
+    if (isEmpty(firstName) || isEmpty(lastName) || isEmpty(registrationNumber))
+      return setUser1({
+        ...user1,
+        err: "Please check the information above is correct",
+        success: "",
+      });
+    if (isSpace(firstName) || isSpace(lastName) || isSpace(registrationNumber))
+      return setUser1({
+        ...user1,
+        err: "Please check the information above is correct",
+        success: "",
+      });
+
     navigate("/hcp/searchhomeaddress", {
       state: {
         email: email,
@@ -79,14 +83,26 @@ function HCPUserDetails() {
     });
   };
 
-  // let lastNameEl = useRef()
-
-  // function clickFun(){
-  //   lastNameEl.current.focus()
-  // }
-
   return (
     <div>
+      <div style={{ marginTop: "2%" }}>
+        <a
+          href=" "
+          style={{
+            textDecoration: "none",
+            color: "black",
+            display: "flex",
+            alignItems: "center",
+            margin: 0,
+            padding: 0,
+            marginLeft: 150,
+            marginTop: 0,
+          }}
+        >
+          <ArrowBackIcon />
+          <p>Back</p>
+        </a>
+      </div>
       <form onSubmit={handleSubmit}>
         <Container component="main" maxWidth="xs">
           <Box
@@ -101,7 +117,6 @@ function HCPUserDetails() {
               <h1 className="heading">Your details</h1>
               <TextField
                 margin="normal"
-              
                 fullWidth
                 placeholder="First name"
                 id="firstName"
@@ -121,29 +136,14 @@ function HCPUserDetails() {
                 }}
                 variant="outlined"
               />
-              {/* {firstName === "" && lastName !== "" ? (
-                <FormHelperText
-                  style={{
-                    color: "red",
-                    margin: "1.68464px 0px",
-                    fontWeight: "bold",
-                  }}
-                  id="component-error-text"
-                >
-                  This Field Is Required
-                </FormHelperText>
-              ) : (
-                ""
-              )} */}
+
               <TextField
                 margin="normal"
                 fullWidth
                 placeholder="Last name"
                 name="lastName"
                 label="Last name"
-                // ref={lastNameEl}
                 onChange={handleChangeInput}
-                // onClick={clickFun}
                 type="text"
                 id="lastName"
                 value={lastName}
@@ -157,11 +157,9 @@ function HCPUserDetails() {
                   ),
                 }}
               />
-              {/* {lastName === "" && phoneNumber !== "" ? ( */}
 
               <TextField
                 margin="normal"
-                
                 fullWidth
                 placeholder="Registration number"
                 id="registrationNumber"
@@ -181,28 +179,6 @@ function HCPUserDetails() {
                 }}
                 variant="outlined"
               />
-              {/* <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="phoneNumber"
-                label="Phone number"
-                type="text"
-                id="phoneNumber"
-                autoComplete="pno"
-                value={phoneNumber}
-                onChange={handleChangeInput}
-                InputProps={{
-                  inputMode: "numeric",
-                  pattern: "[0-9]",
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <LocalPhoneRoundedIcon />
-                    </InputAdornment>
-                  ),
-                }}
-                variant="outlined"
-              /> */}
 
               <RegistraionModal />
               {err && showErrMsg(err)}
@@ -219,6 +195,7 @@ function HCPUserDetails() {
                   color: "#07283C",
                   marginTop: "9px",
                   borderRadius: "2px",
+                  marginBottom: "10%",
                 }}
                 type="submit"
               >

@@ -35,11 +35,10 @@ export const isChecked = (checked) => {
   return false;
 };
 
-
-export const isPasswordValid = password => {
+export const isPasswordValid = (password) => {
   const re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
   return re.test(password);
-}
+};
 
 export const isPhone = (value) => {
   const phn =

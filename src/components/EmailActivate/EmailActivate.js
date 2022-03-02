@@ -39,9 +39,7 @@ function EMailActivate() {
         <img src={Msgmail} alt="error" />
         <div style={{ marginLeft: 15 }}>
           <p style={{ padding: 0, margin: 0 }}>We’ve sent an email to </p>
-          <p style={{ padding: 0, margin: 0, fontWeight: "bolder" }}>
-            {email}
-          </p>
+          <p style={{ padding: 0, margin: 0, fontWeight: "bolder" }}>{email}</p>
         </div>
       </Paper>
 
@@ -54,7 +52,6 @@ function EMailActivate() {
       </p>
 
       <Button
-        
         variant="contained"
         size="Large"
         disableElevation

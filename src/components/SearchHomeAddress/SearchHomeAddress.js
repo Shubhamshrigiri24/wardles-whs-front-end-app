@@ -96,6 +96,8 @@ export default function SearchHomeAddress() {
           <Grid className="or" mt={2}>
             Or
           </Grid>
+   
+
           <Button
             variant="contained"
             color="primary"
@@ -116,6 +118,7 @@ export default function SearchHomeAddress() {
           >
             Enter your address manually
           </Button>
+          <MyPrescriber1 />
         </Container>
       </form>
     </div>

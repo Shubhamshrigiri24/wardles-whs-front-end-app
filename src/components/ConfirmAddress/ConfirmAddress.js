@@ -21,8 +21,6 @@ function ConfirmAddress() {
   const addressLineTwo = location.state.addressLineTwo;
   const city = location.state.city;
   const postcode = location.state.postcode;
-  
-
 
   const handleSubmit = async (e) => {
     accessStart(
@@ -44,7 +42,7 @@ function ConfirmAddress() {
       },
     });
     // console.log(user)
-     e.preventDefault();
+    e.preventDefault();
   };
 
   return (
@@ -60,7 +58,6 @@ function ConfirmAddress() {
               alignItems: "center",
               margin: 0,
               padding: 0,
-              marginLeft: 150,
               marginTop: 0,
             }}
           >
@@ -68,103 +65,104 @@ function ConfirmAddress() {
             <p>Back</p>
           </a>
         </div>
-        <div className="container">
-          <div className="inner-container">
-            <div className="header-section">
-              <h1>Confirm your address</h1>
-            </div>
-            
-            
-            <div className="text-section">
-              <p>
-              
-                Double-check your address is correct and that it's the address
-                registered with your prescriber.
-              </p>
-            </div>
-            <Button
-              className="textarea"
-              fullWidth
-              style={{
-                display: "block",
-                textAlign: "left",
-                border: "1px solid black",
-                marginBottom: "2%",
-                marginTop: "2%",
-                padding: "20px",
-              }}
+        <div className="inner-container">
+          <div className="header-section">
+            <h3>Confirm your address</h3>
+          </div>
+
+          <div className="text-section">
+            <p>
+              Double-check your address is correct and that it's the address
+              registered with your prescriber.
+            </p>
+          </div>
+          <Button
+            className="textarea"
+            style={{
+              display: "block",
+              textAlign: "left",
+              border: "1px solid black",
+              marginBottom: "2%",
+              marginTop: "2%",
+              padding: "20px",
+              width: "70%",
+            }}
+          >
+            <Typography
+              variant="Body1"
+              className="typography-heading"
+              style={{ fontWeight: "bold", color: "#07283C" }}
             >
-                <Typography variant="Body1" className="typography-heading">
-                {addressLineOne} 
-              </Typography>
-              <br />
-              <Typography className="typography" variant="caption">
-                {addressLineTwo},{city},{postcode}
-                
-              </Typography>
-              
-              <input style={{marginLeft:"80%"}} type="checkbox" className="checkbox" />
-            </Button>
-            <Button
-             
-             onClick={() => {
-              
-            
+              {addressLineOne}
+            </Typography>
+            <br />
+            <Typography
+              style={{ fontSize: "13px", fontWeight: "500", color: "#07283C" }}
+              className="typography"
+              variant="caption"
+            >
+              {addressLineTwo},{city},{postcode}
+            </Typography>
+
+            <input
+              style={{ marginLeft: "90%", paddingBottom: "3%" }}
+              type="checkbox"
+              className="checkbox"
+            />
+          </Button>
+          <Button
+            onClick={() => {
               navigate("/patient/homeaddressmanual", {
                 state: {
-                 
                   email: email,
                   password: password,
                   firstName: firstName,
                   lastName: lastName,
-                 registrationNumber: registrationNumber
+                  registrationNumber: registrationNumber,
                 },
               });
-            }
-          }
-            
-              
-              variant="contained"
-              size="large"
-              disableElevation
-              style={{
-                marginTop: "10px",
-                background: "white",
-                color: "#07283C",
-                fontSize: "16px",
-                textTransform: "none",
-                solid: "#07283C",
-                borderRadius: "2px",
-                fontWeight: "bold",
-                border: "1px solid black",
-              }}
-              fullWidth
-              type="submit"
-            >
-              Change Address
-            </Button>
-
-            <Button
-              variant="contained"
-              size="large"
-              disableElevation
-              style={{
-                marginTop: "10px",
-                background: "#FFCD00",
-                color: "#07283C",
-                fontSize: "16px",
-                textTransform: "none",
-                solid: "#07283C",
-                borderRadius: "2px",
-                fontWeight: "bold",
-                border: "0px solid ",
-              }}
-              fullWidth
-              type="submit"
-            >
-              Confirm
-            </Button>
-          </div>
+            }}
+            variant="contained"
+            size="large"
+            disableElevation
+            style={{
+              marginTop: "10px",
+              background: "white",
+              color: "#07283C",
+              fontSize: "16px",
+              textTransform: "none",
+              solid: "#07283C",
+              borderRadius: "2px",
+              fontWeight: "bold",
+              border: "1px solid black",
+              width: "70%",
+            }}
+            type="submit"
+          >
+            Change Address
+          </Button>
+          <br />
+          <Button
+            variant="contained"
+            size="large"
+            disableElevation
+            fullWidth
+            style={{
+              marginTop: "10px",
+              background: "#FFCD00",
+              color: "#07283C",
+              fontSize: "16px",
+              textTransform: "none",
+              solid: "#07283C",
+              borderRadius: "2px",
+              fontWeight: "bold",
+              border: "0px solid ",
+              width: "70%",
+            }}
+            type="submit"
+          >
+            Confirm
+          </Button>
         </div>
       </form>
     </div>
