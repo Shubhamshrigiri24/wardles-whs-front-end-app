@@ -118,7 +118,6 @@ export default function SearchHomeAddress() {
           >
             Enter your address manually
           </Button>
-
           <MyPrescriber1 />
         </Container>
       </form>

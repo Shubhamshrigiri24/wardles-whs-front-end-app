@@ -15,7 +15,9 @@ import DateFnsUtils from "@date-io/date-fns";
 
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
 import { isSpace, isEmpty, isPhone } from "../validation/Validation";
+
 import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
 
 let initialState1 = {
@@ -38,12 +40,15 @@ function UserDetails() {
 
   const [user1, setUser1] = useState(initialState1);
 
+  const [value, setValue] = React.useState(new Date());
+
   let navigate = useNavigate();
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setUser1({ ...user1, [name]: value, err: "" });
   };
+
 
   const {
     firstName,
@@ -56,8 +61,10 @@ function UserDetails() {
     success,
   } = user1;
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
 
     if (
       isEmpty(firstName) ||
@@ -87,6 +94,7 @@ function UserDetails() {
         success: "",
       });
     }
+
 
     navigate("/patient/searchhomeaddress", {
       state: {
@@ -182,6 +190,7 @@ function UserDetails() {
                 }}
               />
 
+
               {isEmpty(lastName) && showErrMsgEmpty(err)}
 
               <div style={{ marginBottom: "23px" }}>
@@ -200,6 +209,19 @@ function UserDetails() {
                 </MuiPickersUtilsProvider>
               </div>
 
+              {lastName === "" && phoneNumber !== "" ? (
+                <FormHelperText
+                  style={{ color: "red" }}
+                  id="component-error-text"
+                >
+                  This Field Is Required
+                </FormHelperText>
+              ) : (
+                ""
+              )}
+
+
+           
               <TextField
                 margin="normal"
                 fullWidth
