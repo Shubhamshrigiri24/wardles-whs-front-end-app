@@ -23,6 +23,7 @@ function ConfirmAddress() {
   const postcode = location.state.postcode;
   
 
+
   const handleSubmit = async (e) => {
     accessStart(
       location.state.email,
@@ -43,7 +44,7 @@ function ConfirmAddress() {
       },
     });
     // console.log(user)
-    e.preventDefault();
+     e.preventDefault();
   };
 
   return (
@@ -72,8 +73,11 @@ function ConfirmAddress() {
             <div className="header-section">
               <h1>Confirm your address</h1>
             </div>
+            
+            
             <div className="text-section">
               <p>
+              
                 Double-check your address is correct and that it's the address
                 registered with your prescriber.
               </p>
@@ -90,16 +94,36 @@ function ConfirmAddress() {
                 padding: "20px",
               }}
             >
-              <Typography variant="Body1" className="typography-heading">
-                Merchants Warehouse Castle Street
+                <Typography variant="Body1" className="typography-heading">
+                {addressLineOne} 
               </Typography>
               <br />
               <Typography className="typography" variant="caption">
-                Castlefield, Manchester, M3 4LZ
+                {addressLineTwo},{city},{postcode}
+                
               </Typography>
-              <input type="checkbox" className="checkbox" />
+              
+              <input style={{marginLeft:"80%"}} type="checkbox" className="checkbox" />
             </Button>
             <Button
+             
+             onClick={() => {
+              
+            
+              navigate("/patient/homeaddressmanual", {
+                state: {
+                 
+                  email: email,
+                  password: password,
+                  firstName: firstName,
+                  lastName: lastName,
+                 registrationNumber: registrationNumber
+                },
+              });
+            }
+          }
+            
+              
               variant="contained"
               size="large"
               disableElevation
@@ -138,7 +162,7 @@ function ConfirmAddress() {
               fullWidth
               type="submit"
             >
-              Close
+              Confirm
             </Button>
           </div>
         </div>
