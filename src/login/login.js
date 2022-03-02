@@ -67,20 +67,10 @@ function Login(){
 
                 <Button variant="contained" onClick={login} size="Large" disableElevation style={{background: "#FFCD00",color:"#07283C",  fontSize:"18px", textTransform: "none"}} fullWidth type="submit" >Sign In</Button>
 
-                {/* <Typography  style={{marginTop:"17px",textAlign: "Center"}}>
+                <Typography  style={{marginTop:"17px",textAlign: "Center"}}>
                     <a href='# ' style={{fontSize: 17,color:"#0066BE",textDecoration:"none"}}>Dont have an account yet?</a> 
-                </Typography>  */}
-                <Typography style={{ marginTop: "17px", textAlign: "Center" }}>
-          <a
-            onClick={() => {
-              navigate("/patient/createaccount");
-            }}
-            href=" "
-            style={{ fontSize: 17, color: "#0066BE", textDecoration: "none" }}
-          >
-            Don’t have an account yet?
-          </a>
-        </Typography>
+                </Typography> 
+
 
 
 
