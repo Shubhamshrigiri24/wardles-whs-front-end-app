@@ -9,17 +9,13 @@ import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 import PermContactCalendarRoundedIcon from "@mui/icons-material/PermContactCalendarRounded";
 import LocalPhoneRoundedIcon from "@mui/icons-material/LocalPhoneRounded";
 
+import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import { KeyboardDatePicker } from "@material-ui/pickers";
+import DateFnsUtils from "@date-io/date-fns";
 
-
-// import Stack from '@mui/material/Stack';
-// import AdapterDateFns from "@mui/lab/AdapterDateFns";
-// import LocalizationProvider from "@mui/lab/LocalizationProvider";
-// import Stack from "@mui/material/Stack";
-// import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
-// import "date-fns";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { isSpace,isEmpty } from "../validation/Validation";
+import { isSpace, isEmpty } from "../validation/Validation";
 import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
 
 let initialState1 = {
@@ -39,6 +35,8 @@ function UserDetails() {
 
   const [user1, setUser1] = useState(initialState1);
 
+  const [value, setValue] = React.useState(new Date());
+
   let navigate = useNavigate();
 
   const handleChangeInput = (e) => {
@@ -46,18 +44,24 @@ function UserDetails() {
     setUser1({ ...user1, [name]: value, err: "" });
   };
 
-  
-
   const { firstName, lastName, phoneNumber, dob, err, errEmpty, success } =
     user1;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if(isEmpty(firstName) || isEmpty(lastName) || isEmpty(phoneNumber))
-            return setUser1({...user1, err: "Please check the information above is correct",success: ''})
-    if(isSpace(firstName) || isSpace(lastName) || isSpace(phoneNumber))
-            return setUser1({...user1, err: "Please check the information above is correct", success: ''})
+
+    if (isEmpty(firstName) || isEmpty(lastName) || isEmpty(phoneNumber))
+      return setUser1({
+        ...user1,
+        err: "Please check the information above is correct",
+        success: "",
+      });
+    if (isSpace(firstName) || isSpace(lastName) || isSpace(phoneNumber))
+      return setUser1({
+        ...user1,
+        err: "Please check the information above is correct",
+        success: "",
+      });
 
     navigate("/patient/searchhomeaddress", {
       state: {
@@ -69,8 +73,6 @@ function UserDetails() {
       },
     });
   };
-
-
 
   return (
     <div>
@@ -179,17 +181,20 @@ function UserDetails() {
                 ""
               )}
 
-              {/* <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <Stack spacing={3}>
-                  <DesktopDatePicker
-                    label="Date desktop"
-                    inputFormat="MM/dd/yyyy"
-                    value={value}
-                    onChange={handleChange}
-                    renderInput={(params) => <TextField {...params} />}
-                  />
-                </Stack>
-              </LocalizationProvider> */}
+
+              <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                <KeyboardDatePicker
+                  autoOk
+                  fullWidth
+                  variant="inline"
+                  inputVariant="outlined"
+                  label="Date of birth DD/MM/YYYY"
+                  format="dd/MM/yyyy"
+                  value={value}
+                  InputAdornmentProps={{ position: "start" }}
+                  onChange={(date) => setValue(date)}
+                />
+              </MuiPickersUtilsProvider>
 
               <TextField
                 margin="normal"

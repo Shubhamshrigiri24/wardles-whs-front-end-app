@@ -21,10 +21,9 @@ export default function SearchHomeAddress() {
 
   let navigate = useNavigate();
 
-           
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     navigate("/hcp/homeaddressmanual", {
       state: {
         email: email,
@@ -117,8 +116,6 @@ export default function SearchHomeAddress() {
           >
             Enter your address manually
           </Button>
-
-          
         </Container>
       </form>
     </div>
