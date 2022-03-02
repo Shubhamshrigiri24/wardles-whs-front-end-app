@@ -199,7 +199,7 @@ function HomeAddressmanual() {
           </Button>
         </form>
 
-        <HomeAddressModal />
+        
       </Paper>
     </Grid>
   );

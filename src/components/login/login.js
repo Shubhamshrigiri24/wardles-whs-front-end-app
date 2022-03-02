@@ -132,8 +132,18 @@ function Login(){
           >
             Sign In
           </Button>
-
-          <SignInModal />
+          <Typography style={{ marginTop: "17px", textAlign: "Center" }}>
+          <a
+            onClick={() => {
+              navigate("/patient/createaccount");
+            }}
+            href=" "
+            style={{ fontSize: 17, color: "#0066BE", textDecoration: "none" }}
+          >
+            Don’t have an account yet?
+          </a>
+        </Typography>
+          
         </Paper>
       </Grid>
     );

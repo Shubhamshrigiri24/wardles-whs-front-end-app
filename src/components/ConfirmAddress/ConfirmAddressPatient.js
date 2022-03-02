@@ -74,7 +74,7 @@ function ConfirmAddress() {
         <div className="container">
           <div className="inner-container">
             <div className="header-section">
-              <h1>Confirm your address</h1>
+              <h3>Confirm your address</h3>
             </div>
             <div className="text-section">
               <p>
@@ -95,15 +95,30 @@ function ConfirmAddress() {
               }}
             >
               <Typography variant="Body1" className="typography-heading">
-                Merchants Warehouse Castle Street
+                {addressLineOne}
               </Typography>
               <br />
               <Typography className="typography" variant="caption">
-                Castlefield, Manchester, M3 4LZ
+                {addressLineTwo}, {city}, {postcode}
               </Typography>
-              <input type="checkbox" className="checkbox" />
+              <input style={{marginLeft:"80%"}} type="checkbox" className="checkbox" />
             </Button>
             <Button
+              onClick={() => {
+              
+            
+                navigate("/patient/homeaddressmanual", {
+                  state: {
+                   
+                    email: email,
+                    password: password,
+                    firstName: firstName,
+                    lastName: lastName,
+                    phoneNumber: phoneNumber,
+                  },
+                });
+              }
+            }
               variant="contained"
               size="large"
               disableElevation
@@ -143,7 +158,7 @@ function ConfirmAddress() {
               fullWidth
               type="submit"
             >
-              Close
+              Confirm
             </Button>
           </div>
         </div>
