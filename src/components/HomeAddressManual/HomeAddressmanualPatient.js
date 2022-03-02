@@ -78,7 +78,7 @@ function HomeAddressmanual() {
         phoneNumber: phoneNumber,
       },
     });
-    // console.log(user)
+     
     
   };
 

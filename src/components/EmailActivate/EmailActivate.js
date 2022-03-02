@@ -54,9 +54,7 @@ function EMailActivate() {
       </p>
 
       <Button
-        onClick={() => {
-          navigate("/patient/emailsuccess");
-        }}
+        
         variant="contained"
         size="Large"
         disableElevation
