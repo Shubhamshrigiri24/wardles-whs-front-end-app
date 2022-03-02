@@ -2,6 +2,7 @@ import { Grid, Paper, Button } from "@material-ui/core";
 import GetEmail from "../GetEmail";
 import "./CheckYourEmail.css";
 import { useNavigate } from "react-router-dom";
+import Email from "@mui/icons-material/Email";
 
 function CheckYourEmail() {
   let navigate = useNavigate();
@@ -13,7 +14,7 @@ function CheckYourEmail() {
     margin: "10px auto",
     background: "#F7FBFF",
   };
-
+  
   return (
     <Grid>
       <Paper elevation={0} style={paperStyle}>

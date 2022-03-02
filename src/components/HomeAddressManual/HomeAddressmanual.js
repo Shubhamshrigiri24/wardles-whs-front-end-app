@@ -78,8 +78,8 @@ function HomeAddressmanual() {
         registrationNumber: registrationNumber,
       },
     });
-    // console.log(user)
-    e.preventDefault();
+     console.log(user)
+     e.preventDefault();
   };
 
   return (
@@ -199,7 +199,7 @@ function HomeAddressmanual() {
           </Button>
         </form>
 
-        <HomeAddressModal />
+        
       </Paper>
     </Grid>
   );

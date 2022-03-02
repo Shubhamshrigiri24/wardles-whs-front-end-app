@@ -67,7 +67,7 @@ export default function SearchHomeAddress() {
               fontWeight: "600",
             }}
           >
-            Enter your home address
+            Enter your work address
           </Typography>
           <Typography
             mb={2}
@@ -118,7 +118,7 @@ export default function SearchHomeAddress() {
             Enter your address manually
           </Button>
 
-          <MyPrescriber1 />
+          
         </Container>
       </form>
     </div>

@@ -109,8 +109,8 @@ export default function Consent() {
 
     );
     navigate("/patient/emailactivate", {
-      state: { email: email}})   
-  }
+      state: { email: email},});   
+  };
   
   return (
     <div className="consent-section">
