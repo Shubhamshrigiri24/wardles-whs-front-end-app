@@ -7,6 +7,7 @@ import { accessStart } from "../../API/userOps";
 import { useLocation } from "react-router-dom";
 
 export const showErrMsg = (msg) => {
+
   return (
     <div className="errMsg">
       <div
@@ -48,10 +49,11 @@ export const showErrMsgEmpty = (msg) => {
 
 export default function Consent() {
   let navigate = useNavigate();
-
+  
   const location = useLocation();
 
   const email = location.state.email;
+  
 
   const [A, setA] = useState(false);
 
@@ -60,11 +62,7 @@ export default function Consent() {
   const [D, setD] = useState(false);
   const [Error, setError] = useState("");
 
-  // console.log(A);
-  // console.log(B);
-  // console.log(C);
-  // console.log(D);
-  // console.log(Error);
+ 
 
   const handleOnChangeA = () => {
     setA(!A);
@@ -82,8 +80,11 @@ export default function Consent() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (A === true && B === true && C === true && D === true) {
-      setError("");
-      navigate("/emailactivate");
+       setError("");
+      // navigate("/emailactivate");
+      navigate("/patient/emailactivate", {
+          state: { email: email},});   
+      
     } else {
       setError("You must agree to all of the statements above to continue.");
     }
@@ -103,13 +104,13 @@ export default function Consent() {
       location.state.prescriberaddresLineone,
       location.state.prescriberaddresLinetwo,
       location.state.prescriberCity,
-      location.state.prescriberpostcode
-    );
-    navigate("/patient/emailactivate", {
-      state: { email: email },
-    });
-  };
+      location.state.prescriberpostcode,
 
+    );
+    // navigate("/patient/emailactivate", {
+    //   state: { email: email},});   
+  };
+  
   return (
     <div className="consent-section">
       <div className="container">

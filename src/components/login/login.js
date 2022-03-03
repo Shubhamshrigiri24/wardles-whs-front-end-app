@@ -194,19 +194,7 @@ function Login() {
           </Button>
         </Link>
 
-        <Typography style={{ marginTop: "17px", textAlign: "Center" }}>
-          <a
-            onClick={() => {
-              navigate("/patient/createaccount");
-            }}
-            href=" "
-            style={{ fontSize: 17, color: "#0066BE", textDecoration: "none" }}
-
-          >
-            Sign In
-          </Button>
-          {/* </Link> */}
-
+        
           <Typography style={{ marginTop: "17px", textAlign: "Center" }}>
             <a
               onClick={() => {
