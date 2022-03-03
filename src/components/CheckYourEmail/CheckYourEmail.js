@@ -3,9 +3,15 @@ import GetEmail from "../GetEmail";
 import "./CheckYourEmail.css";
 import { useNavigate } from "react-router-dom";
 import Email from "@mui/icons-material/Email";
+import { useLocation } from "react-router-dom";
 
 function CheckYourEmail() {
   let navigate = useNavigate();
+
+  const location = useLocation();
+
+  const email = location.state.email;
+  console.log(email);
 
   const paperStyle = {
     padding: 20,
@@ -20,9 +26,9 @@ function CheckYourEmail() {
       <Paper elevation={0} style={paperStyle}>
         <h1 className="heading">Check your email to reset your password</h1>
 
-        <p className="paragraph">
-          We’ve sent an email to email@address.com <br /> with a secure link to
-          reset your password.
+        <p className="paragraph" style={{ marginTop: "10px" }}>
+          We've sent an email to {email} with a secure link to reset your
+          password.
         </p>
 
         <Button

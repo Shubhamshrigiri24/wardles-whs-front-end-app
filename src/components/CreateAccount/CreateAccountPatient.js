@@ -26,6 +26,7 @@ import {
   isPasswordValid,
 } from "../validation/Validation";
 import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
+
 const initialState = {
   email: "",
   confirm_email: "",
@@ -99,31 +100,42 @@ export default function CreateAcc(props) {
 
   const handleSubmit = async (e) => {
     // console.log(password)
-   
+
     e.preventDefault();
-    if(isEmpty(email) || isEmpty(password) || isEmpty(confirm_email)) 
-              return setUser({...user, err: "Please fill in all fields.", success: ''})
+    if (isEmpty(email) || isEmpty(password) || isEmpty(confirm_email))
+      return setUser({
+        ...user,
+        err: "Please fill in all fields.",
+        success: "",
+      });
 
-        if(!isEmail(email, confirm_email))
-          return setUser({...user, err: "Invalid email address.", success: ''})
+    if (!isEmail(email, confirm_email))
+      return setUser({ ...user, err: "Invalid email address.", success: "" });
 
-        
-        if(!isMatchemail(email, confirm_email))
-        return setUser({...user, err: "Make sure your email address matches in both fields.", success: ''})
-        
-        
-        if(!isPasswordValid(password,passwordValidator))
-        return setUser({...user,err:"Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!", success:''})
+    if (!isMatchemail(email, confirm_email))
+      return setUser({
+        ...user,
+        err: "Make sure your email address matches in both fields.",
+        success: "",
+      });
 
+    if (!isPasswordValid(password, passwordValidator))
+      return setUser({
+        ...user,
+        err: "Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!",
+        success: "",
+      });
 
-        
-        if(!isMatch(password, cf_password))
-            return setUser({...user, err: "Make sure your password matches in both fields.", success: ''})
+    if (!isMatch(password, cf_password))
+      return setUser({
+        ...user,
+        err: "Make sure your password matches in both fields.",
+        success: "",
+      });
 
     navigate("/patient/userdetails", {
       state: { email: email, password: password },
     });
-    
   };
 
   return (
@@ -164,13 +176,6 @@ export default function CreateAcc(props) {
               <TextField
                 size="large"
                 error={errEmpty}
-                // helperText={errEmpty && showErrMsgEmpty(errEmpty)}
-                // style={{
-                //   marginBottom: "17px",
-                //   boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)",
-                //   // background: "white",
-                //   // borderRadius: 4,  border:(errEmpty ? "1px solid #BB4035" : null )
-                // }}
                 placeholder="Email address"
                 variant="outlined"
                 label="Email address"

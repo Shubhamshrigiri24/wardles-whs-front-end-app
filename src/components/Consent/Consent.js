@@ -7,7 +7,6 @@ import { accessStart } from "../../API/userOps";
 import { useLocation } from "react-router-dom";
 
 export const showErrMsg = (msg) => {
-
   return (
     <div className="errMsg">
       <div
@@ -49,11 +48,10 @@ export const showErrMsgEmpty = (msg) => {
 
 export default function Consent() {
   let navigate = useNavigate();
-  
+
   const location = useLocation();
 
   const email = location.state.email;
-  
 
   const [A, setA] = useState(false);
 
@@ -105,13 +103,13 @@ export default function Consent() {
       location.state.prescriberaddresLineone,
       location.state.prescriberaddresLinetwo,
       location.state.prescriberCity,
-      location.state.prescriberpostcode,
-
+      location.state.prescriberpostcode
     );
     navigate("/patient/emailactivate", {
-      state: { email: email},});   
+      state: { email: email },
+    });
   };
-  
+
   return (
     <div className="consent-section">
       <div className="container">
