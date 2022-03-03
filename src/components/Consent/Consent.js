@@ -107,7 +107,7 @@ export default function Consent() {
       location.state.prescriberpostcode,
 
     );
-    
+
   };
   
   return (

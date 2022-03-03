@@ -7,21 +7,18 @@
   left: 0px;
   right: 0px;
   top: 0px;
-  /* font-family: Gilroy Alt; */
   font-size: 32px;
   letter-spacing: 0.005em;
-  font-feature-settings: "liga" off;
   color: #07283c;
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin: 24px 0px;
 }
 .paragraph {
   position: static;
   left: 0px;
   right: 0px;
-  /* font-family: Gilroy Alt; */
+  
   font-size: 18px;
   letter-spacing: 0.01em;
   font-feature-settings: "liga" off;

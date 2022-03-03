@@ -69,7 +69,7 @@ function Resetpassword() {
     <Paper elevation={0} style={paperStyle}>
       <h1 className="heading">Reset password</h1>
       <p className="paragraph">
-        Choose a password to keep your data secure. You’ll need this password
+        Choose a password to keep your data secure. You'll need this password
         and your email address to access your account in future.
       </p>
 
@@ -82,6 +82,7 @@ function Resetpassword() {
         fullWidth
         style={{
           marginBottom: 15,
+          marginTop: 15,
           boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)",
           height: 45,
         }}

@@ -100,107 +100,83 @@ function Login() {
     <form onSubmit={handleSubmit}>
     <Grid>
       <Paper elevation={0} style={paperStyle}>
-        
-          <Grid align="left">
-            <h2 style={{ fontSize: 28, margin: 0 }}>Sign in</h2>
-          </Grid>
 
-          <p style={{ fontSize: 18, marginBottom: 15 }}>
-            Enter your email address and password.
-          </p>
-          
-          <TextField
-            size="large"
-            label="Email address"
-            style={{
-              marginBottom: "17px",
-              boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)",
-            }}
-            placeholder="Email address"
-            type="email"
-            variant="outlined"
-            fullWidth
-            onChange={handleChangeInput}
-            value={email}
-            name="email"
-            id="email"
-            // data.find(email => email === email)
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <EmailOutlinedIcon />
-                </InputAdornment>
-              ),
-              endAdornment: (
-                <InputAdornment position="end">
-                  {isEmail(email) ? (
-                    <DoneIcon style={{ color: "#52B057" }} />
-                  ) : null}
-                </InputAdornment>
-              ),
-            }}
-          />
-          <TextField
-            size="large"
-            label="Password"
-            name="password"
-            id="password"
-            style={{
-              marginBottom: "17px",
-              boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)",
-            }}
-            placeholder="Password"
-            // type="password"
-            type={user.showPassword ? "text" : "password"}
-            value={password}
-            onChange={handleChangeInput}
-            variant="outlined"
-            fullWidth
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <LockOutlinedIcon />
-                </InputAdornment>
-              ),
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    // onMouseDown={handleMouseDownPassword}
-                    edge="end"
-                  >
-                    {user.showPassword ? (
-                      <Visibility style={{ color: "grey" }} />
-                    ) : (
-                      <VisibilityOff style={{ color: "grey" }} />
-                    )}
-                  </IconButton>
-                </InputAdornment>
-              ),
-            }}
-          />
-          
-          {err && showErrMsg(err)}
-          
-          <Typography style={{ marginBottom: "17px", textAlign: "Center" }}>
-            <a
-              onClick={() => {
-                navigate("/emailresetpwd");
-              }}
-              href="# "
-              style={{ fontSize: 17, color: "#0066BE", textDecoration: "none" }}
-            >
-              Forgotten your password?
-            </a>
-          </Typography>
-          
-          {/* <Link href="https://www.well.co.uk" style={textDecoration:"none"}> */}
+        <Grid align="left">
+          <h2 style={{ fontSize: 28, margin: 0 }}>Sign in</h2>
+        </Grid>
+
+        <p style={{ fontSize: 18, marginBottom: 15 }}>
+          Enter your email address and password.
+        </p>
+
+        <TextField
+          size="large"
+          label="Email address"
+          style={{
+            marginBottom: "17px",
+            boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)",
+          }}
+          placeholder="Email address"
+          type="email"
+          variant="outlined"
+          fullWidth
+          onChange={handleChangeInput}
+          value={email}
+          name="email"
+          id="email"
+          // data.find(email => email === email)
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <EmailOutlinedIcon />
+              </InputAdornment>
+            ),
+          }}
+        />
+        <TextField
+          size="large"
+          label="Password"
+          name="password"
+          id="password"
+          style={{
+            marginBottom: "17px",
+            boxShadow: "2px 2px 7px rgba(0, 0, 0, 0.07)",
+          }}
+          placeholder="Password"
+          type="password"
+          value={password}
+          onChange={handleChangeInput}
+          variant="outlined"
+          fullWidth
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <LockOutlinedIcon />
+              </InputAdornment>
+            ),
+          }}
+        />
+
+        <Typography
+          onClick={() => {
+            navigate("/emailresetpwd", {
+              state: { email: email },
+            });
+          }}
+          style={{
+            marginBottom: "17px",
+            textAlign: "Center",
+            color: "#0066BE",
+          }}
+        >
+          Forgotten your password?
+        </Typography>
+
+        <Link href="https://www.well.co.uk" style={{ textDecoration: "none" }}>
           <Button
-          
             variant="contained"
             size="Large"
-            type="submit"
+
             disableElevation
             style={{
               background: "#FFCD00",
@@ -209,14 +185,16 @@ function Login() {
               textTransform: "none",
             }}
             fullWidth
-          // onClick={() => {
-          //   login(email, password);
-          // }}
+
+            // onClick={() => {
+            //   login(email, password);
+            // }}
           >
             Sign In
           </Button>
-          {/* </Link> */}
+        </Link>
 
+        
           <Typography style={{ marginTop: "17px", textAlign: "Center" }}>
             <a
               onClick={() => {
