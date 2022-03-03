@@ -3,9 +3,23 @@ import { InputAdornment } from "@material-ui/core";
 import EmailIcon from "@material-ui/icons/Email";
 import "./EmailResetPwd.css";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
+
+const initialState = {
+  email: "",
+};
 
 function EmailResetPwd() {
-    let navigate = useNavigate();
+  let navigate = useNavigate();
+
+  const location = useLocation();
+
+  const [user, setUser] = useState(initialState);
+
+  const { email } = user;
+
+  console.log(email);
 
   const paperStyle = {
     padding: 20,
@@ -13,6 +27,16 @@ function EmailResetPwd() {
     width: 400,
     margin: "10px auto",
     background: "#F7FBFF",
+  };
+
+  const handleChangeInput = (e) => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value, err: "", success: "" });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    navigate("*");
   };
 
   return (
@@ -31,6 +55,7 @@ function EmailResetPwd() {
         name="email"
         autoComplete="email"
         autoFocus
+        onChange={handleChangeInput}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -47,14 +72,15 @@ function EmailResetPwd() {
         style={{
           background: "#FFCD00",
           color: "#07283C",
-          fontFamily: "Gilroy Alt",
           marginBottom: "17px",
           fontSize: "16px",
           textTransform: "none",
         }}
         fullWidth
         onClick={() => {
-          navigate("/CheckYourEmail");
+          navigate("/CheckYourEmail", {
+            state: { email: email },
+          });
         }}
       >
         Reset password

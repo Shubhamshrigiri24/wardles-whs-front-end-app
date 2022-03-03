@@ -68,7 +68,7 @@ function ConfirmAddress() {
 
         <div className="inner-container">
           <div className="header-section">
-            <h4>Confirm your address</h4>
+            <h2>Confirm your address</h2>
           </div>
           <div className="text-section">
             <p>
@@ -100,6 +100,28 @@ function ConfirmAddress() {
               type="checkbox"
               className="checkbox"
             />
+          </Button>
+          <Button
+            variant="contained"
+            size="large"
+            fullWidth
+            disableElevation
+            style={{
+              marginTop: "10px",
+              background: "white",
+              color: "#07283C",
+              fontSize: "16px",
+              textTransform: "none",
+              solid: "#07283C",
+              borderRadius: "2px",
+              fontWeight: "bold",
+              border: "0px solid",
+              borderColor: "#07283C",
+              width: "70%",
+            }}
+            type="submit"
+          >
+            Change address
           </Button>
 
           <Button

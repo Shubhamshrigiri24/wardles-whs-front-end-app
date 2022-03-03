@@ -23,7 +23,7 @@ import {
   isEmail,
   isMatch,
   isMatchemail,
-  isPasswordValid
+  isPasswordValid,
 } from "../../components/validation/Validation";
 
 import {
@@ -101,39 +101,46 @@ export default function CreateAcc(props) {
   };
 
   const handleSubmit = async (e) => {
-    
-
     e.preventDefault();
-        if(isEmpty(email) || isEmpty(password) || isEmpty(confirm_email)) 
-              return setUser({...user, err: "Please fill in all fields.", success: ''})
+    if (isEmpty(email) || isEmpty(password) || isEmpty(confirm_email))
+      return setUser({
+        ...user,
+        err: "Please fill in all fields.",
+        success: "",
+      });
 
-        if(!isEmail(email) || !isEmail(confirm_email))
-          return setUser({...user, err: "Invalid email address.", success: ''})
+    if (!isEmail(email) || !isEmail(confirm_email))
+      return setUser({ ...user, err: "Invalid email address.", success: "" });
 
-        
-        if(!isMatchemail(email, confirm_email))
-        return setUser({...user, err: "Make sure your email address matches in both fields.", success: ''})
-        
-        
-        if(!isPasswordValid(password))
-        return setUser({...user,err:"Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!", success:''})
+    if (!isMatchemail(email, confirm_email))
+      return setUser({
+        ...user,
+        err: "Make sure your email address matches in both fields.",
+        success: "",
+      });
 
+    if (!isPasswordValid(password))
+      return setUser({
+        ...user,
+        err: "Password must contain at least 8 characters, 1 number, 1 upper and 1 lowercase!",
+        success: "",
+      });
 
-        
-        if(!isMatch(password, cf_password))
-            return setUser({...user, err: "Make sure your password matches in both fields.", success: ''})
-
-    
+    if (!isMatch(password, cf_password))
+      return setUser({
+        ...user,
+        err: "Make sure your password matches in both fields.",
+        success: "",
+      });
 
     navigate("/hcp/userdetails", {
       state: { email: email, password: password },
     });
-    
   };
 
   return (
     <Grid>
-      <div style={{ marginTop: "2%" }}>
+      <div>
         <a
           href=" "
           style={{
@@ -292,7 +299,6 @@ export default function CreateAcc(props) {
                       <IconButton
                         aria-label="toggle password visibility"
                         onClick={handleClickShowConfirmPassword}
-                        // onMouseDown={handleMouseDownPassword}
                         edge="end"
                       >
                         {user.showPassword ? (
@@ -325,7 +331,6 @@ export default function CreateAcc(props) {
                 style={{
                   margin: 0,
                   padding: 0,
-                  fontFamily: "Gilroy Alt",
                   fontSize: 15,
                 }}
               >
@@ -345,11 +350,17 @@ export default function CreateAcc(props) {
 
             <label>
               By continuing you are agreeing to our{" "}
-              <a target="blank" href="https://www.well.co.uk/about-us/policies/terms-and-conditions-well-healthcare-supplies ">
+              <a
+                target="blank"
+                href="https://www.well.co.uk/about-us/policies/terms-and-conditions-well-healthcare-supplies "
+              >
                 terms and conditions
               </a>{" "}
               and
-              <a target="blank" href="https://www.well.co.uk/about-us/policies/privacy">
+              <a
+                target="blank"
+                href="https://www.well.co.uk/about-us/policies/privacy"
+              >
                 {" "}
                 privacy policy.
               </a>
@@ -377,7 +388,7 @@ export default function CreateAcc(props) {
                 component="button"
                 variant="body2"
                 underline="none"
-                style={{ fontSize: "17px", fontFamily: "Gilroy Alt" }}
+                style={{ fontSize: "17px" }}
                 onClick={() => {
                   navigate("/login");
                 }}

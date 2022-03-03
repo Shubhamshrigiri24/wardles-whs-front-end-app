@@ -105,37 +105,40 @@ function Login() {
           }}
         />
 
-        <Typography style={{ marginBottom: "17px", textAlign: "Center" }}>
-          <a
-            onClick={() => {
-              navigate("/emailresetpwd");
-            }}
-            href="# "
-            style={{ fontSize: 17, color: "#0066BE", textDecoration: "none" }}
-          >
-            Forgotten your password?
-          </a>
+        <Typography
+          onClick={() => {
+            navigate("/emailresetpwd", {
+              state: { email: email },
+            });
+          }}
+          style={{
+            marginBottom: "17px",
+            textAlign: "Center",
+            color: "#0066BE",
+          }}
+        >
+          Forgotten your password?
         </Typography>
 
-        <Link href="https://www.well.co.uk" style={{textDecoration:"none"}}>
-        <Button
-          variant="contained"
-          size="Large"
-          disableElevation
-          style={{
-            background: "#FFCD00",
-            color: "#07283C",
-            fontSize: "18px",
-            textTransform: "none",
-          }}
-          fullWidth
-          // onClick={() => {
-          //   login(email, password);
-          // }}
-        >
-          Sign In
-        </Button>
-          </Link>
+        <Link href="https://www.well.co.uk" style={{ textDecoration: "none" }}>
+          <Button
+            variant="contained"
+            size="Large"
+            disableElevation
+            style={{
+              background: "#FFCD00",
+              color: "#07283C",
+              fontSize: "18px",
+              textTransform: "none",
+            }}
+            fullWidth
+            // onClick={() => {
+            //   login(email, password);
+            // }}
+          >
+            Sign In
+          </Button>
+        </Link>
 
         <Typography style={{ marginTop: "17px", textAlign: "Center" }}>
           <a
