@@ -107,8 +107,7 @@ export default function Consent() {
       location.state.prescriberpostcode,
 
     );
-    // navigate("/patient/emailactivate", {
-    //   state: { email: email},});   
+
   };
   
   return (
