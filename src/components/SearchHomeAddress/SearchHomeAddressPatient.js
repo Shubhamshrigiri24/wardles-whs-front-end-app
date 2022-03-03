@@ -78,7 +78,7 @@ export default function SearchHomeAddress() {
             Or
           </Grid>
 
-          <Button
+          {/* <Button
             variant="contained"
             color="primary"
             type="submit"
@@ -100,7 +100,7 @@ export default function SearchHomeAddress() {
             }}
           >
             Dummy
-          </Button>
+          </Button> */}
 
           <Button
             variant="contained"

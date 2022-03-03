@@ -107,7 +107,7 @@ function UserDetails() {
 
   return (
     <div>
-      <div style={{ marginTop: "2%" }}>
+      {/* <div style={{ marginTop: "2%" }}>
         <a
           href=" "
           style={{
@@ -124,7 +124,7 @@ function UserDetails() {
           <ArrowBackIcon />
           <p>Back</p>
         </a>
-      </div>
+      </div> */}
 
       <form onSubmit={handleSubmit}>
         <Container component="main" maxWidth="xs">

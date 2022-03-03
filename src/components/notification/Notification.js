@@ -12,6 +12,7 @@ export const showErrMsg = (msg) => {
           margin: 0,
           padding: 0,
           width: "90%",
+          
         }}
       >
         <p style={{ margin: 0, padding: 0, marginLeft: 5, fontSize: 16 }}>

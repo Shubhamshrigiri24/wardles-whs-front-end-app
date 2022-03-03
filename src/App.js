@@ -42,6 +42,7 @@ import AddressEngland from "./components/AddressEngland/Addressengland";
 import WeAreSorry from "./components/WeAreSorry/WeAreSorry";
 import KeepUpdate from "./components/KeepUpdate/KeepUpdate";
 import KeepUpdate2 from "./components/KeepUpdate2/KeepUpdate2";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 // import HomeAddress from "./components/HomeAddress/HomeAddress";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
@@ -57,6 +58,7 @@ function App() {
         {/* <Route exact path="/" element={<Homepage />} /> */}
         <Route exact path="/" element={<ChooseAcc />} />
         <Route path="/login" element={<Login />} />
+        <Route path ="/dashboard" element={<Dashboard/>}/>
         <Route exact path="/chooseaccount" element={<ChooseAcc />} />
         <Route path="/emailresetpwd" element={<EmailResetPwd />} />
         <Route path="/CheckYourEmail" element={<CheckYourEmail />} />

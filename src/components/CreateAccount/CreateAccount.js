@@ -140,7 +140,9 @@ export default function CreateAcc(props) {
 
   return (
     <Grid>
+
       <div>
+
         <a
           href=" "
           style={{
@@ -157,7 +159,7 @@ export default function CreateAcc(props) {
           <ArrowBackIcon />
           <p>Back</p>
         </a>
-      </div>
+      </div> */}
 
       <div>
         <Paper elevation={0} style={paperStyle}>

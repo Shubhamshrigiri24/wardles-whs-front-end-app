@@ -6,7 +6,9 @@ import HomeAddressModal from "../../HomeAddressModal";
 import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 //import Question from './Assets/Question.svg';
 //import Arrowright from './Assets/Arrowright.svg';
+
 import { isEmpty, isSpace } from "../validation/Validation";
+
 import { showErrMsg, showErrMsgEmpty } from "../notification/Notification";
 
 const initialState = {
@@ -56,6 +58,7 @@ function HomeAddressmanual() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (
       isEmpty(addressLineOne) ||
       isEmpty(addressLineTwo) ||
@@ -79,6 +82,7 @@ function HomeAddressmanual() {
         success: "",
       });
 
+
     navigate("/patient/confirmaddress", {
       state: {
         addressLineOne: addressLineOne,
@@ -96,7 +100,7 @@ function HomeAddressmanual() {
 
   return (
     <Grid>
-      <div style={{ marginTop: "2%" }}>
+      {/* <div style={{ marginTop: "2%" }}>
         <a
           href=" "
           style={{
@@ -113,7 +117,7 @@ function HomeAddressmanual() {
           <ArrowBackIcon />
           <p>Back</p>
         </a>
-      </div>
+      </div> */}
 
       <Paper elevation={0} style={paperStyle}>
         <form onSubmit={handleSubmit}>
@@ -190,8 +194,10 @@ function HomeAddressmanual() {
             variant="outlined"
             fullWidth
           />
+
           {err && showErrMsg(err)}
           
+
           <Button
             variant="contained"
             size="Large"
