@@ -48,7 +48,7 @@ function Login() {
   };
   const handleChangeInput = (e) => {
     e.preventDefault();
-    console.log("handlechange")
+    
     const { name, value } = e.target;
     setUser({ ...user, [name]: value, err: "", success: "" });
   };
