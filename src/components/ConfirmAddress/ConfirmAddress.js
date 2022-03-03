@@ -48,7 +48,7 @@ function ConfirmAddress() {
   return (
     <div className="explore-section">
       <form onSubmit={handleSubmit}>
-        <div style={{ marginTop: "2%" }}>
+        {/* <div style={{ marginTop: "2%" }}>
           <a
             href=" "
             style={{
@@ -64,7 +64,7 @@ function ConfirmAddress() {
             <ArrowBackIcon />
             <p>Back</p>
           </a>
-        </div>
+        </div> */}
         <div className="inner-container">
           <div className="header-section">
             <h3>Confirm your address</h3>
@@ -105,14 +105,14 @@ function ConfirmAddress() {
             </Typography>
 
             <input
-              style={{ marginLeft: "90%", paddingBottom: "3%" }}
+              style={{ marginLeft: "90%", marginTop:"-90%" }}
               type="checkbox"
               className="checkbox"
             />
           </Button>
           <Button
             onClick={() => {
-              navigate("/patient/homeaddressmanual", {
+              navigate("/hcp/homeaddressmanual", {
                 state: {
                   email: email,
                   password: password,

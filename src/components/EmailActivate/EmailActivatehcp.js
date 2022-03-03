@@ -33,7 +33,7 @@ function EMailActivate() {
     // <Grid>
     <Paper elevation={0} style={paperStyle}>
       <Grid align="Center">
-        <img src={Message} alt="error" />
+        <img height="200 " width="200" src={Message} alt="error" />
       </Grid>
       <h2 style={{ marginTop: 0 }}>
         Check your email to <br /> activate your account

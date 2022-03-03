@@ -47,7 +47,7 @@ function ConfirmAddress() {
   return (
     <div className="explore-section">
       <form onSubmit={handleSubmit}>
-        <div style={{ marginTop: "2%" }}>
+        {/* <div style={{ marginTop: "2%" }}>
           <a
             href=" "
             style={{
@@ -64,7 +64,7 @@ function ConfirmAddress() {
             <ArrowBackIcon />
             <p>Back</p>
           </a>
-        </div>
+        </div> */}
 
         <div className="inner-container">
           <div className="header-section">
@@ -96,12 +96,44 @@ function ConfirmAddress() {
             </Typography>
 
             <input
-              style={{ marginLeft: "80%" }}
+              style={{ marginLeft: "90%", marginTop:"-90%"  }}
               type="checkbox"
               className="checkbox"
             />
           </Button>
-
+          <Button
+          onClick={() => {
+            navigate("/patient/homeaddressmanual", {
+              state: {
+                email: email,
+                password: password,
+                firstName: firstName,
+                lastName: lastName,
+                phoneNumber:phoneNumber,
+              },
+            });
+          }}
+            variant="contained"
+            size="large"
+            fullWidth
+            disableElevation
+            style={{
+              
+              marginTop: "10px",
+              background: "white",
+              color: "#07283C",
+              fontSize: "16px",
+              textTransform: "none",
+              solid: "#07283C",
+              borderRadius: "2px",
+              fontWeight: "bold",
+              border: "1px solid black",
+              width: "70%",
+            }}
+            type="submit"
+          >
+            Change Address
+          </Button>
           <Button
             variant="contained"
             size="large"

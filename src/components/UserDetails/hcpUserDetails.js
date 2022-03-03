@@ -85,7 +85,7 @@ function HCPUserDetails() {
 
   return (
     <div>
-      <div style={{ marginTop: "2%" }}>
+      {/* <div style={{ marginTop: "2%" }}>
         <a
           href=" "
           style={{
@@ -102,7 +102,7 @@ function HCPUserDetails() {
           <ArrowBackIcon />
           <p>Back</p>
         </a>
-      </div>
+      </div> */}
       <form onSubmit={handleSubmit}>
         <Container component="main" maxWidth="xs">
           <Box

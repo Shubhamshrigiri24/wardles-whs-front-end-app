@@ -7,6 +7,7 @@ import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 //import Question from './Assets/Question.svg';
 //import Arrowright from './Assets/Arrowright.svg';
 import {
+  isPostCode,
   isEmpty,
   isSpace
 } from "../validation/Validation";
@@ -63,7 +64,8 @@ function HomeAddressmanual() {
         return setUser({...user, err: "Please fill in all fields.", success: ''})
       if(isSpace(addressLineOne) || isSpace(addressLineTwo) || isSpace(city) || isSpace(postcode)) 
         return setUser({...user, err: "Please fill in all fields.", success: ''})
-
+        if (!isPostCode(postcode))
+        return setUser({...user, err: "We can't find your address. Please check you've entered a valid UK postcode.", success: ''})
     
     navigate("/hcp/confirmaddress", {
       state: {
@@ -84,7 +86,7 @@ function HomeAddressmanual() {
 
   return (
     <Grid>
-      <div style={{ marginTop: "2%" }}>
+      {/* <div style={{ marginTop: "2%" }}>
         <a
           href=" "
           style={{
@@ -101,7 +103,7 @@ function HomeAddressmanual() {
           <ArrowBackIcon />
           <p>Back</p>
         </a>
-      </div>
+      </div> */}
 
       <Paper elevation={0} style={paperStyle}>
         <form onSubmit={handleSubmit}>
