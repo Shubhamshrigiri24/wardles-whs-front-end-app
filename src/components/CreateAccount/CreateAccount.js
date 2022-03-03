@@ -140,9 +140,7 @@ export default function CreateAcc(props) {
 
   return (
     <Grid>
-
-      <div>
-
+      {/* <div style={{ marginTop: "2%" }}>
         <a
           href=" "
           style={{
