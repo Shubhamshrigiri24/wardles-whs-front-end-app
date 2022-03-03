@@ -20,13 +20,13 @@ export default function ChooseAcc() {
       }}
     >
       <div>
-        <h1 style={{ fontFamily: "Gilroy Alt", textAlign: "center" }}>
+        <h1 style={{marginBottom:"5%", fontFamily: "Gilroy Alt", textAlign: "center" , fontSize:"220%" }}>
           Which type of account would you like to create?
         </h1>
-        <Container style={{ display: "flex" }}>
+        <Container style={{marginTop:"3%",marginBottom:"20%", display: "flex" }}>
           <Container maxWidth="sm">
             <Box
-              p={2}
+              p={4}
               sx={{
                 width: "364px",
                 height: "330px",
@@ -39,7 +39,7 @@ export default function ChooseAcc() {
             >
               <img src={UserIcon1} alt="Error" />
               <h2 style={{ fontFamily: "Gilroy Alt" }}>Personal</h2>
-              <p style={{ fontFamily: "Gilroy Alt" }}>
+              <p style={{ fontFamily: "Gilroy Alt"}}>
                 I am creating an account for myself to manage my own appliances.{" "}
               </p>
               <Button
@@ -56,6 +56,7 @@ export default function ChooseAcc() {
                   marginTop: "10%",
                   height: "20%",
                   borderRadius: "1px",
+                  fontWeight:"bold"
                 }}
                 onClick={() => {
                   navigate("/patient/createaccount");
@@ -67,7 +68,7 @@ export default function ChooseAcc() {
           </Container>
           <Container maxWidth="sm">
             <Box
-              p={2}
+              p={4}
               sx={{
                 width: "364px",
                 height: "330px",
@@ -100,9 +101,10 @@ export default function ChooseAcc() {
                   marginTop: "10%",
                   height: "20%",
                   borderRadius: "1px",
+                  fontWeight:"bold"
                 }}
                 onClick={() => {
-                  navigate("/createaccount");
+                  navigate("/hcp/createaccount");
                 }}
               >
                 Continue

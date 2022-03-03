@@ -1,5 +1,7 @@
 import React from "react";
 import "./KeepUpdate2.css";
+import { Link } from "@material-ui/core";
+
 
 export default function KeepUpdate2() {
   return (
@@ -17,9 +19,11 @@ export default function KeepUpdate2() {
             </p>
           </div>
           <div>
+          <Link href="https://www.well.co.uk" style={{textDecoration:"none"}}>
             <button type="button" class="keepupdate-button ">
               Go to well.co.uk
             </button>
+            </Link>
           </div>
         </div>
       </div>

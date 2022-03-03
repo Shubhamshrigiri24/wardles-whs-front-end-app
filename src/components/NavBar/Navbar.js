@@ -9,7 +9,7 @@ function Navbar() {
 
       <div className="help">
         <img className="help-icon" src={Questionblack} alt="error" />
-        <a href=" https://www.wells.co.uk" className="helptext">
+        <a href=" https://www.well.co.uk" className="helptext">
           Help
         </a>
       </div>
