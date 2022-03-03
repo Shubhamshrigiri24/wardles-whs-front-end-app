@@ -36,7 +36,7 @@ export default function SearchHomeAddress() {
   };
   return (
     <div style={{ textTransform: "none !important", background: "E5E5E5" }}>
-      <div style={{ marginTop: "2%" }}>
+      {/* <div style={{ marginTop: "2%" }}>
         <a
           href=" /homeaddressmanual"
           style={{
@@ -53,7 +53,7 @@ export default function SearchHomeAddress() {
           <ArrowBackIcon />
           <p>Back</p>
         </a>
-      </div>
+      </div> */}
       <form onSubmit={handleSubmit}>
         <Container style={{ margin: "4% auto" }} maxWidth="xs">
           <Typography

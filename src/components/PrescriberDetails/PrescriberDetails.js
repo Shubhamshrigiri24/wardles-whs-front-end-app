@@ -6,6 +6,7 @@ import { TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { ThemeConsumer } from "styled-components";
 import {
+  isPostCode,
   isEmpty,
   isSpace
 } from "../../components/validation/Validation";
@@ -56,7 +57,9 @@ export default function PrescriberDetails() {
               return setUser({...user, err: "Please fill in all fields.", success: ''})
         if(isSpace(prescriberName) || isSpace(prescriberCity) || isSpace(prescriberaddresLineone) || isSpace(prescriberaddresLinetwo) || isSpace(prescriberpostcode)) 
               return setUser({...user, err: "Please fill in all fields.", success: ''})
-  
+        if(!isPostCode(prescriberpostcode))
+              return setUser({...user, err: "We can't find your address. Please check you've entered a valid UK postcode.", success: ''})
+          
     navigate("/patient/prescribersystem", {
       state: { 
         addressLineOne: addressLineOne,
