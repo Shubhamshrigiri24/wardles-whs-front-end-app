@@ -62,11 +62,7 @@ export default function Consent() {
   const [D, setD] = useState(false);
   const [Error, setError] = useState("");
 
-  // console.log(A);
-  // console.log(B);
-  // console.log(C);
-  // console.log(D);
-  // console.log(Error);
+ 
 
   const handleOnChangeA = () => {
     setA(!A);
@@ -84,8 +80,11 @@ export default function Consent() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (A === true && B === true && C === true && D === true) {
-      setError("");
-      navigate("/emailactivate");
+       setError("");
+      // navigate("/emailactivate");
+      navigate("/patient/emailactivate", {
+          state: { email: email},});   
+      
     } else {
       setError("You must agree to all of the statements above to continue.");
     }
@@ -108,8 +107,7 @@ export default function Consent() {
       location.state.prescriberpostcode,
 
     );
-    navigate("/patient/emailactivate", {
-      state: { email: email},});   
+    
   };
   
   return (
