@@ -102,7 +102,6 @@ function ConfirmAddress() {
             />
           </Button>
           <Button
-
           onClick={() => {
             navigate("/patient/homeaddressmanual", {
               state: {
@@ -114,13 +113,12 @@ function ConfirmAddress() {
               },
             });
           }}
-
             variant="contained"
             size="large"
             fullWidth
             disableElevation
             style={{
-
+              
               marginTop: "10px",
               background: "white",
               color: "#07283C",
@@ -129,19 +127,13 @@ function ConfirmAddress() {
               solid: "#07283C",
               borderRadius: "2px",
               fontWeight: "bold",
-
-              border: "0px solid",
-              borderColor: "#07283C",
-
-
+              border: "1px solid black",
               width: "70%",
             }}
             type="submit"
           >
-
-            Change address
+            Change Address
           </Button>
-
           <Button
             variant="contained"
             size="large"
