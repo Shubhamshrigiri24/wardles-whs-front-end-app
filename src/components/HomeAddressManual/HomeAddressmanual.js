@@ -86,6 +86,13 @@ function HomeAddressmanual() {
 
   return (
     <Grid>
+      <div onClick={() => {navigate(("/hcp/searchhomeaddress"),{state:{email:location.state.email, password:location.state.password,firstName:location.state.firstName,lastName:location.state.lastName,registrationNumber:location.state.registrationNumber, }})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}>
+
+<ArrowBackIcon />
+
+<p>Back</p>
+
+</div>
       {/* <div style={{ marginTop: "2%" }}>
         <a
           href=" "

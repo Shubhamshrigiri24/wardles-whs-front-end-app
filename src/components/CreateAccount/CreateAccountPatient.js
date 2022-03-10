@@ -53,9 +53,9 @@ export default function CreateAcc(props) {
   const passwordValidator = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z@]{12,}$/;
 
   const paperStyle = {
-    padding: 10,
+    padding: 0,
     width: 380,
-    margin: "10px auto",
+    margin: "0px auto",
     background: "#F7FBFF",
   };
   const [values, setValues] = React.useState({
@@ -140,6 +140,11 @@ export default function CreateAcc(props) {
 
   return (
     <Grid>
+      <div onClick={() => {navigate("/");}} style={{cursor: "pointer",paddingTop:"10px",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, marginLeft:150}}>
+      <ArrowBackIcon />
+      <p>Back</p>
+
+      </div>
       {/* <div style={{ marginTop: "2%" }}>
         <a
           href=" "
@@ -159,7 +164,7 @@ export default function CreateAcc(props) {
         </a>
       </div> */}
 
-      <div>
+      <div style={{marginTop:'0px'}}>
         <Paper elevation={0} style={paperStyle}>
           <form onSubmit={handleSubmit}>
             <h2 className="heading">Create account</h2>
@@ -385,7 +390,7 @@ export default function CreateAcc(props) {
                 underline="none"
                 style={{ fontSize: "17px", fontFamily: "Gilroy Alt" }}
                 onClick={() => {
-                  navigate("/login");
+                  navigate("/patient/login");
                 }}
               >
                 Already have an account?

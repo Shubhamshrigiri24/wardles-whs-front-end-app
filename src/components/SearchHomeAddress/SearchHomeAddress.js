@@ -36,24 +36,10 @@ export default function SearchHomeAddress() {
   };
   return (
     <div style={{ textTransform: "none !important", background: "E5E5E5" }}>
-      {/* <div style={{ marginTop: "2%" }}>
-        <a
-          href=" /homeaddressmanual"
-          style={{
-            textDecoration: "none",
-            color: "black",
-            display: "flex",
-            alignItems: "center",
-            margin: 0,
-            padding: 0,
-            marginLeft: 150,
-            marginTop: 0,
-          }}
-        >
-          <ArrowBackIcon />
-          <p>Back</p>
-        </a>
-      </div> */}
+      <div onClick={() => { navigate(("/hcp/userdetails"), { state: { email: location.state.email, password: location.state.password, } }) }} style={{ cursor: "pointer", textDecoration: "none", color: "#5E5E5E;", display: "flex", alignItems: "center", margin: 0, paddingTop: 100, marginLeft: 150 }}>
+        <ArrowBackIcon />
+        <p>Back</p>
+      </div>
       <form onSubmit={handleSubmit}>
         <Container style={{ margin: "4% auto" }} maxWidth="xs">
           <Typography

@@ -46,26 +46,22 @@ function ConfirmAddress() {
 
   return (
     <div className="explore-section">
+         <div onClick={() => {navigate(("/patient/searchhomeaddress"),
+         {state:{email:location.state.email,
+           password:location.state.password,
+           firstName:location.state.firstName,
+           lastName:location.state.lastName,
+           phoneNumber:location.state.phoneNumber,
+           addressLineOne:location.state.addressLineOne,
+           addressLineTwo:location.state.addressLineTwo,
+           city:location.state.city,
+           postcode:location.state.postcode,
+            }})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}>
+<ArrowBackIcon />
+<p>Back</p>
+</div>
       <form onSubmit={handleSubmit}>
-        {/* <div style={{ marginTop: "2%" }}>
-          <a
-            href=" "
-            style={{
-              textDecoration: "none",
-              color: "black",
-              display: "flex",
-              alignItems: "center",
-              margin: 0,
-              padding: 0,
-
-              marginTop: 0,
-            }}
-          >
-            <ArrowBackIcon />
-            <p>Back</p>
-          </a>
-        </div> */}
-
+        
         <div className="inner-container">
           <div className="header-section">
             <h2>Confirm your address</h2>

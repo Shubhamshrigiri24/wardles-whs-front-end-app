@@ -29,7 +29,7 @@ const initialState = {
   success: "",
 };
 
-function Login() {
+function Hcplogin() {
   let navigate = useNavigate();
   const passwordValidator = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z@]{12,}$/;
   const paperStyle = {
@@ -101,7 +101,7 @@ function Login() {
   return (
     <form onSubmit={handleSubmit}>
     <Grid>
-    <div onClick={() => {navigate("/patient/createaccount");}} style={{cursor: "pointer",paddingTop:"100px",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, marginLeft:150}}>
+    <div onClick={() => {navigate("/hcp/createaccount");}} style={{cursor: "pointer",paddingTop:"100px",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, marginLeft:150}}>
 
 <ArrowBackIcon />
 
@@ -195,7 +195,7 @@ function Login() {
           <Typography style={{ marginBottom: "17px", textAlign: "Center" }}>
             <a
               onClick={() => {
-                navigate("/patient/emailresetpwd");
+                navigate("/hcp/hcpemailresetpwd");
               }}
               href="# "
               style={{ fontSize: 17, color: "#0066BE", textDecoration: "none" }}
@@ -229,7 +229,7 @@ function Login() {
           <Typography style={{ marginTop: "17px", textAlign: "Center" }}>
             <a
               onClick={() => {
-                navigate("/patient/createaccount");
+                navigate("/hcp/createaccount");
               }}
               href=" "
               style={{ fontSize: 17, color: "#0066BE", textDecoration: "none" }}
@@ -244,4 +244,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Hcplogin;

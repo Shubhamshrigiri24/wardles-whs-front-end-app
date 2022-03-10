@@ -140,25 +140,12 @@ export default function CreateAcc(props) {
 
   return (
     <Grid>
-      {/* <div style={{ marginTop: "2%" }}>
-        <a
-          href=" "
-          style={{
-            textDecoration: "none",
-            color: "black",
-            display: "flex",
-            alignItems: "center",
-            margin: 0,
-            padding: 0,
-            marginLeft: 150,
-            marginTop: 0,
-          }}
-        >
-          <ArrowBackIcon />
-          <p>Back</p>
-        </a>
-      </div> */}
+      
+      <div onClick={() => {navigate("/");}} style={{cursor: "pointer",paddingTop:"100px",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, marginLeft:150}}>
+      <ArrowBackIcon />
+      <p>Back</p>
 
+      </div>
       <div>
         <Paper elevation={0} style={paperStyle}>
           <form onSubmit={handleSubmit}>
@@ -390,7 +377,7 @@ export default function CreateAcc(props) {
                 underline="none"
                 style={{ fontSize: "17px" }}
                 onClick={() => {
-                  navigate("/login");
+                  navigate("/hcp/hcplogin");
                 }}
               >
                 Already have an account?

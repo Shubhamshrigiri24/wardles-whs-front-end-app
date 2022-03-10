@@ -4,6 +4,7 @@ import Msgmail from "../../Assets/msgmail.svg";
 import GetEmail from "../GetEmail";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 
 function EMailActivate() {
   let navigate = useNavigate();
@@ -27,7 +28,13 @@ function EMailActivate() {
 
   return (
     // <Grid>
+    <>
+    <div onClick={() => {navigate(("/patient/consent"),{state:{email:location.state.email, }})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}>
+    <ArrowBackIcon />
+    <p>Back</p>
+    </div>
     <Paper elevation={0} style={paperStyle}>
+     
       <Grid align="Center">
         <img src={Message} alt="error" />
       </Grid>
@@ -71,7 +78,8 @@ function EMailActivate() {
 
       <GetEmail />
     </Paper>
-    // </Grid>
+     {/* </Grid> */}
+    </>
   );
 }
 
