@@ -2,6 +2,7 @@ import React from "react";
 import "./PrescriberSystem.css";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 
 function PrescriberSystem() {
   let navigate = useNavigate();
@@ -49,6 +50,21 @@ function PrescriberSystem() {
     <div className="prescriber-section">
       <form onSubmit={handleSubmit} >
       <div className="container">
+     
+<div onClick={() => {navigate(("/patient/selectprescriber"),
+         {state:{email:location.state.email,
+           password:location.state.password,
+           firstName:location.state.firstName,
+           lastName:location.state.lastName,
+           phoneNumber:location.state.phoneNumber,
+           addressLineOne:location.state.addressLineOne,
+           addressLineTwo:location.state.addressLineTwo,
+           city:location.state.city,
+           postcode:location.state.postcode,
+            }})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}>
+<ArrowBackIcon />
+<p>Back</p>
+</div>
         <div className="inner-container">
           <h1 className="prescriber-heading">
             {" "}

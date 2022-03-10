@@ -85,6 +85,13 @@ function HCPUserDetails() {
 
   return (
     <div>
+     <div onClick={() => {navigate("/hcp/createaccount");}} style={{cursor: "pointer",paddingTop:"100px",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, marginLeft:150}}>
+
+<ArrowBackIcon />
+
+<p>Back</p>
+
+</div> 
       {/* <div style={{ marginTop: "2%" }}>
         <a
           href=" "

@@ -5,6 +5,8 @@
 .heading {
   position: static;
   left: 0px;
+  margin-top: 0px !important;
+  margin-bottom: 8px !important;
   right: 0px;
   top: 0px;
   font-size: 32px;
@@ -26,7 +28,7 @@
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin: 5px 0px;
+  margin: 0px 0px ;
 }
 .checkbox-container {
   display: flex;

@@ -10,6 +10,7 @@ import {
   isEmpty,
   isSpace
 } from "../../components/validation/Validation";
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 
 import {
   showErrMsg,
@@ -82,6 +83,21 @@ export default function PrescriberDetails() {
   };
   return (
     <div>
+     
+<div onClick={() => {navigate(("/patient/selectprescriber"),
+         {state:{email:location.state.email,
+           password:location.state.password,
+           firstName:location.state.firstName,
+           lastName:location.state.lastName,
+           phoneNumber:location.state.phoneNumber,
+           addressLineOne:location.state.addressLineOne,
+           addressLineTwo:location.state.addressLineTwo,
+           city:location.state.city,
+           postcode:location.state.postcode,
+            }})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}>
+<ArrowBackIcon />
+<p>Back</p>
+</div>
       <form onSubmit={handleSubmit}>
       <Container style={{ margin: "4% auto" }} maxWidth="xs">
         <Typography mb={1} variant="h4" style={{ color: "#07283C" }}>

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/NavBar/Navbar";
 import Login from "./components/login/login";
+import Hcplogin from "./components/login/hcplogin";
 import ChooseAcc from "./components/ChooseAcc/ChooseAcc";
 
 import CreateAccount from "./components/CreateAccount/CreateAccount";
@@ -33,9 +34,11 @@ import EmailActivate from "./components/EmailActivate/EmailActivatehcp";
 import EmailActivatePatient from "./components/EmailActivate/EmailActivate";
 
 import CheckYourEmail from "./components/CheckYourEmail/CheckYourEmail";
+import HcpCheckYourEmail from "./components/CheckYourEmail/hcpCheckYourEmail";
 import ThankYou from "./components/ThankYou/ThankYou";
 import Resetpassword from "./components/Resetpassword/Resetpassword";
 import EmailResetPwd from "./components/EmailResetPwd/EmailResetPwd";
+import HcpEmailResetPwd from "./components/EmailResetPwd/hcpEmailResetPwd";
 import ResetpasswordSuccess from "./components/ResetpasswordSuccess/ResetpasswordSuccess";
 import Signin from "./components/loginapi/loginapi";
 import AddressEngland from "./components/AddressEngland/Addressengland";
@@ -57,11 +60,11 @@ function App() {
         {/* Common routes */}
         {/* <Route exact path="/" element={<Homepage />} /> */}
         <Route exact path="/" element={<ChooseAcc />} />
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} /> */}
         <Route path ="/dashboard" element={<Dashboard/>}/>
         <Route exact path="/chooseaccount" element={<ChooseAcc />} />
-        <Route path="/emailresetpwd" element={<EmailResetPwd />} />
-        <Route path="/CheckYourEmail" element={<CheckYourEmail />} />
+        {/* <Route path="/emailresetpwd" element={<EmailResetPwd />} /> */}
+        {/* <Route path="/CheckYourEmail" element={<CheckYourEmail />} /> */}
         <Route path="/Resetpassword" element={<Resetpassword />} />
         <Route
           path="/Resetpasswordsuccess"
@@ -77,6 +80,9 @@ function App() {
 
         {/* routes for HCP-Signup  */}
         <Route path="/hcp/createaccount" element={<CreateAccount />} />
+         <Route path="/hcp/hcplogin" element={<Hcplogin />} />
+         <Route path="/hcp/hcpemailresetpwd" element={<HcpEmailResetPwd />} />
+         <Route path="/hcp/hcpCheckYourEmail" element={<HcpCheckYourEmail />} />
         <Route path="/hcp/userdetails" element={<HcpUserDetails />} />
         <Route path="/hcp/searchhomeaddress" element={<SearchHomeAddress />} />
         <Route path="/hcp/homeaddressmanual" element={<HomeAddressmanual />} />
@@ -97,7 +103,10 @@ function App() {
           path="/patient/createaccount"
           element={<CreateAccountPatient />}
         />
+         <Route path="/patient/login" element={<Login />} /> 
+         <Route path="/patient/emailresetpwd" element={<EmailResetPwd />} />
         <Route path="/patient/userdetails" element={<UserDetails />} />
+        <Route path="/patient/CheckYourEmail" element={<CheckYourEmail />} />
         <Route
           path="/patient/searchhomeaddress"
           element={<SearchHomeAddressPatient />}

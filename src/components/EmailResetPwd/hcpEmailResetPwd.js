@@ -11,7 +11,7 @@ const initialState = {
   email: "",
 };
 
-function EmailResetPwd() {
+function HcpEmailResetPwd() {
   let navigate = useNavigate();
 
   const location = useLocation();
@@ -41,14 +41,14 @@ function EmailResetPwd() {
   };
 
   return (
-    <>
-    <div onClick={() => {navigate("/patient/login");}} style={{cursor: "pointer",paddingTop:"100px",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, marginLeft:150}}>
+      <>
+      <div onClick={() => {navigate("/hcp/hcplogin");}} style={{cursor: "pointer",paddingTop:"100px",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, marginLeft:150}}>
 
-            <ArrowBackIcon />
+<ArrowBackIcon />
 
-            <p>Back</p>
+<p>Back</p>
 
-            </div>
+</div>
     <Paper elevation={0} style={paperStyle}>
       <h2 className="heading">Enter your email address</h2>
       <p className="paragraph">
@@ -87,7 +87,7 @@ function EmailResetPwd() {
         }}
         fullWidth
         onClick={() => {
-          navigate("/patient/CheckYourEmail", {
+          navigate("/hcp/hcpCheckYourEmail", {
             state: { email: email },
           });
         }}
@@ -99,4 +99,4 @@ function EmailResetPwd() {
   );
 }
 
-export default EmailResetPwd;
+export default HcpEmailResetPwd;
