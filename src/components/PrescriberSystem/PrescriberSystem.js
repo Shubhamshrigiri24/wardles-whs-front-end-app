@@ -2,6 +2,7 @@ import React from "react";
 import "./PrescriberSystem.css";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 
 function PrescriberSystem() {
   let navigate = useNavigate();
@@ -46,7 +47,26 @@ function PrescriberSystem() {
   };
   
   return (
+  <>
+  
+  <div onClick={() => {navigate(("/patient/selectprescriber"),{state: {addressLineOne: addressLineOne,
+        addressLineTwo: addressLineTwo,
+        city: city,
+        postcode: postcode,
+        email: email,
+        password: password,
+        firstName: firstName,
+        lastName: lastName,
+        phoneNumber: phoneNumber,
+        prescriberName:prescriberName,
+        prescriberCity:prescriberCity,
+        prescriberaddresLineone:prescriberaddresLineone,
+        prescriberaddresLinetwo:prescriberaddresLinetwo,
+        prescriberpostcode:prescriberpostcode
+       },
+    })}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}><ArrowBackIcon /><p>Back</p></div>  
     <div className="prescriber-section">
+       
       <form onSubmit={handleSubmit} >
       <div className="container">
         <div className="inner-container">
@@ -71,6 +91,7 @@ function PrescriberSystem() {
       </div>
       </form>
     </div>
+    </>
   );
 }
 

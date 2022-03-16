@@ -13,7 +13,7 @@ import "./SelectPrescriber.css";
 
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 export default function SelectPrescriber() {
   const navigate = useNavigate();
 
@@ -45,6 +45,11 @@ export default function SelectPrescriber() {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
+        prescriberName:location.state.prescriberName,
+        prescriberCity:location.state.prescriberCity,
+        prescriberaddresLineone:location.state.prescriberaddresLineone,
+        prescriberaddresLinetwo:location.state.prescriberaddresLinetwo,
+        prescriberpostcode:location.state.prescriberpostcode
       },
     });
     // console.log(user)
@@ -52,6 +57,8 @@ export default function SelectPrescriber() {
 
   return (
     <div style={{ textTransform: "none !important", background: "E5E5E5" }}>
+      <div onClick={() => {navigate(("/patient/confirmaddress"),{state:{email:email, password:password,firstName:firstName,lastName:lastName,phoneNumber:phoneNumber,addressLineOne:addressLineOne,addressLineTwo:addressLineTwo,city:city,postcode:postcode}})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}><ArrowBackIcon /><p>Back</p></div>  
+
       <form onSubmit={handleSubmit}>
         <Container style={{ margin: "4% auto" }} maxWidth="xs">
           <Typography

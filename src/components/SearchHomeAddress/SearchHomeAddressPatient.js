@@ -8,7 +8,7 @@ import "./SearchHomeAddress.css";
 import MyPrescriber1 from "../MyPrescriber1";
 import { useNavigate } from "react-router";
 import { useLocation } from "react-router";
-
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 export default function SearchHomeAddress() {
   const location = useLocation();
 
@@ -30,11 +30,17 @@ export default function SearchHomeAddress() {
         phoneNumber: phoneNumber,
         firstName: firstName,
         lastName: lastName,
+        addressLineOne:location.state.addressLineOne,
+        addressLineTwo:location.state.addressLineTwo,
+        city:location.state.city,
+        postcode:location.state.postcode,
       },
     });
   };
   return (
     <div style={{ textTransform: "none !important", background: "E5E5E5" }}>
+            <div onClick={() => {navigate(("/patient/userdetails"),{state:{email:email, password:password,firstName:firstName,lastName:lastName,phoneNumber:phoneNumber}})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}><ArrowBackIcon /><p>Back</p></div>  
+
       <form onSubmit={handleSubmit}>
         <Container style={{ margin: "4% auto" }} maxWidth="xs">
           <Typography

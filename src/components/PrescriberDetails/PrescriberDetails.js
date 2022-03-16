@@ -16,6 +16,7 @@ import {
 } from "../../components/notification/Notification";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 
 
 const initialState = {
@@ -53,11 +54,11 @@ export default function PrescriberDetails() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-        if(isEmpty(prescriberName) || isEmpty(prescriberCity) || isEmpty(prescriberaddresLineone) || isEmpty(prescriberaddresLinetwo) || isEmpty(prescriberpostcode)) 
+        if(isEmpty(prescriberName || location.state.prescriberName) || isEmpty(prescriberCity || location.state.prescriberCity) || isEmpty(prescriberaddresLineone || location.state.prescriberaddresLineone) || isEmpty(prescriberaddresLinetwo || location.state.prescriberaddresLinetwo) || isEmpty(prescriberpostcode || location.state.prescriberpostcode)) 
               return setUser({...user, err: "Please fill in all fields.", success: ''})
-        if(isSpace(prescriberName) || isSpace(prescriberCity) || isSpace(prescriberaddresLineone) || isSpace(prescriberaddresLinetwo) || isSpace(prescriberpostcode)) 
+        if(isSpace(prescriberName || location.state.prescriberName) || isSpace(prescriberCity || location.state.prescriberCity) || isSpace(prescriberaddresLineone || location.state.prescriberaddresLineone) || isSpace(prescriberaddresLinetwo || location.state.prescriberaddresLinetwo) || isSpace(prescriberpostcode || location.state.prescriberpostcode)) 
               return setUser({...user, err: "Please fill in all fields.", success: ''})
-        if(!isPostCode(prescriberpostcode))
+        if(!isPostCode(prescriberpostcode || location.state.prescriberpostcode))
               return setUser({...user, err: "We can't find your address. Please check you've entered a valid UK postcode.", success: ''})
           
     navigate("/patient/prescribersystem", {
@@ -71,17 +72,19 @@ export default function PrescriberDetails() {
         firstName: firstName,
         lastName: lastName,
         phoneNumber: phoneNumber,
-        prescriberName:prescriberName,
-        prescriberCity:prescriberCity,
-        prescriberaddresLineone:prescriberaddresLineone,
-        prescriberaddresLinetwo:prescriberaddresLinetwo,
-        prescriberpostcode:prescriberpostcode
+        prescriberName:location.state.prescriberName?location.state.prescriberName:prescriberName,
+        prescriberCity:location.state.prescriberCity?location.state.prescriberCity:prescriberCity,
+        prescriberaddresLineone:location.state.prescriberaddresLineone?location.state.prescriberaddresLineone:prescriberaddresLineone,
+        prescriberaddresLinetwo:location.state.prescriberaddresLinetwo?location.state.prescriberaddresLinetwo:prescriberaddresLinetwo,
+        prescriberpostcode:location.state.prescriberpostcode?location.state.prescriberpostcode:prescriberpostcode
        },
     });
     
   };
   return (
     <div>
+            <div onClick={() => {navigate(("/patient/selectprescriber"),{state:{email:email, password:password,firstName:firstName,lastName:lastName,phoneNumber:phoneNumber,addressLineOne:addressLineOne,addressLineTwo:addressLineTwo,city:city,postcode:postcode}})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}><ArrowBackIcon /><p>Back</p></div>  
+
       <form onSubmit={handleSubmit}>
       <Container style={{ margin: "4% auto" }} maxWidth="xs">
         <Typography mb={1} variant="h4" style={{ color: "#07283C" }}>
@@ -93,7 +96,8 @@ export default function PrescriberDetails() {
         </Typography>
         <Grid mb={2}>
           <TextField
-            value={prescriberName}
+            // value={prescriberName}
+            value={location.state.prescriberName?location.state.prescriberName:prescriberName}
             name="prescriberName"
             onChange={handleChangeInput}
             type="text"
@@ -106,7 +110,8 @@ export default function PrescriberDetails() {
         </Grid>
         <Grid mb={2}>
           <TextField
-            value={prescriberaddresLineone}
+            // value={prescriberaddresLineone}
+            value={location.state.prescriberaddresLineone?location.state.prescriberaddresLineone:prescriberaddresLineone}
             name="prescriberaddresLineone"
             type="text"
             onChange={handleChangeInput}
@@ -119,7 +124,8 @@ export default function PrescriberDetails() {
         </Grid>
         <Grid mb={2}>
           <TextField
-            value={prescriberaddresLinetwo}
+            // value={prescriberaddresLinetwo}
+            value={location.state.prescriberaddresLinetwo?location.state.prescriberaddresLinetwo:prescriberaddresLinetwo}
             name="prescriberaddresLinetwo"
             type="text"
             onChange={handleChangeInput}
@@ -132,7 +138,8 @@ export default function PrescriberDetails() {
         </Grid>
         <Grid mb={2}>
           <TextField
-            value={prescriberCity}
+            // value={prescriberCity}
+            value={location.state.prescriberCity?location.state.prescriberCity:prescriberCity}
             name="prescriberCity"
             type="text"
             placeholder="City"
@@ -145,7 +152,8 @@ export default function PrescriberDetails() {
         </Grid>
         <Grid mb={1}>
           <TextField
-            value={prescriberpostcode}
+            // value={prescriberpostcode}
+            value={location.state.prescriberpostcode?location.state.prescriberpostcode:prescriberpostcode}
             name="prescriberpostcode"
             type="text"
             placeholder="Postcode"

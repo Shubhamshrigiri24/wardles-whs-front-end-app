@@ -46,6 +46,8 @@ function ConfirmAddress() {
 
   return (
     <div className="explore-section">
+            <div onClick={() => {navigate(("/patient/searchhomeaddress"),{state:{email:email, password:password,firstName:firstName,lastName:lastName,phoneNumber:phoneNumber,addressLineOne:addressLineOne,addressLineTwo:addressLineTwo,city:city,postcode:postcode}})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}><ArrowBackIcon /><p>Back</p></div>  
+
       <form onSubmit={handleSubmit}>
         {/* <div style={{ marginTop: "2%" }}>
           <a
@@ -88,11 +90,11 @@ function ConfirmAddress() {
             }}
           >
             <Typography variant="Body1" className="typography-heading">
-              {addressLineOne}
+              {location.state.addressLineOne?location.state.addressLineOne:addressLineOne}
             </Typography>
             <br />
             <Typography className="typography" variant="caption">
-              {addressLineTwo},{city},{postcode}
+              {location.state.addressLineTwo?location.state.addressLineTwo:addressLineTwo},{location.state.city?location.state.city:city},{location.state.postcode?location.state.postcode:postcode}
             </Typography>
 
             <input

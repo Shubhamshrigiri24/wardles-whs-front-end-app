@@ -61,28 +61,50 @@ function HomeAddressmanual() {
     setUser({ ...user, [name]: value, err: "", success: "" });
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if(isEmpty(addressLineOne) || isEmpty(addressLineTwo) || isEmpty(city) || isEmpty(postcode)) 
+  //       return setUser({...user, err: "Please fill in all fields.", success: ''})
+  //   if(isSpace(addressLineOne) || isSpace(addressLineTwo) || isSpace(city) || isSpace(postcode)) 
+  //       return setUser({...user, err: "Please fill in all fields.", success: ''})
+  //       if (!isPostCode(postcode))
+  //       return setUser({...user, err: "We can't find your address. Please check you've entered a valid UK postcode.", success: ''})
+
+  //   navigate("/patient/confirmaddress", {
+  //     state: {
+  //       addressLineOne: addressLineOne,
+  //       addressLineTwo: addressLineTwo,
+  //       city: city,
+  //       postcode: postcode,
+  //       email: email,
+  //       password: password,
+  //       firstName: firstName,
+  //       lastName: lastName,
+  //       phoneNumber: phoneNumber,
+  //     },
+  //   });
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(isEmpty(addressLineOne) || isEmpty(addressLineTwo) || isEmpty(city) || isEmpty(postcode)) 
-        return setUser({...user, err: "Please fill in all fields.", success: ''})
-    if(isSpace(addressLineOne) || isSpace(addressLineTwo) || isSpace(city) || isSpace(postcode)) 
-        return setUser({...user, err: "Please fill in all fields.", success: ''})
-        if (!isPostCode(postcode))
-        return setUser({...user, err: "We can't find your address. Please check you've entered a valid UK postcode.", success: ''})
-
-    navigate("/patient/confirmaddress", {
-      state: {
-        addressLineOne: addressLineOne,
-        addressLineTwo: addressLineTwo,
-        city: city,
-        postcode: postcode,
-        email: email,
-        password: password,
-        firstName: firstName,
-        lastName: lastName,
-        phoneNumber: phoneNumber,
-      },
-    });
+    if(isEmpty(addressLineOne || location.state.addressLineOne) || isEmpty(addressLineTwo || location.state.addressLineTwo) || isEmpty(city || location.state.city) || isEmpty(postcode || location.state.postcode)) 
+      return setUser({...user, err: "Please fill in all fields.", success: ''})
+    if(isSpace(addressLineOne || location.state.addressLineOne) || isSpace(addressLineTwo || location.state.addressLineTwo) || isSpace(city || location.state.city) || isSpace(postcode || location.state.postcode)) 
+      return setUser({...user, err: "Please fill in all fields.", success: ''})
+      if (!isPostCode(postcode || location.state.postcode) )
+      return setUser({...user, err: "We can't find your address. Please check you've entered a valid UK postcode.", success: ''})
+  
+  navigate("/patient/confirmaddress", {
+    state: {
+      addressLineOne: location.state.addressLineOne?location.state.addressLineOne:addressLineOne,
+      addressLineTwo: location.state.addressLineTwo?location.state.addressLineTwo:addressLineTwo,
+      city: location.state.city?location.state.city:city,
+      postcode: location.state.postcode?location.state.postcode:postcode,
+      email: email,
+      password: password,
+      firstName: firstName,
+      lastName: lastName,
+      phoneNumber: phoneNumber,
+    },
+  });
   };
 
   return (
@@ -105,6 +127,7 @@ function HomeAddressmanual() {
           <p>Back</p>
         </a>
       </div> */}
+                  <div onClick={() => {navigate(("/patient/searchhomeaddress"),{state:{email:email, password:password,firstName:firstName,lastName:lastName,phoneNumber:phoneNumber,addressLineOne:addressLineOne,addressLineTwo:addressLineTwo,postcode:postcode,city:city}})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}><ArrowBackIcon /><p>Back</p></div>  
 
       <Paper elevation={0} style={paperStyle}>
         <form onSubmit={handleSubmit}>
@@ -124,7 +147,9 @@ function HomeAddressmanual() {
             placeholder="Address line one"
             id="addressLineOne"
             name="addressLineOne"
-            value={addressLineOne}
+            // value={addressLineOne}
+            value={location.state.addressLineOne?location.state.addressLineOne:addressLineOne}
+
             onChange={handleChangeInput}
             type="text"
             variant="outlined"
@@ -143,7 +168,9 @@ function HomeAddressmanual() {
             variant="outlined"
             id="addressLineTwo"
             name="addressLineTwo"
-            value={addressLineTwo}
+            // value={addressLineTwo}
+            value={location.state.addressLineTwo?location.state.addressLineTwo:addressLineTwo}
+
             onChange={handleChangeInput}
             fullWidth
           />
@@ -158,7 +185,9 @@ function HomeAddressmanual() {
             placeholder="City"
             id="city"
             name="city"
-            value={city}
+            // value={city}
+            value={location.state.city?location.state.city:city}
+
             onChange={handleChangeInput}
             type="text"
             variant="outlined"
@@ -175,7 +204,9 @@ function HomeAddressmanual() {
             placeholder="Postcode"
             id="postcode"
             name="postcode"
-            value={postcode}
+            // value={postcode}
+            value={location.state.postcode?location.state.postcode:postcode}
+
             onChange={handleChangeInput}
             type="text"
             variant="outlined"
