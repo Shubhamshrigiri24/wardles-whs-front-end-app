@@ -7,6 +7,7 @@ import { Button } from "@material-ui/core";
 import { Link } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router";
 import LockIcon from "@mui/icons-material/Lock";
 import InputAdornment from "@mui/material/InputAdornment";
 import EmailIcon from "@mui/icons-material/Email";
@@ -49,7 +50,7 @@ const initialState = {
 
 export default function CreateAcc(props) {
   let navigate = useNavigate();
-
+ const location=useLocation();
   const passwordValidator = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z@]{12,}$/;
 
   const paperStyle = {
@@ -158,6 +159,7 @@ export default function CreateAcc(props) {
           <p>Back</p>
         </a>
       </div> */}
+            <div onClick={() => {navigate(("/"))}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}><ArrowBackIcon /><p>Back</p></div>  
 
       <div>
         <Paper elevation={0} style={paperStyle}>
@@ -181,6 +183,7 @@ export default function CreateAcc(props) {
                 label="Email address"
                 type="text"
                 id="email"
+                // value={location.state.email?location.state.email:email}
                 value={email}
                 name="email"
                 onChange={handleChangeInput}

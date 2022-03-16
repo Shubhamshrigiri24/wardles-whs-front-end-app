@@ -60,51 +60,95 @@ function UserDetails() {
   } = user1;
 
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+
+  //   if (
+  //     isEmpty(firstName) ||
+  //     isEmpty(lastName) ||
+  //     isEmpty(phoneNumber)
+  //     // isEmpty(dob)
+  //   ) {
+  //     return setUser1({
+  //       ...user1,
+  //       err: "This field is required",
+  //       err1: "Please check the information above is correct",
+  //       success: "",
+  //     });
+  //   }
+  //   if (!isPhone(phoneNumber)) {
+  //     return setUser1({
+  //       ...user1,
+  //       err: "Please provide a valid phone number",
+  //       err1: "Please check the information above is correct ",
+  //       success: "",
+  //     });
+  //   }
+  //   if (isSpace(phoneNumber) || isSpace(firstName) || isSpace(lastName)) {
+  //     return setUser1({
+  //       ...user1,
+  //       err1: "Please check the information above is correct",
+  //       success: "",
+  //     });
+  //   }
+
+
+  //   navigate("/patient/searchhomeaddress", {
+  //     state: {
+  //       email: email,
+  //       password: password,
+  //       phoneNumber: phoneNumber,
+  //       firstName: firstName,
+  //       lastName: lastName,
+  //     },
+  //   });
+  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-
-    if (
-      isEmpty(firstName) ||
-      isEmpty(lastName) ||
-      isEmpty(phoneNumber)
-      // isEmpty(dob)
-    ) {
-      return setUser1({
-        ...user1,
-        err: "This field is required",
-        err1: "Please check the information above is correct",
-        success: "",
-      });
-    }
-    if (!isPhone(phoneNumber)) {
-      return setUser1({
-        ...user1,
-        err: "Please provide a valid phone number",
-        err1: "Please check the information above is correct ",
-        success: "",
-      });
-    }
-    if (isSpace(phoneNumber) || isSpace(firstName) || isSpace(lastName)) {
-      return setUser1({
-        ...user1,
-        err1: "Please check the information above is correct",
-        success: "",
-      });
-    }
-
+    if (isEmpty(firstName || location.state.firstName) || isEmpty(lastName || location.state.lastName) || isEmpty(phoneNumber || location.state.phoneNumber))
+    return setUser1({
+      ...user1,
+      err: "Please check the information above is correct",
+      success: "",
+    });
+  if (isSpace(firstName || location.state.firstName) || isSpace(lastName || location.state.lastName) || isSpace(phoneNumber || location.state.phoneNumber))
+    return setUser1({
+      ...user1,
+      err: "Please check the information above is correct",
+      success: "",
+    });
+    if (!isPhone(phoneNumber || location.state.phoneNumber)) {
+          return setUser1({
+            ...user1,
+            err: "Please provide a valid phone number",
+            err1: "Please check the information above is correct ",
+            success: "",
+          });
+        }
+    // if (isEmpty(firstName) || isEmpty(lastName) || isEmpty(registrationNumber))
+    //   return setUser1({
+    //     ...user1,
+    //     err: "Please check the information above is correct",
+    //     success: "",
+    //   });
+    // if (isSpace(firstName) || isSpace(lastName) || isSpace(registrationNumber))
+    //   return setUser1({
+    //     ...user1,
+    //     err: "Please check the information above is correct",
+    //     success: "",
+    //   });
 
     navigate("/patient/searchhomeaddress", {
       state: {
         email: email,
         password: password,
-        phoneNumber: phoneNumber,
-        firstName: firstName,
-        lastName: lastName,
+        phoneNumber: location.state.phoneNumber?location.state.phoneNumber:phoneNumber,
+        firstName: location.state.firstName?location.state.firstName:firstName,
+        lastName: location.state.label?location.state.lastName:lastName,
       },
     });
   };
-
   return (
     <div>
       {/* <div style={{ marginTop: "2%" }}>
@@ -125,6 +169,7 @@ function UserDetails() {
           <p>Back</p>
         </a>
       </div> */}
+        <div onClick={() => {navigate(("/patient/createaccount"),{state:{email:email, password:password}})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}><ArrowBackIcon /><p>Back</p></div>  
 
       <form onSubmit={handleSubmit}>
         <Container component="main" maxWidth="xs">
@@ -148,7 +193,8 @@ function UserDetails() {
                 label="First name"
                 type="text"
                 name="firstName"
-                value={firstName}
+                // value={firstName}
+                value={location.state.firstName?location.state.firstName:firstName}
                 autoComplete="fname"
                 onChange={handleChangeInput}
                 error={isEmpty(firstName) && err}
@@ -175,7 +221,8 @@ function UserDetails() {
                 onChange={handleChangeInput}
                 type="text"
                 id="lastName"
-                value={lastName}
+                // value={lastName}
+                value={location.state.lastName?location.state.lastName:lastName}
                 error={isEmpty(lastName) && err}
                 autoComplete="lname"
                 variant="outlined"
@@ -228,7 +275,8 @@ function UserDetails() {
                 type="text"
                 id="phoneNumber"
                 autoComplete="pno"
-                value={phoneNumber}
+                // value={phoneNumber}
+                value={location.state.phoneNumber?location.state.phoneNumber:phoneNumber}
                 style={{ marginBottom: "23px" }}
                 onChange={handleChangeInput}
                 error={

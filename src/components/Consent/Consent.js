@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./Consent.css";
 import { accessStart } from "../../API/userOps";
 import { useLocation } from "react-router-dom";
+import ArrowBackIcon from "@material-ui/icons/KeyboardArrowLeft";
 
 export const showErrMsg = (msg) => {
 
@@ -111,7 +112,11 @@ export default function Consent() {
   };
   
   return (
+    <>
+    <div onClick={() => {navigate(("/patient/prescribersystem"),{state:{email:email}})}} style={{cursor: "pointer",textDecoration:"none", color:"#5E5E5E;", display:"flex", alignItems:"center", margin:0, paddingTop:100,marginLeft:150}}><ArrowBackIcon /><p>Back</p></div>  
+
     <div className="consent-section">
+
       <div className="container">
         <div className="inner-container">
           <div>
@@ -185,5 +190,6 @@ export default function Consent() {
         </div>
       </div>
     </div>
+    </>
   );
 }
